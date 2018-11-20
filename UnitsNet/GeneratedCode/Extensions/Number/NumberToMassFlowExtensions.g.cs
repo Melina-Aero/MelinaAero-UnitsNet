@@ -209,6 +209,17 @@ namespace UnitsNet.Extensions.NumberToMassFlow
 
         #endregion
 
+        #region PoundPerSecond
+
+        /// <inheritdoc cref="MassFlow.FromPoundsPerMinute(UnitsNet.QuantityValue)" />
+        public static MassFlow PoundsPerSecond<T>(this T value) => MassFlow.FromPoundsPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MassFlow.FromPoundsPerMinute(UnitsNet.QuantityValue)" />
+        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
+        public static MassFlow? PoundsPerSecond<T>(this T? value) where T : struct => MassFlow.FromPoundsPerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
+
+        #endregion
+
         #region ShortTonPerHour
 
         /// <inheritdoc cref="MassFlow.FromShortTonsPerHour(UnitsNet.QuantityValue)" />

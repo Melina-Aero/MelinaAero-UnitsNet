@@ -60,6 +60,7 @@ namespace UnitsNet.Units
         NanogramPerSecond,
         PoundPerHour,
         PoundPerMinute,
+        PoundPerSecond,
         ShortTonPerHour,
         TonnePerDay,
         TonnePerHour,

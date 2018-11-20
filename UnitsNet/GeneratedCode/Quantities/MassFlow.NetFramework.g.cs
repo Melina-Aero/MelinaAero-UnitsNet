@@ -198,6 +198,15 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get nullable MassFlow from nullable PoundsPerMinute.
+        /// </summary>
+        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
+        public static MassFlow? FromPoundsPerSecond(QuantityValue? poundspersecond)
+        {
+            return poundspersecond.HasValue ? FromPoundsPerMinute(poundspersecond.Value) : default(MassFlow?);
+        }
+
+        /// <summary>
         ///     Get nullable MassFlow from nullable ShortTonsPerHour.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]

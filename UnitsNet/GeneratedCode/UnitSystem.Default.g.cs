@@ -2549,6 +2549,11 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "lb/min"),
                             }),
+                        new CulturesForEnumValue((int) MassFlowUnit.PoundPerSecond,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "lb/s"),
+                            }),
                         new CulturesForEnumValue((int) MassFlowUnit.ShortTonPerHour,
                             new[]
                             {
