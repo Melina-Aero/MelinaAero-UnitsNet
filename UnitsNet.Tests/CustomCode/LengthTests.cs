@@ -34,12 +34,8 @@ namespace UnitsNet.Tests.CustomCode
         protected override double CentimetersInOneMeter => 100;
 
         protected override double DecimetersInOneMeter => 10;
-        protected override double DtpPicasInOneMeter => 236.22047244;
-        protected override double DtpPointsInOneMeter => 2834.6456693;
-
         protected override double FeetInOneMeter => 3.28084;
 
-        protected override double TwipsInOneMeter => 56692.913386;
         protected override double UsSurveyFeetInOneMeter => 3.280833333333333;
 
         protected override double InchesInOneMeter => 39.37007874;
@@ -52,8 +48,6 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MicrometersInOneMeter => 1E6;
 
-        protected override double MilsInOneMeter => 39370.07874015;
-
         protected override double MilesInOneMeter => 0.000621371;
 
         protected override double MillimetersInOneMeter => 1E3;
@@ -63,11 +57,6 @@ namespace UnitsNet.Tests.CustomCode
         protected override double YardsInOneMeter => 1.09361;
       
         protected override double FathomsInOneMeter => 0.546806649;
-
-        protected override double PrinterPicasInOneMeter => 237.10630158;
-        protected override double PrinterPointsInOneMeter => 2845.2755906;
-
-        protected override double ShacklesInOneMeter => 0.0364538;
 
         protected override double NauticalMilesInOneMeter => 1.0/1852.0;
 

@@ -172,16 +172,6 @@ namespace UnitsNet
         public double Decimeters => As(LengthUnit.Decimeter);
 
         /// <summary>
-        ///     Get Length in DtpPicas.
-        /// </summary>
-        public double DtpPicas => As(LengthUnit.DtpPica);
-
-        /// <summary>
-        ///     Get Length in DtpPoints.
-        /// </summary>
-        public double DtpPoints => As(LengthUnit.DtpPoint);
-
-        /// <summary>
         ///     Get Length in Fathoms.
         /// </summary>
         public double Fathoms => As(LengthUnit.Fathom);
@@ -217,11 +207,6 @@ namespace UnitsNet
         public double Micrometers => As(LengthUnit.Micrometer);
 
         /// <summary>
-        ///     Get Length in Mils.
-        /// </summary>
-        public double Mils => As(LengthUnit.Mil);
-
-        /// <summary>
         ///     Get Length in Miles.
         /// </summary>
         public double Miles => As(LengthUnit.Mile);
@@ -240,26 +225,6 @@ namespace UnitsNet
         ///     Get Length in NauticalMiles.
         /// </summary>
         public double NauticalMiles => As(LengthUnit.NauticalMile);
-
-        /// <summary>
-        ///     Get Length in PrinterPicas.
-        /// </summary>
-        public double PrinterPicas => As(LengthUnit.PrinterPica);
-
-        /// <summary>
-        ///     Get Length in PrinterPoints.
-        /// </summary>
-        public double PrinterPoints => As(LengthUnit.PrinterPoint);
-
-        /// <summary>
-        ///     Get Length in Shackles.
-        /// </summary>
-        public double Shackles => As(LengthUnit.Shackle);
-
-        /// <summary>
-        ///     Get Length in Twips.
-        /// </summary>
-        public double Twips => As(LengthUnit.Twip);
 
         /// <summary>
         ///     Get Length in UsSurveyFeet.
@@ -306,34 +271,6 @@ namespace UnitsNet
         {
             double value = (double) decimeters;
             return new Length(value, LengthUnit.Decimeter);
-        }
-
-        /// <summary>
-        ///     Get Length from DtpPicas.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromDtpPicas(double dtppicas)
-#else
-        public static Length FromDtpPicas(QuantityValue dtppicas)
-#endif
-        {
-            double value = (double) dtppicas;
-            return new Length(value, LengthUnit.DtpPica);
-        }
-
-        /// <summary>
-        ///     Get Length from DtpPoints.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromDtpPoints(double dtppoints)
-#else
-        public static Length FromDtpPoints(QuantityValue dtppoints)
-#endif
-        {
-            double value = (double) dtppoints;
-            return new Length(value, LengthUnit.DtpPoint);
         }
 
         /// <summary>
@@ -435,20 +372,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get Length from Mils.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromMils(double mils)
-#else
-        public static Length FromMils(QuantityValue mils)
-#endif
-        {
-            double value = (double) mils;
-            return new Length(value, LengthUnit.Mil);
-        }
-
-        /// <summary>
         ///     Get Length from Miles.
         /// </summary>
 #if WINDOWS_UWP
@@ -502,62 +425,6 @@ namespace UnitsNet
         {
             double value = (double) nauticalmiles;
             return new Length(value, LengthUnit.NauticalMile);
-        }
-
-        /// <summary>
-        ///     Get Length from PrinterPicas.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromPrinterPicas(double printerpicas)
-#else
-        public static Length FromPrinterPicas(QuantityValue printerpicas)
-#endif
-        {
-            double value = (double) printerpicas;
-            return new Length(value, LengthUnit.PrinterPica);
-        }
-
-        /// <summary>
-        ///     Get Length from PrinterPoints.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromPrinterPoints(double printerpoints)
-#else
-        public static Length FromPrinterPoints(QuantityValue printerpoints)
-#endif
-        {
-            double value = (double) printerpoints;
-            return new Length(value, LengthUnit.PrinterPoint);
-        }
-
-        /// <summary>
-        ///     Get Length from Shackles.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromShackles(double shackles)
-#else
-        public static Length FromShackles(QuantityValue shackles)
-#endif
-        {
-            double value = (double) shackles;
-            return new Length(value, LengthUnit.Shackle);
-        }
-
-        /// <summary>
-        ///     Get Length from Twips.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Length FromTwips(double twips)
-#else
-        public static Length FromTwips(QuantityValue twips)
-#endif
-        {
-            double value = (double) twips;
-            return new Length(value, LengthUnit.Twip);
         }
 
         /// <summary>
@@ -762,8 +629,6 @@ namespace UnitsNet
             {
                 case LengthUnit.Centimeter: return (_value) * 1e-2d;
                 case LengthUnit.Decimeter: return (_value) * 1e-1d;
-                case LengthUnit.DtpPica: return _value/236.220472441;
-                case LengthUnit.DtpPoint: return (_value/72)*2.54e-2;
                 case LengthUnit.Fathom: return _value*1.8288;
                 case LengthUnit.Foot: return _value*0.3048;
                 case LengthUnit.Inch: return _value*2.54e-2;
@@ -771,15 +636,10 @@ namespace UnitsNet
                 case LengthUnit.Meter: return _value;
                 case LengthUnit.Microinch: return _value*2.54e-8;
                 case LengthUnit.Micrometer: return (_value) * 1e-6d;
-                case LengthUnit.Mil: return _value*2.54e-5;
                 case LengthUnit.Mile: return _value*1609.34;
                 case LengthUnit.Millimeter: return (_value) * 1e-3d;
                 case LengthUnit.Nanometer: return (_value) * 1e-9d;
                 case LengthUnit.NauticalMile: return _value*1852;
-                case LengthUnit.PrinterPica: return _value/237.106301584;
-                case LengthUnit.PrinterPoint: return (_value/72.27)*2.54e-2;
-                case LengthUnit.Shackle: return _value*27.432;
-                case LengthUnit.Twip: return _value/56692.913385826;
                 case LengthUnit.UsSurveyFoot: return _value*1200/3937;
                 case LengthUnit.Yard: return _value*0.9144;
                 default:
@@ -798,8 +658,6 @@ namespace UnitsNet
             {
                 case LengthUnit.Centimeter: return (baseUnitValue) / 1e-2d;
                 case LengthUnit.Decimeter: return (baseUnitValue) / 1e-1d;
-                case LengthUnit.DtpPica: return baseUnitValue*236.220472441;
-                case LengthUnit.DtpPoint: return (baseUnitValue/2.54e-2)*72;
                 case LengthUnit.Fathom: return baseUnitValue/1.8288;
                 case LengthUnit.Foot: return baseUnitValue/0.3048;
                 case LengthUnit.Inch: return baseUnitValue/2.54e-2;
@@ -807,15 +665,10 @@ namespace UnitsNet
                 case LengthUnit.Meter: return baseUnitValue;
                 case LengthUnit.Microinch: return baseUnitValue/2.54e-8;
                 case LengthUnit.Micrometer: return (baseUnitValue) / 1e-6d;
-                case LengthUnit.Mil: return baseUnitValue/2.54e-5;
                 case LengthUnit.Mile: return baseUnitValue/1609.34;
                 case LengthUnit.Millimeter: return (baseUnitValue) / 1e-3d;
                 case LengthUnit.Nanometer: return (baseUnitValue) / 1e-9d;
                 case LengthUnit.NauticalMile: return baseUnitValue/1852;
-                case LengthUnit.PrinterPica: return baseUnitValue*237.106301584;
-                case LengthUnit.PrinterPoint: return (baseUnitValue/2.54e-2)*72.27;
-                case LengthUnit.Shackle: return baseUnitValue/27.432;
-                case LengthUnit.Twip: return baseUnitValue*56692.913385826;
                 case LengthUnit.UsSurveyFoot: return baseUnitValue*3937/1200;
                 case LengthUnit.Yard: return baseUnitValue/0.9144;
                 default:

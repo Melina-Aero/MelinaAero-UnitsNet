@@ -81,24 +81,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get nullable Length from nullable DtpPicas.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromDtpPicas(QuantityValue? dtppicas)
-        {
-            return dtppicas.HasValue ? FromDtpPicas(dtppicas.Value) : default(Length?);
-        }
-
-        /// <summary>
-        ///     Get nullable Length from nullable DtpPoints.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromDtpPoints(QuantityValue? dtppoints)
-        {
-            return dtppoints.HasValue ? FromDtpPoints(dtppoints.Value) : default(Length?);
-        }
-
-        /// <summary>
         ///     Get nullable Length from nullable Fathoms.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
@@ -162,15 +144,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get nullable Length from nullable Mils.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromMils(QuantityValue? mils)
-        {
-            return mils.HasValue ? FromMils(mils.Value) : default(Length?);
-        }
-
-        /// <summary>
         ///     Get nullable Length from nullable Miles.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
@@ -204,42 +177,6 @@ namespace UnitsNet
         public static Length? FromNauticalMiles(QuantityValue? nauticalmiles)
         {
             return nauticalmiles.HasValue ? FromNauticalMiles(nauticalmiles.Value) : default(Length?);
-        }
-
-        /// <summary>
-        ///     Get nullable Length from nullable PrinterPicas.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromPrinterPicas(QuantityValue? printerpicas)
-        {
-            return printerpicas.HasValue ? FromPrinterPicas(printerpicas.Value) : default(Length?);
-        }
-
-        /// <summary>
-        ///     Get nullable Length from nullable PrinterPoints.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromPrinterPoints(QuantityValue? printerpoints)
-        {
-            return printerpoints.HasValue ? FromPrinterPoints(printerpoints.Value) : default(Length?);
-        }
-
-        /// <summary>
-        ///     Get nullable Length from nullable Shackles.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromShackles(QuantityValue? shackles)
-        {
-            return shackles.HasValue ? FromShackles(shackles.Value) : default(Length?);
-        }
-
-        /// <summary>
-        ///     Get nullable Length from nullable Twips.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Length? FromTwips(QuantityValue? twips)
-        {
-            return twips.HasValue ? FromTwips(twips.Value) : default(Length?);
         }
 
         /// <summary>

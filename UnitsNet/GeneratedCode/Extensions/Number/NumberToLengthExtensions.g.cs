@@ -66,28 +66,6 @@ namespace UnitsNet.Extensions.NumberToLength
 
         #endregion
 
-        #region DtpPica
-
-        /// <inheritdoc cref="Length.FromDtpPicas(UnitsNet.QuantityValue)" />
-        public static Length DtpPicas<T>(this T value) => Length.FromDtpPicas(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromDtpPicas(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? DtpPicas<T>(this T? value) where T : struct => Length.FromDtpPicas(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DtpPoint
-
-        /// <inheritdoc cref="Length.FromDtpPoints(UnitsNet.QuantityValue)" />
-        public static Length DtpPoints<T>(this T value) => Length.FromDtpPoints(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromDtpPoints(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? DtpPoints<T>(this T? value) where T : struct => Length.FromDtpPoints(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region Fathom
 
         /// <inheritdoc cref="Length.FromFathoms(UnitsNet.QuantityValue)" />
@@ -165,17 +143,6 @@ namespace UnitsNet.Extensions.NumberToLength
 
         #endregion
 
-        #region Mil
-
-        /// <inheritdoc cref="Length.FromMils(UnitsNet.QuantityValue)" />
-        public static Length Mils<T>(this T value) => Length.FromMils(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromMils(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Mils<T>(this T? value) where T : struct => Length.FromMils(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region Mile
 
         /// <inheritdoc cref="Length.FromMiles(UnitsNet.QuantityValue)" />
@@ -217,50 +184,6 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromNauticalMiles(UnitsNet.QuantityValue)" />
         [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
         public static Length? NauticalMiles<T>(this T? value) where T : struct => Length.FromNauticalMiles(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region PrinterPica
-
-        /// <inheritdoc cref="Length.FromPrinterPicas(UnitsNet.QuantityValue)" />
-        public static Length PrinterPicas<T>(this T value) => Length.FromPrinterPicas(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromPrinterPicas(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? PrinterPicas<T>(this T? value) where T : struct => Length.FromPrinterPicas(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region PrinterPoint
-
-        /// <inheritdoc cref="Length.FromPrinterPoints(UnitsNet.QuantityValue)" />
-        public static Length PrinterPoints<T>(this T value) => Length.FromPrinterPoints(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromPrinterPoints(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? PrinterPoints<T>(this T? value) where T : struct => Length.FromPrinterPoints(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region Shackle
-
-        /// <inheritdoc cref="Length.FromShackles(UnitsNet.QuantityValue)" />
-        public static Length Shackles<T>(this T value) => Length.FromShackles(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromShackles(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Shackles<T>(this T? value) where T : struct => Length.FromShackles(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region Twip
-
-        /// <inheritdoc cref="Length.FromTwips(UnitsNet.QuantityValue)" />
-        public static Length Twips<T>(this T value) => Length.FromTwips(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromTwips(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Twips<T>(this T? value) where T : struct => Length.FromTwips(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
