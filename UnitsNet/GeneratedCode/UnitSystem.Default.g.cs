@@ -3444,12 +3444,6 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "lbm/(in·s²)", "lb/(in·s²)"),
                             }),
-                        new CulturesForEnumValue((int) PressureUnit.Psi,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "psi"),
-                                new AbbreviationsForCulture("ru-RU", "psi"),
-                            }),
                         new CulturesForEnumValue((int) PressureUnit.TechnicalAtmosphere,
                             new[]
                             {
