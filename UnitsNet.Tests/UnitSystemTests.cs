@@ -265,7 +265,7 @@ namespace UnitsNet.Tests
             Assert.Equal(KinematicViscosityUnit.Microstokes, KinematicViscosity.ParseUnit("\u00b5St"));
             Assert.Equal(LengthUnit.Microinch, Length.ParseUnit("\u00b5in"));
             Assert.Equal(LengthUnit.Micrometer, Length.ParseUnit("\u00b5m"));
-            Assert.Equal(MassFlowUnit.MicrogramPerSecond, MassFlow.ParseUnit("\u00b5g/S"));
+            Assert.Equal(MassFlowUnit.MicrogramPerSecond, MassFlow.ParseUnit("\u00b5g/s"));
             Assert.Equal(MassUnit.Microgram, Mass.ParseUnit("\u00b5g"));
             Assert.Equal(PowerUnit.Microwatt, Power.ParseUnit("\u00b5W"));
             Assert.Equal(PressureUnit.Micropascal, Pressure.ParseUnit("\u00b5Pa"));
@@ -292,7 +292,7 @@ namespace UnitsNet.Tests
             Assert.Throws<UnitNotFoundException>(() => KinematicViscosity.ParseUnit("\u03bcSt"));
             Assert.Throws<UnitNotFoundException>(() => Length.ParseUnit("\u03bcin"));
             Assert.Throws<UnitNotFoundException>(() => Length.ParseUnit("\u03bcm"));
-            Assert.Throws<UnitNotFoundException>(() => MassFlow.ParseUnit("\u03bcg/S"));
+            Assert.Throws<UnitNotFoundException>(() => MassFlow.ParseUnit("\u03bcg/s"));
             Assert.Throws<UnitNotFoundException>(() => Mass.ParseUnit("\u03bcg"));
             Assert.Throws<UnitNotFoundException>(() => Power.ParseUnit("\u03bcW"));
             Assert.Throws<UnitNotFoundException>(() => Pressure.ParseUnit("\u03bcPa"));

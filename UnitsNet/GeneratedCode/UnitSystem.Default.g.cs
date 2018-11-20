@@ -2475,27 +2475,27 @@ namespace UnitsNet
                         new CulturesForEnumValue((int) MassFlowUnit.CentigramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "cg/S"),
+                                new AbbreviationsForCulture("en-US", "cg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.DecagramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "dag/S"),
+                                new AbbreviationsForCulture("en-US", "dag/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.DecigramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "dg/S"),
+                                new AbbreviationsForCulture("en-US", "dg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.GramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "g/S"),
+                                new AbbreviationsForCulture("en-US", "g/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.HectogramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "hg/S"),
+                                new AbbreviationsForCulture("en-US", "hg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.KilogramPerHour,
                             new[]
@@ -2512,7 +2512,7 @@ namespace UnitsNet
                         new CulturesForEnumValue((int) MassFlowUnit.KilogramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "kg/S"),
+                                new AbbreviationsForCulture("en-US", "kg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.MegapoundPerHour,
                             new[]
@@ -2527,17 +2527,17 @@ namespace UnitsNet
                         new CulturesForEnumValue((int) MassFlowUnit.MicrogramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "µg/S"),
+                                new AbbreviationsForCulture("en-US", "µg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.MilligramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "mg/S"),
+                                new AbbreviationsForCulture("en-US", "mg/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.NanogramPerSecond,
                             new[]
                             {
-                                new AbbreviationsForCulture("en-US", "ng/S"),
+                                new AbbreviationsForCulture("en-US", "ng/s"),
                             }),
                         new CulturesForEnumValue((int) MassFlowUnit.PoundPerHour,
                             new[]
