@@ -44,39 +44,6 @@ namespace UnitsNet.Extensions.NumberToDensity
 {
     public static class NumberToDensityExtensions
     {
-        #region CentigramPerDeciliter
-
-        /// <inheritdoc cref="Density.FromCentigramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density CentigramsPerDeciLiter<T>(this T value) => Density.FromCentigramsPerDeciLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromCentigramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? CentigramsPerDeciLiter<T>(this T? value) where T : struct => Density.FromCentigramsPerDeciLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region CentigramPerLiter
-
-        /// <inheritdoc cref="Density.FromCentigramsPerLiter(UnitsNet.QuantityValue)" />
-        public static Density CentigramsPerLiter<T>(this T value) => Density.FromCentigramsPerLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromCentigramsPerLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? CentigramsPerLiter<T>(this T? value) where T : struct => Density.FromCentigramsPerLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region CentigramPerMilliliter
-
-        /// <inheritdoc cref="Density.FromCentigramsPerMilliliter(UnitsNet.QuantityValue)" />
-        public static Density CentigramsPerMilliliter<T>(this T value) => Density.FromCentigramsPerMilliliter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromCentigramsPerMilliliter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? CentigramsPerMilliliter<T>(this T? value) where T : struct => Density.FromCentigramsPerMilliliter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region DecigramPerDeciliter
 
         /// <inheritdoc cref="Density.FromDecigramsPerDeciLiter(UnitsNet.QuantityValue)" />
@@ -231,39 +198,6 @@ namespace UnitsNet.Extensions.NumberToDensity
 
         #endregion
 
-        #region MicrogramPerDeciliter
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density MicrogramsPerDeciLiter<T>(this T value) => Density.FromMicrogramsPerDeciLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? MicrogramsPerDeciLiter<T>(this T? value) where T : struct => Density.FromMicrogramsPerDeciLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region MicrogramPerLiter
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerLiter(UnitsNet.QuantityValue)" />
-        public static Density MicrogramsPerLiter<T>(this T value) => Density.FromMicrogramsPerLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? MicrogramsPerLiter<T>(this T? value) where T : struct => Density.FromMicrogramsPerLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region MicrogramPerMilliliter
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        public static Density MicrogramsPerMilliliter<T>(this T value) => Density.FromMicrogramsPerMilliliter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromMicrogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? MicrogramsPerMilliliter<T>(this T? value) where T : struct => Density.FromMicrogramsPerMilliliter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region MilligramPerCubicMeter
 
         /// <inheritdoc cref="Density.FromMilligramsPerCubicMeter(UnitsNet.QuantityValue)" />
@@ -305,72 +239,6 @@ namespace UnitsNet.Extensions.NumberToDensity
         /// <inheritdoc cref="Density.FromMilligramsPerMilliliter(UnitsNet.QuantityValue)" />
         [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
         public static Density? MilligramsPerMilliliter<T>(this T? value) where T : struct => Density.FromMilligramsPerMilliliter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region NanogramPerDeciliter
-
-        /// <inheritdoc cref="Density.FromNanogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density NanogramsPerDeciLiter<T>(this T value) => Density.FromNanogramsPerDeciLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromNanogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? NanogramsPerDeciLiter<T>(this T? value) where T : struct => Density.FromNanogramsPerDeciLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region NanogramPerLiter
-
-        /// <inheritdoc cref="Density.FromNanogramsPerLiter(UnitsNet.QuantityValue)" />
-        public static Density NanogramsPerLiter<T>(this T value) => Density.FromNanogramsPerLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromNanogramsPerLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? NanogramsPerLiter<T>(this T? value) where T : struct => Density.FromNanogramsPerLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region NanogramPerMilliliter
-
-        /// <inheritdoc cref="Density.FromNanogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        public static Density NanogramsPerMilliliter<T>(this T value) => Density.FromNanogramsPerMilliliter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromNanogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? NanogramsPerMilliliter<T>(this T? value) where T : struct => Density.FromNanogramsPerMilliliter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region PicogramPerDeciliter
-
-        /// <inheritdoc cref="Density.FromPicogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density PicogramsPerDeciLiter<T>(this T value) => Density.FromPicogramsPerDeciLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromPicogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? PicogramsPerDeciLiter<T>(this T? value) where T : struct => Density.FromPicogramsPerDeciLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region PicogramPerLiter
-
-        /// <inheritdoc cref="Density.FromPicogramsPerLiter(UnitsNet.QuantityValue)" />
-        public static Density PicogramsPerLiter<T>(this T value) => Density.FromPicogramsPerLiter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromPicogramsPerLiter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? PicogramsPerLiter<T>(this T? value) where T : struct => Density.FromPicogramsPerLiter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region PicogramPerMilliliter
-
-        /// <inheritdoc cref="Density.FromPicogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        public static Density PicogramsPerMilliliter<T>(this T value) => Density.FromPicogramsPerMilliliter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Density.FromPicogramsPerMilliliter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Density? PicogramsPerMilliliter<T>(this T? value) where T : struct => Density.FromPicogramsPerMilliliter(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

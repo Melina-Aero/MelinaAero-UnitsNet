@@ -653,21 +653,6 @@ namespace UnitsNet
                 new UnitLocalization(typeof (DensityUnit),
                     new[]
                     {
-                        new CulturesForEnumValue((int) DensityUnit.CentigramPerDeciliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "cg/dl"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.CentigramPerLiter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "cg/L"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.CentigramPerMilliliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "cg/ml"),
-                            }),
                         new CulturesForEnumValue((int) DensityUnit.DecigramPerDeciliter,
                             new[]
                             {
@@ -740,21 +725,6 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "kip/in³"),
                             }),
-                        new CulturesForEnumValue((int) DensityUnit.MicrogramPerDeciliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "µg/dl"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.MicrogramPerLiter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "µg/L"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.MicrogramPerMilliliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "µg/ml"),
-                            }),
                         new CulturesForEnumValue((int) DensityUnit.MilligramPerCubicMeter,
                             new[]
                             {
@@ -775,36 +745,6 @@ namespace UnitsNet
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "mg/ml"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.NanogramPerDeciliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "ng/dl"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.NanogramPerLiter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "ng/L"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.NanogramPerMilliliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "ng/ml"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.PicogramPerDeciliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "pg/dl"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.PicogramPerLiter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "pg/L"),
-                            }),
-                        new CulturesForEnumValue((int) DensityUnit.PicogramPerMilliliter,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "pg/ml"),
                             }),
                         new CulturesForEnumValue((int) DensityUnit.PoundPerCubicFoot,
                             new[]
