@@ -32,18 +32,6 @@
       ]
     },
     {
-      "SingularName": "DegreeDelisle",
-      "PluralName": "DegreesDelisle",
-      "FromUnitToBaseFunc": "x*-2/3 + 373.15",
-      "FromBaseToUnitFunc": "(x - 373.15)*-3/2",
-      "Localization": [
-        {
-          "Culture": "en-US",
-          "Abbreviations": [ "°De" ]
-        }
-      ]
-    },
-    {
       "SingularName": "DegreeFahrenheit",
       "PluralName": "DegreesFahrenheit",
       "FromUnitToBaseFunc": "x*5/9 + 459.67*5/9",
@@ -76,30 +64,6 @@
         {
           "Culture": "en-US",
           "Abbreviations": [ "°R" ]
-        }
-      ]
-    },
-    {
-      "SingularName": "DegreeReaumur",
-      "PluralName": "DegreesReaumur",
-      "FromUnitToBaseFunc": "x*5/4 + 273.15",
-      "FromBaseToUnitFunc": "(x - 273.15)*4/5",
-      "Localization": [
-        {
-          "Culture": "en-US",
-          "Abbreviations": [ "°Ré" ]
-        }
-      ]
-    },
-    {
-      "SingularName": "DegreeRoemer",
-      "PluralName": "DegreesRoemer",
-      "FromUnitToBaseFunc": "x*40/21 + 273.15 - 7.5*40d/21",
-      "FromBaseToUnitFunc": "(x - (273.15 - 7.5*40d/21))*21/40",
-      "Localization": [
-        {
-          "Culture": "en-US",
-          "Abbreviations": [ "°Rø" ]
         }
       ]
     }

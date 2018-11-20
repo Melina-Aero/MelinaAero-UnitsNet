@@ -45,7 +45,6 @@ namespace UnitsNet.Units
     public enum VolumeUnit
     {
         Undefined = 0,
-        AuTablespoon,
         Centiliter,
         CubicCentimeter,
         CubicDecimeter,
@@ -73,25 +72,14 @@ namespace UnitsNet.Units
         MegacubicFoot,
         MegaimperialGallon,
         MegausGallon,
-        MetricCup,
-        MetricTeaspoon,
         Microliter,
         Milliliter,
         OilBarrel,
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTablespoon instead")]
-        Tablespoon,
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTeaspoon instead")]
-        Teaspoon,
-        UkTablespoon,
         UsBeerBarrel,
-        UsCustomaryCup,
         UsGallon,
-        UsLegalCup,
         UsOunce,
         UsPint,
         UsQuart,
-        UsTablespoon,
-        UsTeaspoon,
     }
 
     #pragma warning restore 1591

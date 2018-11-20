@@ -162,11 +162,6 @@ namespace UnitsNet
         public static VolumeUnit[] Units { get; } = Enum.GetValues(typeof(VolumeUnit)).Cast<VolumeUnit>().Except(new VolumeUnit[]{ VolumeUnit.Undefined }).ToArray();
 
         /// <summary>
-        ///     Get Volume in AuTablespoons.
-        /// </summary>
-        public double AuTablespoons => As(VolumeUnit.AuTablespoon);
-
-        /// <summary>
         ///     Get Volume in Centiliters.
         /// </summary>
         public double Centiliters => As(VolumeUnit.Centiliter);
@@ -302,16 +297,6 @@ namespace UnitsNet
         public double MegausGallons => As(VolumeUnit.MegausGallon);
 
         /// <summary>
-        ///     Get Volume in MetricCups.
-        /// </summary>
-        public double MetricCups => As(VolumeUnit.MetricCup);
-
-        /// <summary>
-        ///     Get Volume in MetricTeaspoons.
-        /// </summary>
-        public double MetricTeaspoons => As(VolumeUnit.MetricTeaspoon);
-
-        /// <summary>
         ///     Get Volume in Microliters.
         /// </summary>
         public double Microliters => As(VolumeUnit.Microliter);
@@ -327,41 +312,14 @@ namespace UnitsNet
         public double OilBarrels => As(VolumeUnit.OilBarrel);
 
         /// <summary>
-        ///     Get Volume in Tablespoons.
-        /// </summary>
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTablespoon instead")]
-        public double Tablespoons => As(VolumeUnit.Tablespoon);
-
-        /// <summary>
-        ///     Get Volume in Teaspoons.
-        /// </summary>
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTeaspoon instead")]
-        public double Teaspoons => As(VolumeUnit.Teaspoon);
-
-        /// <summary>
-        ///     Get Volume in UkTablespoons.
-        /// </summary>
-        public double UkTablespoons => As(VolumeUnit.UkTablespoon);
-
-        /// <summary>
         ///     Get Volume in UsBeerBarrels.
         /// </summary>
         public double UsBeerBarrels => As(VolumeUnit.UsBeerBarrel);
 
         /// <summary>
-        ///     Get Volume in UsCustomaryCups.
-        /// </summary>
-        public double UsCustomaryCups => As(VolumeUnit.UsCustomaryCup);
-
-        /// <summary>
         ///     Get Volume in UsGallons.
         /// </summary>
         public double UsGallons => As(VolumeUnit.UsGallon);
-
-        /// <summary>
-        ///     Get Volume in UsLegalCups.
-        /// </summary>
-        public double UsLegalCups => As(VolumeUnit.UsLegalCup);
 
         /// <summary>
         ///     Get Volume in UsOunces.
@@ -378,16 +336,6 @@ namespace UnitsNet
         /// </summary>
         public double UsQuarts => As(VolumeUnit.UsQuart);
 
-        /// <summary>
-        ///     Get Volume in UsTablespoons.
-        /// </summary>
-        public double UsTablespoons => As(VolumeUnit.UsTablespoon);
-
-        /// <summary>
-        ///     Get Volume in UsTeaspoons.
-        /// </summary>
-        public double UsTeaspoons => As(VolumeUnit.UsTeaspoon);
-
         #endregion
 
         #region Static
@@ -396,20 +344,6 @@ namespace UnitsNet
         ///     Gets an instance of this quantity with a value of 0 in the base unit CubicMeter.
         /// </summary>
         public static Volume Zero => new Volume(0, BaseUnit);
-
-        /// <summary>
-        ///     Get Volume from AuTablespoons.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromAuTablespoons(double autablespoons)
-#else
-        public static Volume FromAuTablespoons(QuantityValue autablespoons)
-#endif
-        {
-            double value = (double) autablespoons;
-            return new Volume(value, VolumeUnit.AuTablespoon);
-        }
 
         /// <summary>
         ///     Get Volume from Centiliters.
@@ -790,34 +724,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get Volume from MetricCups.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromMetricCups(double metriccups)
-#else
-        public static Volume FromMetricCups(QuantityValue metriccups)
-#endif
-        {
-            double value = (double) metriccups;
-            return new Volume(value, VolumeUnit.MetricCup);
-        }
-
-        /// <summary>
-        ///     Get Volume from MetricTeaspoons.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromMetricTeaspoons(double metricteaspoons)
-#else
-        public static Volume FromMetricTeaspoons(QuantityValue metricteaspoons)
-#endif
-        {
-            double value = (double) metricteaspoons;
-            return new Volume(value, VolumeUnit.MetricTeaspoon);
-        }
-
-        /// <summary>
         ///     Get Volume from Microliters.
         /// </summary>
 #if WINDOWS_UWP
@@ -860,50 +766,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get Volume from Tablespoons.
-        /// </summary>
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTablespoon instead")]
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromTablespoons(double tablespoons)
-#else
-        public static Volume FromTablespoons(QuantityValue tablespoons)
-#endif
-        {
-            double value = (double) tablespoons;
-            return new Volume(value, VolumeUnit.Tablespoon);
-        }
-
-        /// <summary>
-        ///     Get Volume from Teaspoons.
-        /// </summary>
-        [System.Obsolete("Deprecated due to github issue #134, please use UsTeaspoon instead")]
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromTeaspoons(double teaspoons)
-#else
-        public static Volume FromTeaspoons(QuantityValue teaspoons)
-#endif
-        {
-            double value = (double) teaspoons;
-            return new Volume(value, VolumeUnit.Teaspoon);
-        }
-
-        /// <summary>
-        ///     Get Volume from UkTablespoons.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromUkTablespoons(double uktablespoons)
-#else
-        public static Volume FromUkTablespoons(QuantityValue uktablespoons)
-#endif
-        {
-            double value = (double) uktablespoons;
-            return new Volume(value, VolumeUnit.UkTablespoon);
-        }
-
-        /// <summary>
         ///     Get Volume from UsBeerBarrels.
         /// </summary>
 #if WINDOWS_UWP
@@ -918,20 +780,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get Volume from UsCustomaryCups.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromUsCustomaryCups(double uscustomarycups)
-#else
-        public static Volume FromUsCustomaryCups(QuantityValue uscustomarycups)
-#endif
-        {
-            double value = (double) uscustomarycups;
-            return new Volume(value, VolumeUnit.UsCustomaryCup);
-        }
-
-        /// <summary>
         ///     Get Volume from UsGallons.
         /// </summary>
 #if WINDOWS_UWP
@@ -943,20 +791,6 @@ namespace UnitsNet
         {
             double value = (double) usgallons;
             return new Volume(value, VolumeUnit.UsGallon);
-        }
-
-        /// <summary>
-        ///     Get Volume from UsLegalCups.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromUsLegalCups(double uslegalcups)
-#else
-        public static Volume FromUsLegalCups(QuantityValue uslegalcups)
-#endif
-        {
-            double value = (double) uslegalcups;
-            return new Volume(value, VolumeUnit.UsLegalCup);
         }
 
         /// <summary>
@@ -1000,35 +834,6 @@ namespace UnitsNet
             double value = (double) usquarts;
             return new Volume(value, VolumeUnit.UsQuart);
         }
-
-        /// <summary>
-        ///     Get Volume from UsTablespoons.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromUsTablespoons(double ustablespoons)
-#else
-        public static Volume FromUsTablespoons(QuantityValue ustablespoons)
-#endif
-        {
-            double value = (double) ustablespoons;
-            return new Volume(value, VolumeUnit.UsTablespoon);
-        }
-
-        /// <summary>
-        ///     Get Volume from UsTeaspoons.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Volume FromUsTeaspoons(double usteaspoons)
-#else
-        public static Volume FromUsTeaspoons(QuantityValue usteaspoons)
-#endif
-        {
-            double value = (double) usteaspoons;
-            return new Volume(value, VolumeUnit.UsTeaspoon);
-        }
-
 
         /// <summary>
         ///     Dynamically convert from value and unit enum <see cref="VolumeUnit" /> to <see cref="Volume" />.
@@ -1201,7 +1006,6 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case VolumeUnit.AuTablespoon: return _value*2e-5;
                 case VolumeUnit.Centiliter: return (_value/1e3) * 1e-2d;
                 case VolumeUnit.CubicCentimeter: return _value/1e6;
                 case VolumeUnit.CubicDecimeter: return _value/1e3;
@@ -1229,23 +1033,14 @@ namespace UnitsNet
                 case VolumeUnit.MegacubicFoot: return (_value*0.0283168) * 1e6d;
                 case VolumeUnit.MegaimperialGallon: return (_value*0.00454609000000181429905810072407) * 1e6d;
                 case VolumeUnit.MegausGallon: return (_value*0.00378541) * 1e6d;
-                case VolumeUnit.MetricCup: return _value*0.00025;
-                case VolumeUnit.MetricTeaspoon: return _value*0.5e-5;
                 case VolumeUnit.Microliter: return (_value/1e3) * 1e-6d;
                 case VolumeUnit.Milliliter: return (_value/1e3) * 1e-3d;
                 case VolumeUnit.OilBarrel: return _value*0.158987294928;
-                case VolumeUnit.Tablespoon: return _value*1.478676478125e-5;
-                case VolumeUnit.Teaspoon: return _value*4.92892159375e-6;
-                case VolumeUnit.UkTablespoon: return _value*1.5e-5;
                 case VolumeUnit.UsBeerBarrel: return _value*0.1173477658;
-                case VolumeUnit.UsCustomaryCup: return _value*0.0002365882365;
                 case VolumeUnit.UsGallon: return _value*0.00378541;
-                case VolumeUnit.UsLegalCup: return _value*0.00024;
                 case VolumeUnit.UsOunce: return _value*2.957352956253760505068307980135e-5;
                 case VolumeUnit.UsPint: return _value*4.73176473e-4;
                 case VolumeUnit.UsQuart: return _value*9.46352946e-4;
-                case VolumeUnit.UsTablespoon: return _value*1.478676478125e-5;
-                case VolumeUnit.UsTeaspoon: return _value*4.92892159375e-6;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -1260,7 +1055,6 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case VolumeUnit.AuTablespoon: return baseUnitValue/2e-5;
                 case VolumeUnit.Centiliter: return (baseUnitValue*1e3) / 1e-2d;
                 case VolumeUnit.CubicCentimeter: return baseUnitValue*1e6;
                 case VolumeUnit.CubicDecimeter: return baseUnitValue*1e3;
@@ -1288,23 +1082,14 @@ namespace UnitsNet
                 case VolumeUnit.MegacubicFoot: return (baseUnitValue/0.0283168) / 1e6d;
                 case VolumeUnit.MegaimperialGallon: return (baseUnitValue/0.00454609000000181429905810072407) / 1e6d;
                 case VolumeUnit.MegausGallon: return (baseUnitValue/0.00378541) / 1e6d;
-                case VolumeUnit.MetricCup: return baseUnitValue/0.00025;
-                case VolumeUnit.MetricTeaspoon: return baseUnitValue/0.5e-5;
                 case VolumeUnit.Microliter: return (baseUnitValue*1e3) / 1e-6d;
                 case VolumeUnit.Milliliter: return (baseUnitValue*1e3) / 1e-3d;
                 case VolumeUnit.OilBarrel: return baseUnitValue/0.158987294928;
-                case VolumeUnit.Tablespoon: return baseUnitValue/1.478676478125e-5;
-                case VolumeUnit.Teaspoon: return baseUnitValue/4.92892159375e-6;
-                case VolumeUnit.UkTablespoon: return baseUnitValue/1.5e-5;
                 case VolumeUnit.UsBeerBarrel: return baseUnitValue/0.1173477658;
-                case VolumeUnit.UsCustomaryCup: return baseUnitValue/0.0002365882365;
                 case VolumeUnit.UsGallon: return baseUnitValue/0.00378541;
-                case VolumeUnit.UsLegalCup: return baseUnitValue/0.00024;
                 case VolumeUnit.UsOunce: return baseUnitValue/2.957352956253760505068307980135e-5;
                 case VolumeUnit.UsPint: return baseUnitValue/4.73176473e-4;
                 case VolumeUnit.UsQuart: return baseUnitValue/9.46352946e-4;
-                case VolumeUnit.UsTablespoon: return baseUnitValue/1.478676478125e-5;
-                case VolumeUnit.UsTeaspoon: return baseUnitValue/4.92892159375e-6;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }
@@ -1325,11 +1110,6 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">
         ///     Expected string to have one or two pairs of quantity and unit in the format
         ///     "&lt;quantity&gt; &lt;unit&gt;". Eg. "5.5 m" or "1ft 2in"
-        /// </exception>
-        /// <exception cref="AmbiguousUnitParseException">
-        ///     More than one unit is represented by the specified unit abbreviation.
-        ///     Example: Volume.Parse("1 cup") will throw, because it can refer to any of
-        ///     <see cref="VolumeUnit.MetricCup" />, <see cref="VolumeUnit.UsLegalCup" /> and <see cref="VolumeUnit.UsCustomaryCup" />.
         /// </exception>
         /// <exception cref="UnitsNetException">
         ///     If anything else goes wrong, typically due to a bug or unhandled case.

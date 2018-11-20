@@ -67,29 +67,6 @@ namespace UnitsNet.Extensions.NumberToTemperatureDelta
 
         #endregion
 
-        #region DegreeDelisle
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesDelisle(UnitsNet.QuantityValue)" />
-        public static TemperatureDelta DegreesDelisle<T>(this T value) => TemperatureDelta.FromDegreesDelisle(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesDelisle(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesDelisle<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesDelisle(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeDelisleDelta
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesDelisleDelta(UnitsNet.QuantityValue)" />
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeDelisle instead")]
-        public static TemperatureDelta DegreesDelisleDelta<T>(this T value) => TemperatureDelta.FromDegreesDelisleDelta(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesDelisleDelta(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesDelisleDelta<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesDelisleDelta(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region DegreeFahrenheit
 
         /// <inheritdoc cref="TemperatureDelta.FromDegreesFahrenheit(UnitsNet.QuantityValue)" />
@@ -156,52 +133,6 @@ namespace UnitsNet.Extensions.NumberToTemperatureDelta
         /// <inheritdoc cref="TemperatureDelta.FromDegreesRankineDelta(UnitsNet.QuantityValue)" />
         [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
         public static TemperatureDelta? DegreesRankineDelta<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesRankineDelta(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeReaumur
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesReaumur(UnitsNet.QuantityValue)" />
-        public static TemperatureDelta DegreesReaumur<T>(this T value) => TemperatureDelta.FromDegreesReaumur(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesReaumur(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesReaumur<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesReaumur(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeReaumurDelta
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesReaumurDelta(UnitsNet.QuantityValue)" />
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeReaumur instead")]
-        public static TemperatureDelta DegreesReaumurDelta<T>(this T value) => TemperatureDelta.FromDegreesReaumurDelta(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesReaumurDelta(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesReaumurDelta<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesReaumurDelta(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeRoemer
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesRoemer(UnitsNet.QuantityValue)" />
-        public static TemperatureDelta DegreesRoemer<T>(this T value) => TemperatureDelta.FromDegreesRoemer(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesRoemer(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesRoemer<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesRoemer(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeRoemerDelta
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesRoemerDelta(UnitsNet.QuantityValue)" />
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeRoemer instead")]
-        public static TemperatureDelta DegreesRoemerDelta<T>(this T value) => TemperatureDelta.FromDegreesRoemerDelta(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="TemperatureDelta.FromDegreesRoemerDelta(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static TemperatureDelta? DegreesRoemerDelta<T>(this T? value) where T : struct => TemperatureDelta.FromDegreesRoemerDelta(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

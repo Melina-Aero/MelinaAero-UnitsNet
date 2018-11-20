@@ -63,15 +63,6 @@ namespace UnitsNet
         #region Nullable From Methods
 
         /// <summary>
-        ///     Get nullable Volume from nullable AuTablespoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromAuTablespoons(QuantityValue? autablespoons)
-        {
-            return autablespoons.HasValue ? FromAuTablespoons(autablespoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
         ///     Get nullable Volume from nullable Centiliters.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
@@ -315,24 +306,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get nullable Volume from nullable MetricCups.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromMetricCups(QuantityValue? metriccups)
-        {
-            return metriccups.HasValue ? FromMetricCups(metriccups.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable MetricTeaspoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromMetricTeaspoons(QuantityValue? metricteaspoons)
-        {
-            return metricteaspoons.HasValue ? FromMetricTeaspoons(metricteaspoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
         ///     Get nullable Volume from nullable Microliters.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
@@ -360,33 +333,6 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get nullable Volume from nullable Tablespoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromTablespoons(QuantityValue? tablespoons)
-        {
-            return tablespoons.HasValue ? FromTablespoons(tablespoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable Teaspoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromTeaspoons(QuantityValue? teaspoons)
-        {
-            return teaspoons.HasValue ? FromTeaspoons(teaspoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable UkTablespoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromUkTablespoons(QuantityValue? uktablespoons)
-        {
-            return uktablespoons.HasValue ? FromUkTablespoons(uktablespoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
         ///     Get nullable Volume from nullable UsBeerBarrels.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
@@ -396,30 +342,12 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Get nullable Volume from nullable UsCustomaryCups.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromUsCustomaryCups(QuantityValue? uscustomarycups)
-        {
-            return uscustomarycups.HasValue ? FromUsCustomaryCups(uscustomarycups.Value) : default(Volume?);
-        }
-
-        /// <summary>
         ///     Get nullable Volume from nullable UsGallons.
         /// </summary>
         [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
         public static Volume? FromUsGallons(QuantityValue? usgallons)
         {
             return usgallons.HasValue ? FromUsGallons(usgallons.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable UsLegalCups.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromUsLegalCups(QuantityValue? uslegalcups)
-        {
-            return uslegalcups.HasValue ? FromUsLegalCups(uslegalcups.Value) : default(Volume?);
         }
 
         /// <summary>
@@ -447,24 +375,6 @@ namespace UnitsNet
         public static Volume? FromUsQuarts(QuantityValue? usquarts)
         {
             return usquarts.HasValue ? FromUsQuarts(usquarts.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable UsTablespoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromUsTablespoons(QuantityValue? ustablespoons)
-        {
-            return ustablespoons.HasValue ? FromUsTablespoons(ustablespoons.Value) : default(Volume?);
-        }
-
-        /// <summary>
-        ///     Get nullable Volume from nullable UsTeaspoons.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Volume? FromUsTeaspoons(QuantityValue? usteaspoons)
-        {
-            return usteaspoons.HasValue ? FromUsTeaspoons(usteaspoons.Value) : default(Volume?);
         }
 
         /// <summary>
@@ -582,11 +492,6 @@ namespace UnitsNet
         /// <exception cref="ArgumentException">
         ///     Expected string to have one or two pairs of quantity and unit in the format
         ///     "&lt;quantity&gt; &lt;unit&gt;". Eg. "5.5 m" or "1ft 2in"
-        /// </exception>
-        /// <exception cref="AmbiguousUnitParseException">
-        ///     More than one unit is represented by the specified unit abbreviation.
-        ///     Example: Volume.Parse("1 cup") will throw, because it can refer to any of
-        ///     <see cref="VolumeUnit.MetricCup" />, <see cref="VolumeUnit.UsLegalCup" /> and <see cref="VolumeUnit.UsCustomaryCup" />.
         /// </exception>
         /// <exception cref="UnitsNetException">
         ///     If anything else goes wrong, typically due to a bug or unhandled case.

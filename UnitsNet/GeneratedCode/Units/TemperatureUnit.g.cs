@@ -46,12 +46,9 @@ namespace UnitsNet.Units
     {
         Undefined = 0,
         DegreeCelsius,
-        DegreeDelisle,
         DegreeFahrenheit,
         DegreeNewton,
         DegreeRankine,
-        DegreeReaumur,
-        DegreeRoemer,
         Kelvin,
     }
 

@@ -48,9 +48,6 @@ namespace UnitsNet.Units
         DegreeCelsius,
         [System.Obsolete("Deprecated due to github issue #180, please use DegreeCelsius instead")]
         DegreeCelsiusDelta,
-        DegreeDelisle,
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeDelisle instead")]
-        DegreeDelisleDelta,
         DegreeFahrenheit,
         [System.Obsolete("Deprecated due to github issue #180, please use DegreeFahrenheit instead")]
         DegreeFahrenheitDelta,
@@ -60,12 +57,6 @@ namespace UnitsNet.Units
         DegreeRankine,
         [System.Obsolete("Deprecated due to github issue #180, please use DegreeRankine instead")]
         DegreeRankineDelta,
-        DegreeReaumur,
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeReaumur instead")]
-        DegreeReaumurDelta,
-        DegreeRoemer,
-        [System.Obsolete("Deprecated due to github issue #180, please use DegreeRoemer instead")]
-        DegreeRoemerDelta,
         Kelvin,
         [System.Obsolete("Deprecated due to github issue #180, please use Kelvin instead")]
         KelvinDelta,

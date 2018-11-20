@@ -55,17 +55,6 @@ namespace UnitsNet.Extensions.NumberToTemperature
 
         #endregion
 
-        #region DegreeDelisle
-
-        /// <inheritdoc cref="Temperature.FromDegreesDelisle(UnitsNet.QuantityValue)" />
-        public static Temperature DegreesDelisle<T>(this T value) => Temperature.FromDegreesDelisle(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Temperature.FromDegreesDelisle(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Temperature? DegreesDelisle<T>(this T? value) where T : struct => Temperature.FromDegreesDelisle(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region DegreeFahrenheit
 
         /// <inheritdoc cref="Temperature.FromDegreesFahrenheit(UnitsNet.QuantityValue)" />
@@ -99,28 +88,6 @@ namespace UnitsNet.Extensions.NumberToTemperature
 
         #endregion
 
-        #region DegreeReaumur
-
-        /// <inheritdoc cref="Temperature.FromDegreesReaumur(UnitsNet.QuantityValue)" />
-        public static Temperature DegreesReaumur<T>(this T value) => Temperature.FromDegreesReaumur(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Temperature.FromDegreesReaumur(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Temperature? DegreesReaumur<T>(this T? value) where T : struct => Temperature.FromDegreesReaumur(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
-        #region DegreeRoemer
-
-        /// <inheritdoc cref="Temperature.FromDegreesRoemer(UnitsNet.QuantityValue)" />
-        public static Temperature DegreesRoemer<T>(this T value) => Temperature.FromDegreesRoemer(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Temperature.FromDegreesRoemer(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Temperature? DegreesRoemer<T>(this T? value) where T : struct => Temperature.FromDegreesRoemer(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
-        #endregion
-
         #region Kelvin
 
         /// <inheritdoc cref="Temperature.FromKelvins(UnitsNet.QuantityValue)" />
@@ -131,7 +98,6 @@ namespace UnitsNet.Extensions.NumberToTemperature
         public static Temperature? Kelvins<T>(this T? value) where T : struct => Temperature.FromKelvins(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
-
     }
 }
 #endif

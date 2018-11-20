@@ -167,11 +167,6 @@ namespace UnitsNet
         public double DegreesCelsius => As(TemperatureUnit.DegreeCelsius);
 
         /// <summary>
-        ///     Get Temperature in DegreesDelisle.
-        /// </summary>
-        public double DegreesDelisle => As(TemperatureUnit.DegreeDelisle);
-
-        /// <summary>
         ///     Get Temperature in DegreesFahrenheit.
         /// </summary>
         public double DegreesFahrenheit => As(TemperatureUnit.DegreeFahrenheit);
@@ -185,16 +180,6 @@ namespace UnitsNet
         ///     Get Temperature in DegreesRankine.
         /// </summary>
         public double DegreesRankine => As(TemperatureUnit.DegreeRankine);
-
-        /// <summary>
-        ///     Get Temperature in DegreesReaumur.
-        /// </summary>
-        public double DegreesReaumur => As(TemperatureUnit.DegreeReaumur);
-
-        /// <summary>
-        ///     Get Temperature in DegreesRoemer.
-        /// </summary>
-        public double DegreesRoemer => As(TemperatureUnit.DegreeRoemer);
 
         /// <summary>
         ///     Get Temperature in Kelvins.
@@ -222,20 +207,6 @@ namespace UnitsNet
         {
             double value = (double) degreescelsius;
             return new Temperature(value, TemperatureUnit.DegreeCelsius);
-        }
-
-        /// <summary>
-        ///     Get Temperature from DegreesDelisle.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Temperature FromDegreesDelisle(double degreesdelisle)
-#else
-        public static Temperature FromDegreesDelisle(QuantityValue degreesdelisle)
-#endif
-        {
-            double value = (double) degreesdelisle;
-            return new Temperature(value, TemperatureUnit.DegreeDelisle);
         }
 
         /// <summary>
@@ -278,34 +249,6 @@ namespace UnitsNet
         {
             double value = (double) degreesrankine;
             return new Temperature(value, TemperatureUnit.DegreeRankine);
-        }
-
-        /// <summary>
-        ///     Get Temperature from DegreesReaumur.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Temperature FromDegreesReaumur(double degreesreaumur)
-#else
-        public static Temperature FromDegreesReaumur(QuantityValue degreesreaumur)
-#endif
-        {
-            double value = (double) degreesreaumur;
-            return new Temperature(value, TemperatureUnit.DegreeReaumur);
-        }
-
-        /// <summary>
-        ///     Get Temperature from DegreesRoemer.
-        /// </summary>
-#if WINDOWS_UWP
-        [Windows.Foundation.Metadata.DefaultOverload]
-        public static Temperature FromDegreesRoemer(double degreesroemer)
-#else
-        public static Temperature FromDegreesRoemer(QuantityValue degreesroemer)
-#endif
-        {
-            double value = (double) degreesroemer;
-            return new Temperature(value, TemperatureUnit.DegreeRoemer);
         }
 
         /// <summary>
@@ -495,12 +438,9 @@ namespace UnitsNet
             switch(Unit)
             {
                 case TemperatureUnit.DegreeCelsius: return _value + 273.15;
-                case TemperatureUnit.DegreeDelisle: return _value*-2/3 + 373.15;
                 case TemperatureUnit.DegreeFahrenheit: return _value*5/9 + 459.67*5/9;
                 case TemperatureUnit.DegreeNewton: return _value*100/33 + 273.15;
                 case TemperatureUnit.DegreeRankine: return _value*5/9;
-                case TemperatureUnit.DegreeReaumur: return _value*5/4 + 273.15;
-                case TemperatureUnit.DegreeRoemer: return _value*40/21 + 273.15 - 7.5*40d/21;
                 case TemperatureUnit.Kelvin: return _value;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
@@ -517,12 +457,9 @@ namespace UnitsNet
             switch(unit)
             {
                 case TemperatureUnit.DegreeCelsius: return baseUnitValue - 273.15;
-                case TemperatureUnit.DegreeDelisle: return (baseUnitValue - 373.15)*-3/2;
                 case TemperatureUnit.DegreeFahrenheit: return (baseUnitValue - 459.67*5/9)*9/5;
                 case TemperatureUnit.DegreeNewton: return (baseUnitValue - 273.15)*33/100;
                 case TemperatureUnit.DegreeRankine: return baseUnitValue*9/5;
-                case TemperatureUnit.DegreeReaumur: return (baseUnitValue - 273.15)*4/5;
-                case TemperatureUnit.DegreeRoemer: return (baseUnitValue - (273.15 - 7.5*40d/21))*21/40;
                 case TemperatureUnit.Kelvin: return baseUnitValue;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");

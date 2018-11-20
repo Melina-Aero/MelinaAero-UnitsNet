@@ -3996,11 +3996,6 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "°C"),
                             }),
-                        new CulturesForEnumValue((int) TemperatureUnit.DegreeDelisle,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "°De"),
-                            }),
                         new CulturesForEnumValue((int) TemperatureUnit.DegreeFahrenheit,
                             new[]
                             {
@@ -4015,16 +4010,6 @@ namespace UnitsNet
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "°R"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureUnit.DegreeReaumur,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "°Ré"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureUnit.DegreeRoemer,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "°Rø"),
                             }),
                         new CulturesForEnumValue((int) TemperatureUnit.Kelvin,
                             new[]
@@ -4099,16 +4084,6 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "∆°C"),
                             }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeDelisle,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°De"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeDelisleDelta,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°De"),
-                            }),
                         new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeFahrenheit,
                             new[]
                             {
@@ -4138,26 +4113,6 @@ namespace UnitsNet
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "∆°R"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeReaumur,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°Ré"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeReaumurDelta,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°Ré"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeRoemer,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°Rø"),
-                            }),
-                        new CulturesForEnumValue((int) TemperatureDeltaUnit.DegreeRoemerDelta,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "∆°Rø"),
                             }),
                         new CulturesForEnumValue((int) TemperatureDeltaUnit.Kelvin,
                             new[]
@@ -4337,13 +4292,6 @@ namespace UnitsNet
                 new UnitLocalization(typeof (VolumeUnit),
                     new[]
                     {
-                        new CulturesForEnumValue((int) VolumeUnit.AuTablespoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
-                                new AbbreviationsForCulture("ru-RU", ""),
-                                new AbbreviationsForCulture("nb-NO", ""),
-                            }),
                         new CulturesForEnumValue((int) VolumeUnit.Centiliter,
                             new[]
                             {
@@ -4505,18 +4453,6 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("en-US", "Mgal (U.S.)"),
                                 new AbbreviationsForCulture("ru-RU", "MАмериканский галлон"),
                             }),
-                        new CulturesForEnumValue((int) VolumeUnit.MetricCup,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.MetricTeaspoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "tsp", "t", "ts", "tspn", "t.", "ts.", "tsp.", "tspn.", "teaspoon"),
-                                new AbbreviationsForCulture("ru-RU", ""),
-                                new AbbreviationsForCulture("nb-NO", ""),
-                            }),
                         new CulturesForEnumValue((int) VolumeUnit.Microliter,
                             new[]
                             {
@@ -4534,47 +4470,16 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "bbl"),
                             }),
-                        new CulturesForEnumValue((int) VolumeUnit.Tablespoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "Tbsp", "Tbs", "T", "tb", "tbs", "tbsp", "tblsp", "tblspn", "Tbsp.", "Tbs.", "T.", "tb.", "tbs.", "tbsp.", "tblsp.", "tblspn.", "tablespoon", "Tablespoon"),
-                                new AbbreviationsForCulture("ru-RU", "столовая ложка"),
-                                new AbbreviationsForCulture("nb-NO", "ss", "ss.", "SS", "SS."),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.Teaspoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", "tsp", "t", "ts", "tspn", "t.", "ts.", "tsp.", "tspn.", "teaspoon"),
-                                new AbbreviationsForCulture("ru-RU", "чайная ложка"),
-                                new AbbreviationsForCulture("nb-NO", "ts", "ts."),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.UkTablespoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
-                                new AbbreviationsForCulture("ru-RU", ""),
-                                new AbbreviationsForCulture("nb-NO", ""),
-                            }),
                         new CulturesForEnumValue((int) VolumeUnit.UsBeerBarrel,
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "bl (U.S.)"),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.UsCustomaryCup,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
                             }),
                         new CulturesForEnumValue((int) VolumeUnit.UsGallon,
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "gal (U.S.)"),
                                 new AbbreviationsForCulture("ru-RU", "Американский галлон"),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.UsLegalCup,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
                             }),
                         new CulturesForEnumValue((int) VolumeUnit.UsOunce,
                             new[]
@@ -4591,20 +4496,6 @@ namespace UnitsNet
                             new[]
                             {
                                 new AbbreviationsForCulture("en-US", "qt (U.S.)"),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.UsTablespoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
-                                new AbbreviationsForCulture("ru-RU", ""),
-                                new AbbreviationsForCulture("nb-NO", ""),
-                            }),
-                        new CulturesForEnumValue((int) VolumeUnit.UsTeaspoon,
-                            new[]
-                            {
-                                new AbbreviationsForCulture("en-US", ""),
-                                new AbbreviationsForCulture("ru-RU", ""),
-                                new AbbreviationsForCulture("nb-NO", ""),
                             }),
                     }),
                 new UnitLocalization(typeof (VolumeFlowUnit),
