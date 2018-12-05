@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Ratio : IQuantity
 #else
-    public partial struct Ratio : IQuantity, IComparable, IComparable<Ratio>
+    public partial class Ratio : IQuantity, IComparable, IComparable<Ratio>
 #endif
     {
         /// <summary>

@@ -53,37 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct Capacitance : IComparable, IComparable<Capacitance>
+    public partial class Capacitance : IComparable, IComparable<Capacitance>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable Capacitance from nullable Farads.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static Capacitance? FromFarads(QuantityValue? farads)
-        {
-            return farads.HasValue ? FromFarads(farads.Value) : default(Capacitance?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="CapacitanceUnit" /> to <see cref="Capacitance" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>Capacitance unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Capacitance? From(QuantityValue? value, CapacitanceUnit fromUnit)
-        {
-            return value.HasValue ? new Capacitance((double)value.Value, fromUnit) : default(Capacitance?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class LapseRate : IQuantity
 #else
-    public partial struct LapseRate : IQuantity, IComparable, IComparable<LapseRate>
+    public partial class LapseRate : IQuantity, IComparable, IComparable<LapseRate>
 #endif
     {
         /// <summary>

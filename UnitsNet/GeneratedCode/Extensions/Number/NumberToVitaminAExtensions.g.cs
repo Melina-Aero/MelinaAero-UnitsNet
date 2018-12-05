@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToVitaminA
         /// <inheritdoc cref="VitaminA.FromInternationalUnits(UnitsNet.QuantityValue)" />
         public static VitaminA InternationalUnits<T>(this T value) => VitaminA.FromInternationalUnits(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="VitaminA.FromInternationalUnits(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static VitaminA? InternationalUnits<T>(this T? value) where T : struct => VitaminA.FromInternationalUnits(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

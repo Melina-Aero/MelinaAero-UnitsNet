@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToRotationalAcceleration
         /// <inheritdoc cref="RotationalAcceleration.FromDegreesPerSecondSquared(UnitsNet.QuantityValue)" />
         public static RotationalAcceleration DegreesPerSecondSquared<T>(this T value) => RotationalAcceleration.FromDegreesPerSecondSquared(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="RotationalAcceleration.FromDegreesPerSecondSquared(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalAcceleration? DegreesPerSecondSquared<T>(this T? value) where T : struct => RotationalAcceleration.FromDegreesPerSecondSquared(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region RadianPerSecondSquared
@@ -60,20 +56,12 @@ namespace UnitsNet.Extensions.NumberToRotationalAcceleration
         /// <inheritdoc cref="RotationalAcceleration.FromRadiansPerSecondSquared(UnitsNet.QuantityValue)" />
         public static RotationalAcceleration RadiansPerSecondSquared<T>(this T value) => RotationalAcceleration.FromRadiansPerSecondSquared(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="RotationalAcceleration.FromRadiansPerSecondSquared(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalAcceleration? RadiansPerSecondSquared<T>(this T? value) where T : struct => RotationalAcceleration.FromRadiansPerSecondSquared(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region RevolutionPerMinutePerSecond
 
         /// <inheritdoc cref="RotationalAcceleration.FromRevolutionsPerMinutePerSecond(UnitsNet.QuantityValue)" />
         public static RotationalAcceleration RevolutionsPerMinutePerSecond<T>(this T value) => RotationalAcceleration.FromRevolutionsPerMinutePerSecond(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="RotationalAcceleration.FromRevolutionsPerMinutePerSecond(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalAcceleration? RevolutionsPerMinutePerSecond<T>(this T? value) where T : struct => RotationalAcceleration.FromRevolutionsPerMinutePerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

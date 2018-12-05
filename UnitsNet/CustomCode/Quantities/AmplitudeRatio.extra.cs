@@ -31,11 +31,11 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class AmplitudeRatio
 #else
-    public partial struct AmplitudeRatio
+    public partial class AmplitudeRatio
 #endif
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AmplitudeRatio" /> struct from the specified electric potential
+        ///     Initializes a new instance of the <see cref="AmplitudeRatio" /> class from the specified electric potential
         ///     referenced to one volt RMS. This assumes both the specified electric potential and the one volt reference have the
         ///     same
         ///     resistance.
@@ -49,7 +49,6 @@ namespace UnitsNet
         public
 #endif
             AmplitudeRatio(ElectricPotential voltage)
-            : this()
         {
             if (voltage.Volts <= 0)
                 throw new ArgumentOutOfRangeException(

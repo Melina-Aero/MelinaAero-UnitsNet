@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class MolarMass : IQuantity
 #else
-    public partial struct MolarMass : IQuantity, IComparable, IComparable<MolarMass>
+    public partial class MolarMass : IQuantity, IComparable, IComparable<MolarMass>
 #endif
     {
         /// <summary>

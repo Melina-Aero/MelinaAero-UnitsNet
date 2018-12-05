@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Magnetization : IQuantity
 #else
-    public partial struct Magnetization : IQuantity, IComparable, IComparable<Magnetization>
+    public partial class Magnetization : IQuantity, IComparable, IComparable<Magnetization>
 #endif
     {
         /// <summary>

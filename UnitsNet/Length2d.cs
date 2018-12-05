@@ -32,7 +32,7 @@ namespace UnitsNet
     ///     A class for representing position in two dimensions.
     /// </summary>
 #if WINDOWS_UWP
-    public struct Length2d
+    public class Length2d
     {
         /// <summary>
         ///     Returns a point represented in meters.
@@ -40,7 +40,7 @@ namespace UnitsNet
         public Vector2 Meters;
     }
 #else
-    public struct Length2d : IEquatable<Length2d>
+    public class Length2d : IEquatable<Length2d>
     {
         /// <summary>
         ///     Returns a point represented in meters.
@@ -115,7 +115,7 @@ namespace UnitsNet
 
         #region Static methods
 
-        public static Length2d Zero => new Length2d();
+        public static Length2d Zero => new Length2d(0, 0);
 
         public static Length2d FromMeters(double xMeters, double yMeters)
         {

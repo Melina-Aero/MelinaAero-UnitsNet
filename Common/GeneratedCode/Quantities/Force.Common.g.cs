@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Force : IQuantity
 #else
-    public partial struct Force : IQuantity, IComparable, IComparable<Force>
+    public partial class Force : IQuantity, IComparable, IComparable<Force>
 #endif
     {
         /// <summary>

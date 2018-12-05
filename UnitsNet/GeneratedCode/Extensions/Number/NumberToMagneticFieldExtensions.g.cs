@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToMagneticField
         /// <inheritdoc cref="MagneticField.FromTeslas(UnitsNet.QuantityValue)" />
         public static MagneticField Teslas<T>(this T value) => MagneticField.FromTeslas(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="MagneticField.FromTeslas(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static MagneticField? Teslas<T>(this T? value) where T : struct => MagneticField.FromTeslas(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

@@ -1,4 +1,4 @@
-// Copyright (c) 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).
+﻿// Copyright (c) 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com).
 // https://github.com/angularsen/UnitsNet
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,13 +25,13 @@ using System.Collections.Generic;
 namespace UnitsNet
 {
 #if WINDOWS_UWP
-    public struct Vector2
+    public class Vector2
     {
         public double X;
         public double Y;
     }
 #else
-    public struct Vector2 : IEquatable<Vector2>
+    public class Vector2 : IEquatable<Vector2>
     {
         public readonly double X;
         public readonly double Y;
@@ -42,7 +42,7 @@ namespace UnitsNet
             Y = y;
         }
 
-        public Vector2(double xy) : this()
+        public Vector2(double xy)
         {
             X = xy;
             Y = xy;

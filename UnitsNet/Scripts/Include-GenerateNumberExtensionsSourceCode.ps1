@@ -67,7 +67,7 @@ namespace UnitsNet.Extensions.NumberTo$quantityName
 
         /// <inheritdoc cref="$quantityName.From$($unit.PluralName)(UnitsNet.QuantityValue)" />
         [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static $($quantityName)? $($unit.PluralName)<T>(this T? value) where T : struct => $quantityName.From$($unit.PluralName)(value == null ? (double?)null : Convert.ToDouble(value.Value));
+        public static $($quantityName)? $($unit.PluralName)<T>(this T? value) where T : class => $quantityName.From$($unit.PluralName)(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

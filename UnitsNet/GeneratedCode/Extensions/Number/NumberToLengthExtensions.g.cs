@@ -49,20 +49,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromCentimeters(UnitsNet.QuantityValue)" />
         public static Length Centimeters<T>(this T value) => Length.FromCentimeters(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromCentimeters(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Centimeters<T>(this T? value) where T : struct => Length.FromCentimeters(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Decimeter
 
         /// <inheritdoc cref="Length.FromDecimeters(UnitsNet.QuantityValue)" />
         public static Length Decimeters<T>(this T value) => Length.FromDecimeters(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromDecimeters(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Decimeters<T>(this T? value) where T : struct => Length.FromDecimeters(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -71,20 +63,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromFathoms(UnitsNet.QuantityValue)" />
         public static Length Fathoms<T>(this T value) => Length.FromFathoms(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromFathoms(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Fathoms<T>(this T? value) where T : struct => Length.FromFathoms(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Foot
 
         /// <inheritdoc cref="Length.FromFeet(UnitsNet.QuantityValue)" />
         public static Length Feet<T>(this T value) => Length.FromFeet(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromFeet(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Feet<T>(this T? value) where T : struct => Length.FromFeet(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -93,20 +77,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromInches(UnitsNet.QuantityValue)" />
         public static Length Inches<T>(this T value) => Length.FromInches(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromInches(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Inches<T>(this T? value) where T : struct => Length.FromInches(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Kilometer
 
         /// <inheritdoc cref="Length.FromKilometers(UnitsNet.QuantityValue)" />
         public static Length Kilometers<T>(this T value) => Length.FromKilometers(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromKilometers(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Kilometers<T>(this T? value) where T : struct => Length.FromKilometers(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -115,20 +91,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromMeters(UnitsNet.QuantityValue)" />
         public static Length Meters<T>(this T value) => Length.FromMeters(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromMeters(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Meters<T>(this T? value) where T : struct => Length.FromMeters(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Microinch
 
         /// <inheritdoc cref="Length.FromMicroinches(UnitsNet.QuantityValue)" />
         public static Length Microinches<T>(this T value) => Length.FromMicroinches(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromMicroinches(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Microinches<T>(this T? value) where T : struct => Length.FromMicroinches(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -137,20 +105,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromMicrometers(UnitsNet.QuantityValue)" />
         public static Length Micrometers<T>(this T value) => Length.FromMicrometers(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromMicrometers(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Micrometers<T>(this T? value) where T : struct => Length.FromMicrometers(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Mile
 
         /// <inheritdoc cref="Length.FromMiles(UnitsNet.QuantityValue)" />
         public static Length Miles<T>(this T value) => Length.FromMiles(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromMiles(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Miles<T>(this T? value) where T : struct => Length.FromMiles(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -159,20 +119,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromMillimeters(UnitsNet.QuantityValue)" />
         public static Length Millimeters<T>(this T value) => Length.FromMillimeters(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromMillimeters(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Millimeters<T>(this T? value) where T : struct => Length.FromMillimeters(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Nanometer
 
         /// <inheritdoc cref="Length.FromNanometers(UnitsNet.QuantityValue)" />
         public static Length Nanometers<T>(this T value) => Length.FromNanometers(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromNanometers(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Nanometers<T>(this T? value) where T : struct => Length.FromNanometers(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -181,10 +133,6 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromNauticalMiles(UnitsNet.QuantityValue)" />
         public static Length NauticalMiles<T>(this T value) => Length.FromNauticalMiles(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromNauticalMiles(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? NauticalMiles<T>(this T? value) where T : struct => Length.FromNauticalMiles(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region UsSurveyFoot
@@ -192,20 +140,12 @@ namespace UnitsNet.Extensions.NumberToLength
         /// <inheritdoc cref="Length.FromUsSurveyFeet(UnitsNet.QuantityValue)" />
         public static Length UsSurveyFeet<T>(this T value) => Length.FromUsSurveyFeet(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Length.FromUsSurveyFeet(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? UsSurveyFeet<T>(this T? value) where T : struct => Length.FromUsSurveyFeet(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Yard
 
         /// <inheritdoc cref="Length.FromYards(UnitsNet.QuantityValue)" />
         public static Length Yards<T>(this T value) => Length.FromYards(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Length.FromYards(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Length? Yards<T>(this T? value) where T : struct => Length.FromYards(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

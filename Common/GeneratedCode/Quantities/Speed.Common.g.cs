@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Speed : IQuantity
 #else
-    public partial struct Speed : IQuantity, IComparable, IComparable<Speed>
+    public partial class Speed : IQuantity, IComparable, IComparable<Speed>
 #endif
     {
         /// <summary>

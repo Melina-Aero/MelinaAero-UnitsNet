@@ -44,7 +44,7 @@
 namespace UnitsNet
 {
     /// <summary>
-    ///     Lists all generated quantities with the same name as the quantity struct type,
+    ///     Lists all generated quantities with the same name as the quantity class type,
     ///     such as Length, Mass, Force etc.
     ///     This is useful for populating options in the UI, such as creating a generic conversion
     ///     tool with inputValue, quantityName, fromUnit and toUnit selectors.

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Length : IQuantity
 #else
-    public partial struct Length : IQuantity, IComparable, IComparable<Length>
+    public partial class Length : IQuantity, IComparable, IComparable<Length>
 #endif
     {
         /// <summary>

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Frequency : IQuantity
 #else
-    public partial struct Frequency : IQuantity, IComparable, IComparable<Frequency>
+    public partial class Frequency : IQuantity, IComparable, IComparable<Frequency>
 #endif
     {
         /// <summary>

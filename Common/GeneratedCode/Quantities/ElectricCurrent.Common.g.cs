@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class ElectricCurrent : IQuantity
 #else
-    public partial struct ElectricCurrent : IQuantity, IComparable, IComparable<ElectricCurrent>
+    public partial class ElectricCurrent : IQuantity, IComparable, IComparable<ElectricCurrent>
 #endif
     {
         /// <summary>

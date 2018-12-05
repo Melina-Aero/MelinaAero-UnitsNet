@@ -49,20 +49,12 @@ namespace UnitsNet.Extensions.NumberToApparentPower
         /// <inheritdoc cref="ApparentPower.FromGigavoltamperes(UnitsNet.QuantityValue)" />
         public static ApparentPower Gigavoltamperes<T>(this T value) => ApparentPower.FromGigavoltamperes(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="ApparentPower.FromGigavoltamperes(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ApparentPower? Gigavoltamperes<T>(this T? value) where T : struct => ApparentPower.FromGigavoltamperes(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Kilovoltampere
 
         /// <inheritdoc cref="ApparentPower.FromKilovoltamperes(UnitsNet.QuantityValue)" />
         public static ApparentPower Kilovoltamperes<T>(this T value) => ApparentPower.FromKilovoltamperes(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="ApparentPower.FromKilovoltamperes(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ApparentPower? Kilovoltamperes<T>(this T? value) where T : struct => ApparentPower.FromKilovoltamperes(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -71,20 +63,12 @@ namespace UnitsNet.Extensions.NumberToApparentPower
         /// <inheritdoc cref="ApparentPower.FromMegavoltamperes(UnitsNet.QuantityValue)" />
         public static ApparentPower Megavoltamperes<T>(this T value) => ApparentPower.FromMegavoltamperes(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="ApparentPower.FromMegavoltamperes(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ApparentPower? Megavoltamperes<T>(this T? value) where T : struct => ApparentPower.FromMegavoltamperes(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region Voltampere
 
         /// <inheritdoc cref="ApparentPower.FromVoltamperes(UnitsNet.QuantityValue)" />
         public static ApparentPower Voltamperes<T>(this T value) => ApparentPower.FromVoltamperes(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="ApparentPower.FromVoltamperes(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ApparentPower? Voltamperes<T>(this T? value) where T : struct => ApparentPower.FromVoltamperes(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

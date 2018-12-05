@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToIrradiation
         /// <inheritdoc cref="Irradiation.FromJoulesPerSquareMeter(UnitsNet.QuantityValue)" />
         public static Irradiation JoulesPerSquareMeter<T>(this T value) => Irradiation.FromJoulesPerSquareMeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Irradiation.FromJoulesPerSquareMeter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Irradiation? JoulesPerSquareMeter<T>(this T? value) where T : struct => Irradiation.FromJoulesPerSquareMeter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region KilowattHourPerSquareMeter
@@ -60,20 +56,12 @@ namespace UnitsNet.Extensions.NumberToIrradiation
         /// <inheritdoc cref="Irradiation.FromKilowattHoursPerSquareMeter(UnitsNet.QuantityValue)" />
         public static Irradiation KilowattHoursPerSquareMeter<T>(this T value) => Irradiation.FromKilowattHoursPerSquareMeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Irradiation.FromKilowattHoursPerSquareMeter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Irradiation? KilowattHoursPerSquareMeter<T>(this T? value) where T : struct => Irradiation.FromKilowattHoursPerSquareMeter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region WattHourPerSquareMeter
 
         /// <inheritdoc cref="Irradiation.FromWattHoursPerSquareMeter(UnitsNet.QuantityValue)" />
         public static Irradiation WattHoursPerSquareMeter<T>(this T value) => Irradiation.FromWattHoursPerSquareMeter(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="Irradiation.FromWattHoursPerSquareMeter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Irradiation? WattHoursPerSquareMeter<T>(this T? value) where T : struct => Irradiation.FromWattHoursPerSquareMeter(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

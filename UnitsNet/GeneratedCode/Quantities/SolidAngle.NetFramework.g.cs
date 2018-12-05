@@ -53,37 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct SolidAngle : IComparable, IComparable<SolidAngle>
+    public partial class SolidAngle : IComparable, IComparable<SolidAngle>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable SolidAngle from nullable Steradians.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static SolidAngle? FromSteradians(QuantityValue? steradians)
-        {
-            return steradians.HasValue ? FromSteradians(steradians.Value) : default(SolidAngle?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="SolidAngleUnit" /> to <see cref="SolidAngle" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>SolidAngle unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static SolidAngle? From(QuantityValue? value, SolidAngleUnit fromUnit)
-        {
-            return value.HasValue ? new SolidAngle((double)value.Value, fromUnit) : default(SolidAngle?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

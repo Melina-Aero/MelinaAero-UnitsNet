@@ -40,7 +40,7 @@ namespace UnitsNet
     ///     From 8 (int, long, double, decimal + each nullable) down to 2 (QuantityValue and QuantityValue?).
     ///     This also adds more numeric types with no extra overhead, such as float, short and byte.
     /// </remarks>
-    public struct QuantityValue
+    public class QuantityValue
     {
         /// <summary>
         ///     Value assigned when implicitly casting from all numeric types except <see cref="decimal" />, since
@@ -88,7 +88,7 @@ namespace UnitsNet
 
         public static explicit operator double(QuantityValue number)
         {
-            // double -> decimal -> zero (since we can't implement the default struct ctor)
+            // double -> decimal -> zero (since we can't implement the default class ctor)
             return number._value ?? (double) number._valueDecimal.GetValueOrDefault();
         }
 
@@ -98,7 +98,7 @@ namespace UnitsNet
 
         public static explicit operator decimal(QuantityValue number)
         {
-            // decimal -> double -> zero (since we can't implement the default struct ctor)
+            // decimal -> double -> zero (since we can't implement the default class ctor)
             return number._valueDecimal ?? (decimal) number._value.GetValueOrDefault();
         }
 

@@ -53,55 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct CoefficientOfThermalExpansion : IComparable, IComparable<CoefficientOfThermalExpansion>
+    public partial class CoefficientOfThermalExpansion : IComparable, IComparable<CoefficientOfThermalExpansion>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable CoefficientOfThermalExpansion from nullable InverseDegreeCelsius.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? FromInverseDegreeCelsius(QuantityValue? inversedegreecelsius)
-        {
-            return inversedegreecelsius.HasValue ? FromInverseDegreeCelsius(inversedegreecelsius.Value) : default(CoefficientOfThermalExpansion?);
-        }
-
-        /// <summary>
-        ///     Get nullable CoefficientOfThermalExpansion from nullable InverseDegreeFahrenheit.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? FromInverseDegreeFahrenheit(QuantityValue? inversedegreefahrenheit)
-        {
-            return inversedegreefahrenheit.HasValue ? FromInverseDegreeFahrenheit(inversedegreefahrenheit.Value) : default(CoefficientOfThermalExpansion?);
-        }
-
-        /// <summary>
-        ///     Get nullable CoefficientOfThermalExpansion from nullable InverseKelvin.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? FromInverseKelvin(QuantityValue? inversekelvin)
-        {
-            return inversekelvin.HasValue ? FromInverseKelvin(inversekelvin.Value) : default(CoefficientOfThermalExpansion?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="CoefficientOfThermalExpansionUnit" /> to <see cref="CoefficientOfThermalExpansion" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>CoefficientOfThermalExpansion unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? From(QuantityValue? value, CoefficientOfThermalExpansionUnit fromUnit)
-        {
-            return value.HasValue ? new CoefficientOfThermalExpansion((double)value.Value, fromUnit) : default(CoefficientOfThermalExpansion?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

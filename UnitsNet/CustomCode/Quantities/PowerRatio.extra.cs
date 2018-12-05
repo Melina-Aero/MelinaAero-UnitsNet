@@ -31,11 +31,11 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class PowerRatio
 #else
-    public partial struct PowerRatio
+    public partial class PowerRatio
 #endif
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="PowerRatio" /> struct from the specified power referenced to one watt.
+        ///     Initializes a new instance of the <see cref="PowerRatio" /> class from the specified power referenced to one watt.
         /// </summary>
         /// <param name="power">The power relative to one watt.</param>
 
@@ -46,7 +46,6 @@ namespace UnitsNet
         public
 #endif
             PowerRatio(Power power)
-            : this()
         {
             if (power.Watts <= 0)
                 throw new ArgumentOutOfRangeException(

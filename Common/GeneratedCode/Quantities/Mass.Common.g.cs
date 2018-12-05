@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Mass : IQuantity
 #else
-    public partial struct Mass : IQuantity, IComparable, IComparable<Mass>
+    public partial class Mass : IQuantity, IComparable, IComparable<Mass>
 #endif
     {
         /// <summary>

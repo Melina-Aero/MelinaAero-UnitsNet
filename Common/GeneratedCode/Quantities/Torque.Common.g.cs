@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Torque : IQuantity
 #else
-    public partial struct Torque : IQuantity, IComparable, IComparable<Torque>
+    public partial class Torque : IQuantity, IComparable, IComparable<Torque>
 #endif
     {
         /// <summary>

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class BitRate : IQuantity
 #else
-    public partial struct BitRate : IQuantity, IComparable, IComparable<BitRate>
+    public partial class BitRate : IQuantity, IComparable, IComparable<BitRate>
 #endif
     {
         /// <summary>

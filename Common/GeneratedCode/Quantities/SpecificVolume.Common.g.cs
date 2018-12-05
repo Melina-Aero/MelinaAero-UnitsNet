@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class SpecificVolume : IQuantity
 #else
-    public partial struct SpecificVolume : IQuantity, IComparable, IComparable<SpecificVolume>
+    public partial class SpecificVolume : IQuantity, IComparable, IComparable<SpecificVolume>
 #endif
     {
         /// <summary>

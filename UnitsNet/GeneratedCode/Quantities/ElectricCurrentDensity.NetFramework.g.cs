@@ -53,37 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct ElectricCurrentDensity : IComparable, IComparable<ElectricCurrentDensity>
+    public partial class ElectricCurrentDensity : IComparable, IComparable<ElectricCurrentDensity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable ElectricCurrentDensity from nullable AmperesPerSquareMeter.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static ElectricCurrentDensity? FromAmperesPerSquareMeter(QuantityValue? amperespersquaremeter)
-        {
-            return amperespersquaremeter.HasValue ? FromAmperesPerSquareMeter(amperespersquaremeter.Value) : default(ElectricCurrentDensity?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="ElectricCurrentDensityUnit" /> to <see cref="ElectricCurrentDensity" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>ElectricCurrentDensity unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ElectricCurrentDensity? From(QuantityValue? value, ElectricCurrentDensityUnit fromUnit)
-        {
-            return value.HasValue ? new ElectricCurrentDensity((double)value.Value, fromUnit) : default(ElectricCurrentDensity?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

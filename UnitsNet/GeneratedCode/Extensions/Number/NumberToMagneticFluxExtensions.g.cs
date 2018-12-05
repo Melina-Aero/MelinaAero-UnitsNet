@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToMagneticFlux
         /// <inheritdoc cref="MagneticFlux.FromWebers(UnitsNet.QuantityValue)" />
         public static MagneticFlux Webers<T>(this T value) => MagneticFlux.FromWebers(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="MagneticFlux.FromWebers(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static MagneticFlux? Webers<T>(this T? value) where T : struct => MagneticFlux.FromWebers(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

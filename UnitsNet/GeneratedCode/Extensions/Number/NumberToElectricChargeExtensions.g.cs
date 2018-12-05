@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToElectricCharge
         /// <inheritdoc cref="ElectricCharge.FromCoulombs(UnitsNet.QuantityValue)" />
         public static ElectricCharge Coulombs<T>(this T value) => ElectricCharge.FromCoulombs(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="ElectricCharge.FromCoulombs(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ElectricCharge? Coulombs<T>(this T? value) where T : struct => ElectricCharge.FromCoulombs(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

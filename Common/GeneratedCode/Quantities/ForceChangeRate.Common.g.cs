@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class ForceChangeRate : IQuantity
 #else
-    public partial struct ForceChangeRate : IQuantity, IComparable, IComparable<ForceChangeRate>
+    public partial class ForceChangeRate : IQuantity, IComparable, IComparable<ForceChangeRate>
 #endif
     {
         /// <summary>

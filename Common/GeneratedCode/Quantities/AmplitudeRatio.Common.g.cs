@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class AmplitudeRatio : IQuantity
 #else
-    public partial struct AmplitudeRatio : IQuantity, IComparable, IComparable<AmplitudeRatio>
+    public partial class AmplitudeRatio : IQuantity, IComparable, IComparable<AmplitudeRatio>
 #endif
     {
         /// <summary>

@@ -49,20 +49,12 @@ namespace UnitsNet.Extensions.NumberToPressureChangeRate
         /// <inheritdoc cref="PressureChangeRate.FromAtmospheresPerSecond(UnitsNet.QuantityValue)" />
         public static PressureChangeRate AtmospheresPerSecond<T>(this T value) => PressureChangeRate.FromAtmospheresPerSecond(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="PressureChangeRate.FromAtmospheresPerSecond(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static PressureChangeRate? AtmospheresPerSecond<T>(this T? value) where T : struct => PressureChangeRate.FromAtmospheresPerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region KilopascalPerSecond
 
         /// <inheritdoc cref="PressureChangeRate.FromKilopascalsPerSecond(UnitsNet.QuantityValue)" />
         public static PressureChangeRate KilopascalsPerSecond<T>(this T value) => PressureChangeRate.FromKilopascalsPerSecond(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="PressureChangeRate.FromKilopascalsPerSecond(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static PressureChangeRate? KilopascalsPerSecond<T>(this T? value) where T : struct => PressureChangeRate.FromKilopascalsPerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
@@ -71,20 +63,12 @@ namespace UnitsNet.Extensions.NumberToPressureChangeRate
         /// <inheritdoc cref="PressureChangeRate.FromMegapascalsPerSecond(UnitsNet.QuantityValue)" />
         public static PressureChangeRate MegapascalsPerSecond<T>(this T value) => PressureChangeRate.FromMegapascalsPerSecond(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="PressureChangeRate.FromMegapascalsPerSecond(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static PressureChangeRate? MegapascalsPerSecond<T>(this T? value) where T : struct => PressureChangeRate.FromMegapascalsPerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region PascalPerSecond
 
         /// <inheritdoc cref="PressureChangeRate.FromPascalsPerSecond(UnitsNet.QuantityValue)" />
         public static PressureChangeRate PascalsPerSecond<T>(this T value) => PressureChangeRate.FromPascalsPerSecond(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="PressureChangeRate.FromPascalsPerSecond(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static PressureChangeRate? PascalsPerSecond<T>(this T? value) where T : struct => PressureChangeRate.FromPascalsPerSecond(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

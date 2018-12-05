@@ -107,7 +107,7 @@ if ($obsoleteAttribute)
 #if WINDOWS_UWP
     public sealed partial class $quantityName : IQuantity
 #else
-    public partial struct $quantityName : IQuantity, IComparable, IComparable<$quantityName>
+    public partial class $quantityName : IQuantity, IComparable, IComparable<$quantityName>
 #endif
     {
         /// <summary>

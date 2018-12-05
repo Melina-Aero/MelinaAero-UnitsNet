@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToLapseRate
         /// <inheritdoc cref="LapseRate.FromDegreesCelciusPerKilometer(UnitsNet.QuantityValue)" />
         public static LapseRate DegreesCelciusPerKilometer<T>(this T value) => LapseRate.FromDegreesCelciusPerKilometer(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="LapseRate.FromDegreesCelciusPerKilometer(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static LapseRate? DegreesCelciusPerKilometer<T>(this T? value) where T : struct => LapseRate.FromDegreesCelciusPerKilometer(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

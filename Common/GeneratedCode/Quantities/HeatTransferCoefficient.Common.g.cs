@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class HeatTransferCoefficient : IQuantity
 #else
-    public partial struct HeatTransferCoefficient : IQuantity, IComparable, IComparable<HeatTransferCoefficient>
+    public partial class HeatTransferCoefficient : IQuantity, IComparable, IComparable<HeatTransferCoefficient>
 #endif
     {
         /// <summary>

@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToCoefficientOfThermalExpansion
         /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseDegreeCelsius(UnitsNet.QuantityValue)" />
         public static CoefficientOfThermalExpansion InverseDegreeCelsius<T>(this T value) => CoefficientOfThermalExpansion.FromInverseDegreeCelsius(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseDegreeCelsius(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? InverseDegreeCelsius<T>(this T? value) where T : struct => CoefficientOfThermalExpansion.FromInverseDegreeCelsius(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region InverseDegreeFahrenheit
@@ -60,20 +56,12 @@ namespace UnitsNet.Extensions.NumberToCoefficientOfThermalExpansion
         /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseDegreeFahrenheit(UnitsNet.QuantityValue)" />
         public static CoefficientOfThermalExpansion InverseDegreeFahrenheit<T>(this T value) => CoefficientOfThermalExpansion.FromInverseDegreeFahrenheit(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseDegreeFahrenheit(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? InverseDegreeFahrenheit<T>(this T? value) where T : struct => CoefficientOfThermalExpansion.FromInverseDegreeFahrenheit(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region InverseKelvin
 
         /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseKelvin(UnitsNet.QuantityValue)" />
         public static CoefficientOfThermalExpansion InverseKelvin<T>(this T value) => CoefficientOfThermalExpansion.FromInverseKelvin(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseKelvin(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static CoefficientOfThermalExpansion? InverseKelvin<T>(this T? value) where T : struct => CoefficientOfThermalExpansion.FromInverseKelvin(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

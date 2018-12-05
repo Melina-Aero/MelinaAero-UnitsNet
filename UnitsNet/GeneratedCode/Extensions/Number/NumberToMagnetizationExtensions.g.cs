@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToMagnetization
         /// <inheritdoc cref="Magnetization.FromAmperesPerMeter(UnitsNet.QuantityValue)" />
         public static Magnetization AmperesPerMeter<T>(this T value) => Magnetization.FromAmperesPerMeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Magnetization.FromAmperesPerMeter(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Magnetization? AmperesPerMeter<T>(this T? value) where T : struct => Magnetization.FromAmperesPerMeter(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

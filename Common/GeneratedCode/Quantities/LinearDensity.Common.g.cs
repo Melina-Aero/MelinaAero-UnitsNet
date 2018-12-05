@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class LinearDensity : IQuantity
 #else
-    public partial struct LinearDensity : IQuantity, IComparable, IComparable<LinearDensity>
+    public partial class LinearDensity : IQuantity, IComparable, IComparable<LinearDensity>
 #endif
     {
         /// <summary>

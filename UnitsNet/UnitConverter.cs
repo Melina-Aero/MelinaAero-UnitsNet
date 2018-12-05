@@ -367,7 +367,7 @@ namespace UnitsNet
         private static Type GetQuantityType(string quantityName)
         {
             string quantityTypeName = $"{QuantityNamespace}.{quantityName}";
-            Type quantityType = UnitsNetAssembly.GetType(quantityTypeName); // ex: UnitsNet.Length struct
+            Type quantityType = UnitsNetAssembly.GetType(quantityTypeName); // ex: UnitsNet.Length class
             if (quantityType == null)
                 throw new QuantityNotFoundException($"Quantity type name not found: {quantityTypeName}");
             return quantityType;

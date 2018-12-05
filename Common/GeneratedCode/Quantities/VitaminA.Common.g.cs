@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class VitaminA : IQuantity
 #else
-    public partial struct VitaminA : IQuantity, IComparable, IComparable<VitaminA>
+    public partial class VitaminA : IQuantity, IComparable, IComparable<VitaminA>
 #endif
     {
         /// <summary>

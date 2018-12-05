@@ -94,7 +94,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct $quantityName : IComparable, IComparable<$quantityName>
+    public partial class $quantityName : IComparable, IComparable<$quantityName>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

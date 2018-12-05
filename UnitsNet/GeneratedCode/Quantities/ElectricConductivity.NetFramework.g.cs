@@ -53,37 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct ElectricConductivity : IComparable, IComparable<ElectricConductivity>
+    public partial class ElectricConductivity : IComparable, IComparable<ElectricConductivity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable ElectricConductivity from nullable SiemensPerMeter.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static ElectricConductivity? FromSiemensPerMeter(QuantityValue? siemenspermeter)
-        {
-            return siemenspermeter.HasValue ? FromSiemensPerMeter(siemenspermeter.Value) : default(ElectricConductivity?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="ElectricConductivityUnit" /> to <see cref="ElectricConductivity" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>ElectricConductivity unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ElectricConductivity? From(QuantityValue? value, ElectricConductivityUnit fromUnit)
-        {
-            return value.HasValue ? new ElectricConductivity((double)value.Value, fromUnit) : default(ElectricConductivity?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

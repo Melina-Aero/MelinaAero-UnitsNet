@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class DynamicViscosity : IQuantity
 #else
-    public partial struct DynamicViscosity : IQuantity, IComparable, IComparable<DynamicViscosity>
+    public partial class DynamicViscosity : IQuantity, IComparable, IComparable<DynamicViscosity>
 #endif
     {
         /// <summary>

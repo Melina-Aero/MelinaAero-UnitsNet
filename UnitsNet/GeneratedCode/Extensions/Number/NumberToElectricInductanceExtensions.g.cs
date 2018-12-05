@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToElectricInductance
         /// <inheritdoc cref="ElectricInductance.FromHenries(UnitsNet.QuantityValue)" />
         public static ElectricInductance Henries<T>(this T value) => ElectricInductance.FromHenries(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="ElectricInductance.FromHenries(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ElectricInductance? Henries<T>(this T? value) where T : struct => ElectricInductance.FromHenries(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }

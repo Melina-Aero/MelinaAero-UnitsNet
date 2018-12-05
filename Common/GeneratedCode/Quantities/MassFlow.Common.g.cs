@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class MassFlow : IQuantity
 #else
-    public partial struct MassFlow : IQuantity, IComparable, IComparable<MassFlow>
+    public partial class MassFlow : IQuantity, IComparable, IComparable<MassFlow>
 #endif
     {
         /// <summary>

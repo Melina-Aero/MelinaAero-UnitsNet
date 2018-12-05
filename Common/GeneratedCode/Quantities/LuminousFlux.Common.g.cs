@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class LuminousFlux : IQuantity
 #else
-    public partial struct LuminousFlux : IQuantity, IComparable, IComparable<LuminousFlux>
+    public partial class LuminousFlux : IQuantity, IComparable, IComparable<LuminousFlux>
 #endif
     {
         /// <summary>

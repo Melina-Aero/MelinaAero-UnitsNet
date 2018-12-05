@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class ReactiveEnergy : IQuantity
 #else
-    public partial struct ReactiveEnergy : IQuantity, IComparable, IComparable<ReactiveEnergy>
+    public partial class ReactiveEnergy : IQuantity, IComparable, IComparable<ReactiveEnergy>
 #endif
     {
         /// <summary>

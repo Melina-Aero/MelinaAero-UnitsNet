@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToRotationalStiffness
         /// <inheritdoc cref="RotationalStiffness.FromKilonewtonMetersPerRadian(UnitsNet.QuantityValue)" />
         public static RotationalStiffness KilonewtonMetersPerRadian<T>(this T value) => RotationalStiffness.FromKilonewtonMetersPerRadian(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="RotationalStiffness.FromKilonewtonMetersPerRadian(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalStiffness? KilonewtonMetersPerRadian<T>(this T? value) where T : struct => RotationalStiffness.FromKilonewtonMetersPerRadian(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region MeganewtonMeterPerRadian
@@ -60,20 +56,12 @@ namespace UnitsNet.Extensions.NumberToRotationalStiffness
         /// <inheritdoc cref="RotationalStiffness.FromMeganewtonMetersPerRadian(UnitsNet.QuantityValue)" />
         public static RotationalStiffness MeganewtonMetersPerRadian<T>(this T value) => RotationalStiffness.FromMeganewtonMetersPerRadian(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="RotationalStiffness.FromMeganewtonMetersPerRadian(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalStiffness? MeganewtonMetersPerRadian<T>(this T? value) where T : struct => RotationalStiffness.FromMeganewtonMetersPerRadian(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
         #region NewtonMeterPerRadian
 
         /// <inheritdoc cref="RotationalStiffness.FromNewtonMetersPerRadian(UnitsNet.QuantityValue)" />
         public static RotationalStiffness NewtonMetersPerRadian<T>(this T value) => RotationalStiffness.FromNewtonMetersPerRadian(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="RotationalStiffness.FromNewtonMetersPerRadian(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static RotationalStiffness? NewtonMetersPerRadian<T>(this T? value) where T : struct => RotationalStiffness.FromNewtonMetersPerRadian(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 

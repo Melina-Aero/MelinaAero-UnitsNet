@@ -53,37 +53,12 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial struct ElectricCharge : IComparable, IComparable<ElectricCharge>
+    public partial class ElectricCharge : IComparable, IComparable<ElectricCharge>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
         public double Value => _value;
-
-        #region Nullable From Methods
-
-        /// <summary>
-        ///     Get nullable ElectricCharge from nullable Coulombs.
-        /// </summary>
-        [Obsolete("Nullable type support is obsolete and will be removed in a future release.")]
-        public static ElectricCharge? FromCoulombs(QuantityValue? coulombs)
-        {
-            return coulombs.HasValue ? FromCoulombs(coulombs.Value) : default(ElectricCharge?);
-        }
-
-        /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="ElectricChargeUnit" /> to <see cref="ElectricCharge" />.
-        /// </summary>
-        /// <param name="value">Value to convert from.</param>
-        /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>ElectricCharge unit value.</returns>
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static ElectricCharge? From(QuantityValue? value, ElectricChargeUnit fromUnit)
-        {
-            return value.HasValue ? new ElectricCharge((double)value.Value, fromUnit) : default(ElectricCharge?);
-        }
-
-        #endregion
 
         /// <summary>
         ///     Get unit abbreviation string.

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Area : IQuantity
 #else
-    public partial struct Area : IQuantity, IComparable, IComparable<Area>
+    public partial class Area : IQuantity, IComparable, IComparable<Area>
 #endif
     {
         /// <summary>

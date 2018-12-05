@@ -49,10 +49,6 @@ namespace UnitsNet.Extensions.NumberToCapacitance
         /// <inheritdoc cref="Capacitance.FromFarads(UnitsNet.QuantityValue)" />
         public static Capacitance Farads<T>(this T value) => Capacitance.FromFarads(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Capacitance.FromFarads(UnitsNet.QuantityValue)" />
-        [Obsolete("Nullable type support has been deprecated and will be removed in a future release.")]
-        public static Capacitance? Farads<T>(this T? value) where T : struct => Capacitance.FromFarads(value == null ? (double?)null : Convert.ToDouble(value.Value));
-
         #endregion
 
     }
