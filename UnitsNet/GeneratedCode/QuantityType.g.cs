@@ -58,7 +58,6 @@ namespace UnitsNet
         Area,
         AreaDensity,
         AreaMomentOfInertia,
-        BitRate,
         BrakeSpecificFuelConsumption,
         Capacitance,
         CoefficientOfThermalExpansion,

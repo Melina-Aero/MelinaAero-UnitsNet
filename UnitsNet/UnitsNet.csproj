@@ -1,3 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="UnitsNet.Common.props" />
+  <ItemGroup>
+    <Compile Remove="..\Common\GeneratedCode\Quantities\BitRate.Common.g.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="..\Common\GeneratedCode\Quantities\BitRate.Common.g.cs" />
+    <None Remove="..\Common\UnitDefinitions\BitRate.json" />
+  </ItemGroup>
 </Project>
