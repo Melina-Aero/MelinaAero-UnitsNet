@@ -571,6 +571,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (RotationalSpeedUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this RotationalSpeed to another RotationalSpeed with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A RotationalSpeed with the specified unit.</returns>

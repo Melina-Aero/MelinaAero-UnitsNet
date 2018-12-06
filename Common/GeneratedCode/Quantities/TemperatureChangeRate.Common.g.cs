@@ -514,6 +514,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (TemperatureChangeRateUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this TemperatureChangeRate to another TemperatureChangeRate with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A TemperatureChangeRate with the specified unit.</returns>

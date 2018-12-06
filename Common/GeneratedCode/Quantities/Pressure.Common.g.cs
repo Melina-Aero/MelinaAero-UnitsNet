@@ -1084,6 +1084,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (PressureUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Pressure to another Pressure with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Pressure with the specified unit.</returns>

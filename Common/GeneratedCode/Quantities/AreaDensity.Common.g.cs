@@ -343,6 +343,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (AreaDensityUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this AreaDensity to another AreaDensity with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A AreaDensity with the specified unit.</returns>

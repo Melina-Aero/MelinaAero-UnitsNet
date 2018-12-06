@@ -495,6 +495,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ForcePerLengthUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ForcePerLength to another ForcePerLength with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ForcePerLength with the specified unit.</returns>

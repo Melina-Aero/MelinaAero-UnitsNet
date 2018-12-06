@@ -457,6 +457,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (EntropyUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Entropy to another Entropy with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Entropy with the specified unit.</returns>

@@ -589,6 +589,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (AngleUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Angle to another Angle with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Angle with the specified unit.</returns>

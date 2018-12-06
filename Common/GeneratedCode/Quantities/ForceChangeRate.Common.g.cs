@@ -533,6 +533,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ForceChangeRateUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ForceChangeRate to another ForceChangeRate with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ForceChangeRate with the specified unit.</returns>

@@ -343,6 +343,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (CapacitanceUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Capacitance to another Capacitance with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Capacitance with the specified unit.</returns>

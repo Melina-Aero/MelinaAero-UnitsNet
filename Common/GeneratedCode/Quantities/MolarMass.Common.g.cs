@@ -552,6 +552,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (MolarMassUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this MolarMass to another MolarMass with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A MolarMass with the specified unit.</returns>

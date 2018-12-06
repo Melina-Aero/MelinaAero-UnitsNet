@@ -400,6 +400,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ElectricResistivityUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ElectricResistivity to another ElectricResistivity with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ElectricResistivity with the specified unit.</returns>

@@ -400,6 +400,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (IlluminanceUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Illuminance to another Illuminance with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Illuminance with the specified unit.</returns>

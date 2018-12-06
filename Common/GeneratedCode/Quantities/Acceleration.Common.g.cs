@@ -571,6 +571,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (AccelerationUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Acceleration to another Acceleration with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Acceleration with the specified unit.</returns>

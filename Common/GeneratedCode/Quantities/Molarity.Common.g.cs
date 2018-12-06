@@ -476,6 +476,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (MolarityUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Molarity to another Molarity with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Molarity with the specified unit.</returns>

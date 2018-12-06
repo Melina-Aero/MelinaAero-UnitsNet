@@ -419,6 +419,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ElectricPotentialUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ElectricPotential to another ElectricPotential with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ElectricPotential with the specified unit.</returns>

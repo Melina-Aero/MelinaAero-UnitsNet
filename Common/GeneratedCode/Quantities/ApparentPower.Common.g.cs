@@ -400,6 +400,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ApparentPowerUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ApparentPower to another ApparentPower with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ApparentPower with the specified unit.</returns>

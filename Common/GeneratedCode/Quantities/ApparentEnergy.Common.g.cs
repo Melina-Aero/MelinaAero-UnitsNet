@@ -381,6 +381,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (ApparentEnergyUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this ApparentEnergy to another ApparentEnergy with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A ApparentEnergy with the specified unit.</returns>

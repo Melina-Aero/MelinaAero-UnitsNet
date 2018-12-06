@@ -476,6 +476,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (FrequencyUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Frequency to another Frequency with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Frequency with the specified unit.</returns>

@@ -988,6 +988,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (VolumeUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Volume to another Volume with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Volume with the specified unit.</returns>

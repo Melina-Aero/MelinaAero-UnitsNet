@@ -556,6 +556,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (DurationUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this Duration to another Duration with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A Duration with the specified unit.</returns>

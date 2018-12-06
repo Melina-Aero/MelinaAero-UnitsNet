@@ -362,6 +362,16 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Convert to the unit representation <paramref name="unit" />.
+        /// </summary>
+        /// <returns>Value converted to the specified unit.</returns>
+        public double As(int unitEnumIndex)
+        {
+            var unit = (MassFluxUnit)unitEnumIndex;
+            return As(unit);
+        }
+
+        /// <summary>
         ///     Converts this MassFlux to another MassFlux with the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>A MassFlux with the specified unit.</returns>
