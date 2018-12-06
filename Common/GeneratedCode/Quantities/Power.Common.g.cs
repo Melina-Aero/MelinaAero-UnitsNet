@@ -65,7 +65,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        private readonly decimal _value;
+        private readonly double _value;
 
         /// <summary>
         ///     The unit this quantity was constructed with.
@@ -88,7 +88,7 @@ namespace UnitsNet
         [Obsolete("Use the constructor that takes a unit parameter. This constructor will be removed in a future version.")]
         public Power(double watts)
         {
-            _value = Convert.ToDecimal(watts);
+            _value = Convert.ToDouble(watts);
             _unit = BaseUnit;
         }
 
@@ -103,7 +103,7 @@ namespace UnitsNet
 #else
         public
 #endif
-        Power(decimal numericValue, PowerUnit unit)
+        Power(double numericValue, PowerUnit unit)
         {
             _value = numericValue;
             _unit = unit;
@@ -120,7 +120,7 @@ namespace UnitsNet
         [Obsolete("Use the constructor that takes a unit parameter. This constructor will be removed in a future version.")]
         public
 #endif
-        Power(long watts) : this(Convert.ToDecimal(watts), BaseUnit) { }
+        Power(long watts) : this(Convert.ToDouble(watts), BaseUnit) { }
 
         // Windows Runtime Component does not allow public methods/ctors with same number of parameters: https://msdn.microsoft.com/en-us/library/br230301.aspx#Overloaded methods
         // Windows Runtime Component does not support decimal type
@@ -134,7 +134,7 @@ namespace UnitsNet
         [Obsolete("Use the constructor that takes a unit parameter. This constructor will be removed in a future version.")]
         public
 #endif
-        Power(decimal watts) : this(Convert.ToDecimal(watts), BaseUnit) { }
+        Power(decimal watts) : this(Convert.ToDouble(watts), BaseUnit) { }
 
         #region Properties
 
@@ -280,7 +280,7 @@ namespace UnitsNet
         public static Power FromBoilerHorsepower(QuantityValue boilerhorsepower)
 #endif
         {
-            decimal value = (decimal) boilerhorsepower;
+            var value = (double) boilerhorsepower;
             return new Power(value, PowerUnit.BoilerHorsepower);
         }
 
@@ -294,7 +294,7 @@ namespace UnitsNet
         public static Power FromBritishThermalUnitsPerHour(QuantityValue britishthermalunitsperhour)
 #endif
         {
-            decimal value = (decimal) britishthermalunitsperhour;
+            var value = (double) britishthermalunitsperhour;
             return new Power(value, PowerUnit.BritishThermalUnitPerHour);
         }
 
@@ -308,7 +308,7 @@ namespace UnitsNet
         public static Power FromDecawatts(QuantityValue decawatts)
 #endif
         {
-            decimal value = (decimal) decawatts;
+            var value = (double) decawatts;
             return new Power(value, PowerUnit.Decawatt);
         }
 
@@ -322,7 +322,7 @@ namespace UnitsNet
         public static Power FromDeciwatts(QuantityValue deciwatts)
 #endif
         {
-            decimal value = (decimal) deciwatts;
+            var value = (double) deciwatts;
             return new Power(value, PowerUnit.Deciwatt);
         }
 
@@ -336,7 +336,7 @@ namespace UnitsNet
         public static Power FromElectricalHorsepower(QuantityValue electricalhorsepower)
 #endif
         {
-            decimal value = (decimal) electricalhorsepower;
+            double value = (double) electricalhorsepower;
             return new Power(value, PowerUnit.ElectricalHorsepower);
         }
 
@@ -350,7 +350,7 @@ namespace UnitsNet
         public static Power FromFemtowatts(QuantityValue femtowatts)
 #endif
         {
-            decimal value = (decimal) femtowatts;
+            double value = (double) femtowatts;
             return new Power(value, PowerUnit.Femtowatt);
         }
 
@@ -364,7 +364,7 @@ namespace UnitsNet
         public static Power FromGigawatts(QuantityValue gigawatts)
 #endif
         {
-            decimal value = (decimal) gigawatts;
+            double value = (double) gigawatts;
             return new Power(value, PowerUnit.Gigawatt);
         }
 
@@ -378,7 +378,7 @@ namespace UnitsNet
         public static Power FromHydraulicHorsepower(QuantityValue hydraulichorsepower)
 #endif
         {
-            decimal value = (decimal) hydraulichorsepower;
+            double value = (double) hydraulichorsepower;
             return new Power(value, PowerUnit.HydraulicHorsepower);
         }
 
@@ -392,7 +392,7 @@ namespace UnitsNet
         public static Power FromKilobritishThermalUnitsPerHour(QuantityValue kilobritishthermalunitsperhour)
 #endif
         {
-            decimal value = (decimal) kilobritishthermalunitsperhour;
+            double value = (double) kilobritishthermalunitsperhour;
             return new Power(value, PowerUnit.KilobritishThermalUnitPerHour);
         }
 
@@ -406,7 +406,7 @@ namespace UnitsNet
         public static Power FromKilowatts(QuantityValue kilowatts)
 #endif
         {
-            decimal value = (decimal) kilowatts;
+            double value = (double) kilowatts;
             return new Power(value, PowerUnit.Kilowatt);
         }
 
@@ -420,7 +420,7 @@ namespace UnitsNet
         public static Power FromMechanicalHorsepower(QuantityValue mechanicalhorsepower)
 #endif
         {
-            decimal value = (decimal) mechanicalhorsepower;
+            double value = (double) mechanicalhorsepower;
             return new Power(value, PowerUnit.MechanicalHorsepower);
         }
 
@@ -434,7 +434,7 @@ namespace UnitsNet
         public static Power FromMegawatts(QuantityValue megawatts)
 #endif
         {
-            decimal value = (decimal) megawatts;
+            double value = (double) megawatts;
             return new Power(value, PowerUnit.Megawatt);
         }
 
@@ -448,7 +448,7 @@ namespace UnitsNet
         public static Power FromMetricHorsepower(QuantityValue metrichorsepower)
 #endif
         {
-            decimal value = (decimal) metrichorsepower;
+            double value = (double) metrichorsepower;
             return new Power(value, PowerUnit.MetricHorsepower);
         }
 
@@ -462,7 +462,7 @@ namespace UnitsNet
         public static Power FromMicrowatts(QuantityValue microwatts)
 #endif
         {
-            decimal value = (decimal) microwatts;
+            double value = (double) microwatts;
             return new Power(value, PowerUnit.Microwatt);
         }
 
@@ -476,7 +476,7 @@ namespace UnitsNet
         public static Power FromMilliwatts(QuantityValue milliwatts)
 #endif
         {
-            decimal value = (decimal) milliwatts;
+            double value = (double) milliwatts;
             return new Power(value, PowerUnit.Milliwatt);
         }
 
@@ -490,7 +490,7 @@ namespace UnitsNet
         public static Power FromNanowatts(QuantityValue nanowatts)
 #endif
         {
-            decimal value = (decimal) nanowatts;
+            double value = (double) nanowatts;
             return new Power(value, PowerUnit.Nanowatt);
         }
 
@@ -504,7 +504,7 @@ namespace UnitsNet
         public static Power FromPetawatts(QuantityValue petawatts)
 #endif
         {
-            decimal value = (decimal) petawatts;
+            double value = (double) petawatts;
             return new Power(value, PowerUnit.Petawatt);
         }
 
@@ -518,7 +518,7 @@ namespace UnitsNet
         public static Power FromPicowatts(QuantityValue picowatts)
 #endif
         {
-            decimal value = (decimal) picowatts;
+            double value = (double) picowatts;
             return new Power(value, PowerUnit.Picowatt);
         }
 
@@ -532,7 +532,7 @@ namespace UnitsNet
         public static Power FromTerawatts(QuantityValue terawatts)
 #endif
         {
-            decimal value = (decimal) terawatts;
+            double value = (double) terawatts;
             return new Power(value, PowerUnit.Terawatt);
         }
 
@@ -546,7 +546,7 @@ namespace UnitsNet
         public static Power FromWatts(QuantityValue watts)
 #endif
         {
-            decimal value = (decimal) watts;
+            double value = (double) watts;
             return new Power(value, PowerUnit.Watt);
         }
 
@@ -565,7 +565,7 @@ namespace UnitsNet
         public static Power From(QuantityValue value, PowerUnit fromUnit)
 #endif
         {
-            return new Power((decimal)value, fromUnit);
+            return new Power((double)value, fromUnit);
         }
 
         /// <summary>
@@ -717,36 +717,36 @@ namespace UnitsNet
         ///     This is typically the first step in converting from one unit to another.
         /// </summary>
         /// <returns>The value in the base unit representation.</returns>
-        private decimal AsBaseUnit()
+        private double AsBaseUnit()
         {
             switch(Unit)
             {
-                case PowerUnit.BoilerHorsepower: return _value*9812.5m;
-                case PowerUnit.BritishThermalUnitPerHour: return _value*0.293071m;
-                case PowerUnit.Decawatt: return (_value) * 1e1m;
-                case PowerUnit.Deciwatt: return (_value) * 1e-1m;
-                case PowerUnit.ElectricalHorsepower: return _value*746m;
-                case PowerUnit.Femtowatt: return (_value) * 1e-15m;
-                case PowerUnit.Gigawatt: return (_value) * 1e9m;
-                case PowerUnit.HydraulicHorsepower: return _value*745.69988145m;
-                case PowerUnit.KilobritishThermalUnitPerHour: return (_value*0.293071m) * 1e3m;
-                case PowerUnit.Kilowatt: return (_value) * 1e3m;
-                case PowerUnit.MechanicalHorsepower: return _value*745.69m;
-                case PowerUnit.Megawatt: return (_value) * 1e6m;
-                case PowerUnit.MetricHorsepower: return _value*735.49875m;
-                case PowerUnit.Microwatt: return (_value) * 1e-6m;
-                case PowerUnit.Milliwatt: return (_value) * 1e-3m;
-                case PowerUnit.Nanowatt: return (_value) * 1e-9m;
-                case PowerUnit.Petawatt: return (_value) * 1e15m;
-                case PowerUnit.Picowatt: return (_value) * 1e-12m;
-                case PowerUnit.Terawatt: return (_value) * 1e12m;
+                case PowerUnit.BoilerHorsepower: return _value* Convert.ToDouble(9812.5m);
+                case PowerUnit.BritishThermalUnitPerHour: return _value * Convert.ToDouble(0.293071m);
+                case PowerUnit.Decawatt: return (_value) * Convert.ToDouble(1e1m);
+                case PowerUnit.Deciwatt: return (_value) * Convert.ToDouble(1e-1m);
+                case PowerUnit.ElectricalHorsepower: return _value* Convert.ToDouble(746m);
+                case PowerUnit.Femtowatt: return (_value) * Convert.ToDouble(1e-15m);
+                case PowerUnit.Gigawatt: return (_value) * Convert.ToDouble(1e9m);
+                case PowerUnit.HydraulicHorsepower: return _value* Convert.ToDouble(745.69988145m);
+                case PowerUnit.KilobritishThermalUnitPerHour: return (_value* Convert.ToDouble(0.293071m) * Convert.ToDouble(1e3m));
+                case PowerUnit.Kilowatt: return (_value) * Convert.ToDouble(1e3m);
+                case PowerUnit.MechanicalHorsepower: return _value* Convert.ToDouble(745.69m);
+                case PowerUnit.Megawatt: return (_value) * Convert.ToDouble(1e6m);
+                case PowerUnit.MetricHorsepower: return _value* Convert.ToDouble(735.49875m);
+                case PowerUnit.Microwatt: return (_value) * Convert.ToDouble(1e-6m);
+                case PowerUnit.Milliwatt: return (_value) * Convert.ToDouble(1e-3m);
+                case PowerUnit.Nanowatt: return (_value) * Convert.ToDouble(1e-9m);
+                case PowerUnit.Petawatt: return (_value) * Convert.ToDouble(1e15m);
+                case PowerUnit.Picowatt: return (_value) * Convert.ToDouble(1e-12m);
+                case PowerUnit.Terawatt: return (_value) * Convert.ToDouble(1e12m);
                 case PowerUnit.Watt: return _value;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
         }
 
-        private decimal AsBaseNumericType(PowerUnit unit)
+        private double AsBaseNumericType(PowerUnit unit)
         {
             if(Unit == unit)
                 return _value;
@@ -755,25 +755,25 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case PowerUnit.BoilerHorsepower: return baseUnitValue/9812.5m;
-                case PowerUnit.BritishThermalUnitPerHour: return baseUnitValue/0.293071m;
-                case PowerUnit.Decawatt: return (baseUnitValue) / 1e1m;
-                case PowerUnit.Deciwatt: return (baseUnitValue) / 1e-1m;
-                case PowerUnit.ElectricalHorsepower: return baseUnitValue/746m;
-                case PowerUnit.Femtowatt: return (baseUnitValue) / 1e-15m;
-                case PowerUnit.Gigawatt: return (baseUnitValue) / 1e9m;
-                case PowerUnit.HydraulicHorsepower: return baseUnitValue/745.69988145m;
-                case PowerUnit.KilobritishThermalUnitPerHour: return (baseUnitValue/0.293071m) / 1e3m;
-                case PowerUnit.Kilowatt: return (baseUnitValue) / 1e3m;
-                case PowerUnit.MechanicalHorsepower: return baseUnitValue/745.69m;
-                case PowerUnit.Megawatt: return (baseUnitValue) / 1e6m;
-                case PowerUnit.MetricHorsepower: return baseUnitValue/735.49875m;
-                case PowerUnit.Microwatt: return (baseUnitValue) / 1e-6m;
-                case PowerUnit.Milliwatt: return (baseUnitValue) / 1e-3m;
-                case PowerUnit.Nanowatt: return (baseUnitValue) / 1e-9m;
-                case PowerUnit.Petawatt: return (baseUnitValue) / 1e15m;
-                case PowerUnit.Picowatt: return (baseUnitValue) / 1e-12m;
-                case PowerUnit.Terawatt: return (baseUnitValue) / 1e12m;
+                case PowerUnit.BoilerHorsepower: return baseUnitValue/ Convert.ToDouble(9812.5m);
+                case PowerUnit.BritishThermalUnitPerHour: return baseUnitValue/ Convert.ToDouble(0.293071m);
+                case PowerUnit.Decawatt: return (baseUnitValue) / Convert.ToDouble(1e1m);
+                case PowerUnit.Deciwatt: return (baseUnitValue) / Convert.ToDouble(1e-1m);
+                case PowerUnit.ElectricalHorsepower: return baseUnitValue/ Convert.ToDouble(746m);
+                case PowerUnit.Femtowatt: return (baseUnitValue) / Convert.ToDouble(1e-15m);
+                case PowerUnit.Gigawatt: return (baseUnitValue) / Convert.ToDouble(1e9m);
+                case PowerUnit.HydraulicHorsepower: return baseUnitValue/ Convert.ToDouble(745.69988145m);
+                case PowerUnit.KilobritishThermalUnitPerHour: return (baseUnitValue / Convert.ToDouble(0.293071m) / Convert.ToDouble(1e3m));
+                case PowerUnit.Kilowatt: return (baseUnitValue) / Convert.ToDouble(1e3m);
+                case PowerUnit.MechanicalHorsepower: return baseUnitValue/ Convert.ToDouble(745.69m);
+                case PowerUnit.Megawatt: return (baseUnitValue) / Convert.ToDouble(1e6m);
+                case PowerUnit.MetricHorsepower: return baseUnitValue/ Convert.ToDouble(735.49875m);
+                case PowerUnit.Microwatt: return (baseUnitValue) / Convert.ToDouble(1e-6m);
+                case PowerUnit.Milliwatt: return (baseUnitValue) / Convert.ToDouble(1e-3m);
+                case PowerUnit.Nanowatt: return (baseUnitValue) / Convert.ToDouble(1e-9m);
+                case PowerUnit.Petawatt: return (baseUnitValue) / Convert.ToDouble(1e15m);
+                case PowerUnit.Picowatt: return (baseUnitValue) / Convert.ToDouble(1e-12m);
+                case PowerUnit.Terawatt: return (baseUnitValue) / Convert.ToDouble(1e12m);
                 case PowerUnit.Watt: return baseUnitValue;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
@@ -868,12 +868,12 @@ namespace UnitsNet
         /// <summary>
         /// Represents the largest possible value of Power
         /// </summary>
-        public static Power MaxValue => new Power(decimal.MaxValue, BaseUnit);
+        public static Power MaxValue => new Power(double.MaxValue, BaseUnit);
 
         /// <summary>
         /// Represents the smallest possible value of Power
         /// </summary>
-        public static Power MinValue => new Power(decimal.MinValue, BaseUnit);
+        public static Power MinValue => new Power(double.MinValue, BaseUnit);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.

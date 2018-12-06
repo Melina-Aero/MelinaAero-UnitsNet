@@ -58,7 +58,7 @@ namespace UnitsNet
         /// <summary>
         ///     The numeric value this quantity was constructed with.
         /// </summary>
-        public decimal Value => _value;
+        public double Value => _value;
 
         /// <summary>
         ///     Get unit abbreviation string.
@@ -91,17 +91,17 @@ namespace UnitsNet
             return new Power(left.Value - right.AsBaseNumericType(left.Unit), left.Unit);
         }
 
-        public static Power operator *(decimal left, Power right)
+        public static Power operator *(double left, Power right)
         {
             return new Power(left * right.Value, right.Unit);
         }
 
-        public static Power operator *(Power left, decimal right)
+        public static Power operator *(Power left, double right)
         {
             return new Power(left.Value * right, left.Unit);
         }
 
-        public static Power operator /(Power left, decimal right)
+        public static Power operator /(Power left, double right)
         {
             return new Power(left.Value / right, left.Unit);
         }

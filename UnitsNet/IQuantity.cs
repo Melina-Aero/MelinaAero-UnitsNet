@@ -42,5 +42,6 @@ namespace UnitsNet
             get;
         }
 
+        double Value { get; }
     }
 }
