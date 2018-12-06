@@ -48,34 +48,12 @@ namespace UnitsNet.Serialization.JsonNet.Tests
         public class Serialize : UnitsNetJsonConverterTests
         {
             [Fact]
-            public void Information_CanSerializeVeryLargeValues()
-            {
-                Information i = Information.FromExabytes(1E+9);
-                var expectedJson = "{\n  \"Unit\": \"InformationUnit.Exabyte\",\n  \"Value\": 1000000000.0\n}";
-
-                string json = SerializeObject(i);
-
-                Assert.Equal(expectedJson, json);
-            }
-
-            [Fact]
             public void Mass_ExpectConstructedValueAndUnit()
             {
                 Mass mass = Mass.FromPounds(200);
                 var expectedJson = "{\n  \"Unit\": \"MassUnit.Pound\",\n  \"Value\": 200.0\n}";
 
                 string json = SerializeObject(mass);
-
-                Assert.Equal(expectedJson, json);
-            }
-
-            [Fact]
-            public void Information_ExpectConstructedValueAndUnit()
-            {
-                Information quantity = Information.FromKilobytes(54);
-                var expectedJson = "{\n  \"Unit\": \"InformationUnit.Kilobyte\",\n  \"Value\": 54.0\n}";
-
-                string json = SerializeObject(quantity);
 
                 Assert.Equal(expectedJson, json);
             }
@@ -115,16 +93,6 @@ namespace UnitsNet.Serialization.JsonNet.Tests
 
         public class Deserialize : UnitsNetJsonConverterTests
         {
-            [Fact]
-            public void Information_CanDeserializeVeryLargeValues()
-            {
-                Information original = Information.FromExabytes(1E+9);
-                string json = SerializeObject(original);
-                var deserialized = DeserializeObject<Information>(json);
-
-                Assert.Equal(original, deserialized);
-            }
-
             [Fact]
             public void Mass_ExpectJsonCorrectlyDeserialized()
             {

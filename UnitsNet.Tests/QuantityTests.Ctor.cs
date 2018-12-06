@@ -25,14 +25,6 @@ namespace UnitsNet.Tests
                 Assert.Equal(MassUnit.Kilogram, new Mass(5d).Unit);
                 Assert.Equal(MassUnit.Kilogram, new Mass(5m).Unit);
 
-                // decimal types
-                Assert.Equal(5, new Information(5L).Value);
-                Assert.Equal(5, new Information(5d).Value);
-                Assert.Equal(5, new Information(5m).Value);
-                Assert.Equal(InformationUnit.Bit, new Information(5L).Unit);
-                Assert.Equal(InformationUnit.Bit, new Information(5d).Unit);
-                Assert.Equal(InformationUnit.Bit, new Information(5m).Unit);
-
                 // logarithmic types
                 Assert.Equal(5, new Level(5L).Value);
                 Assert.Equal(5, new Level(5d).Value);
@@ -50,11 +42,6 @@ namespace UnitsNet.Tests
                 var mass = new Mass(5L, MassUnit.Centigram);
                 Assert.Equal(5, mass.Value);
                 Assert.Equal(MassUnit.Centigram, mass.Unit);
-
-                // decimal types
-                var information = new Information(5, InformationUnit.Kibibit);
-                Assert.Equal(5, information.Value);
-                Assert.Equal(InformationUnit.Kibibit, information.Unit);
 
                 // logarithmic types
                 var level = new Level(5, LevelUnit.Neper);

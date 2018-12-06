@@ -39,11 +39,6 @@ namespace UnitsNet.Tests
                 Assert.Equal("5 kg", new Mass(5d).ToString());
                 Assert.Equal("5 kg", new Mass(5m).ToString());
 
-                // decimal types
-                Assert.Equal("5 b", new Information(5L).ToString());
-                Assert.Equal("5 b", new Information(5d).ToString());
-                Assert.Equal("5 b", new Information(5m).ToString());
-
                 // logarithmic types
                 Assert.Equal("5 dB", new Level(5L).ToString());
                 Assert.Equal("5 dB", new Level(5d).ToString());
@@ -57,9 +52,6 @@ namespace UnitsNet.Tests
 #pragma warning disable 618
                 // double types
                 Assert.Equal("5 hg", new Mass(5, MassUnit.Hectogram).ToString());
-
-                // decimal types
-                Assert.Equal("8 B", new Information(8, InformationUnit.Byte).ToString());
 
                 // logarithmic types
                 Assert.Equal("5 Np", new Level(5, LevelUnit.Neper).ToString());

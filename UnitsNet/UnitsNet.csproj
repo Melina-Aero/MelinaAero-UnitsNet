@@ -2,9 +2,12 @@
   <Import Project="UnitsNet.Common.props" />
   <ItemGroup>
     <Compile Remove="..\Common\GeneratedCode\Quantities\BitRate.Common.g.cs" />
+    <Compile Remove="..\Common\GeneratedCode\Quantities\Information.Common.g.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="..\Common\GeneratedCode\Quantities\BitRate.Common.g.cs" />
+    <None Remove="..\Common\GeneratedCode\Quantities\Information.Common.g.cs" />
     <None Remove="..\Common\UnitDefinitions\BitRate.json" />
+    <None Remove="..\Common\UnitDefinitions\Information.json" />
   </ItemGroup>
 </Project>
