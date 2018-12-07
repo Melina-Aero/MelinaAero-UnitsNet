@@ -435,6 +435,11 @@ namespace UnitsNet
             return new Area((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Area((double)value, (AreaUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -511,6 +511,11 @@ namespace UnitsNet
             return new SpecificWeight((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new SpecificWeight((double)value, (SpecificWeightUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

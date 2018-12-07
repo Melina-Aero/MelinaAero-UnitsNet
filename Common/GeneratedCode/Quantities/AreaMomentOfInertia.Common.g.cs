@@ -302,6 +302,11 @@ namespace UnitsNet
             return new AreaMomentOfInertia((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new AreaMomentOfInertia((double)value, (AreaMomentOfInertiaUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -397,6 +397,11 @@ namespace UnitsNet
             return new ForceChangeRate((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ForceChangeRate((double)value, (ForceChangeRateUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -1024,6 +1024,11 @@ namespace UnitsNet
             return new PowerDensity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new PowerDensity((double)value, (PowerDensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

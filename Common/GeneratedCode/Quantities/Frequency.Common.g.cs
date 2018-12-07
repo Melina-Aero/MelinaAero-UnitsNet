@@ -340,6 +340,11 @@ namespace UnitsNet
             return new Frequency((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Frequency((double)value, (FrequencyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

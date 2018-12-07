@@ -282,6 +282,11 @@ namespace UnitsNet
             return new ElectricPotentialDc((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricPotentialDc((double)value, (ElectricPotentialDcUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

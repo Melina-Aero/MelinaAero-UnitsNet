@@ -387,6 +387,11 @@ namespace UnitsNet
             return new TemperatureDelta((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new TemperatureDelta((double)value, (TemperatureDeltaUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

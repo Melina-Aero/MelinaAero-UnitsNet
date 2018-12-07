@@ -226,6 +226,11 @@ namespace UnitsNet
             return new Irradiance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Irradiance((double)value, (IrradianceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

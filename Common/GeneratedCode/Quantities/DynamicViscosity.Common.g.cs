@@ -302,6 +302,11 @@ namespace UnitsNet
             return new DynamicViscosity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new DynamicViscosity((double)value, (DynamicViscosityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

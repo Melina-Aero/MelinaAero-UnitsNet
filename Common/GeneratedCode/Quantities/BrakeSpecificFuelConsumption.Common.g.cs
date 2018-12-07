@@ -245,6 +245,11 @@ namespace UnitsNet
             return new BrakeSpecificFuelConsumption((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new BrakeSpecificFuelConsumption((double)value, (BrakeSpecificFuelConsumptionUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

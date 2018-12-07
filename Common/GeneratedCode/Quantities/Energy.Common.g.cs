@@ -606,6 +606,11 @@ namespace UnitsNet
             return new Energy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Energy((double)value, (EnergyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

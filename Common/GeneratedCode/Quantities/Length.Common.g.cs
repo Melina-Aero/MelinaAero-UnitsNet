@@ -473,6 +473,11 @@ namespace UnitsNet
             return new Length((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Length((double)value, (LengthUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

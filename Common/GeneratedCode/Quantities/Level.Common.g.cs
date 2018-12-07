@@ -225,6 +225,11 @@ namespace UnitsNet
             return new Level((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Level((double)value, (LevelUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

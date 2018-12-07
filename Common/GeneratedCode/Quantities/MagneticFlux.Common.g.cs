@@ -207,6 +207,12 @@ namespace UnitsNet
             return new MagneticFlux((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MagneticFlux((double)value, (MagneticFluxUnit)fromUnit);
+        }
+
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -340,6 +340,11 @@ namespace UnitsNet
             return new SpecificEntropy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new SpecificEntropy((double)value, (SpecificEntropyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

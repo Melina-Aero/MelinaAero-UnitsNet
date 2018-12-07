@@ -264,6 +264,11 @@ namespace UnitsNet
             return new ElectricResistivity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricResistivity((double)value, (ElectricResistivityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

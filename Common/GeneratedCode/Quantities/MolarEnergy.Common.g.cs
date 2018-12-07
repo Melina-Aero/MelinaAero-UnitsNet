@@ -245,6 +245,11 @@ namespace UnitsNet
             return new MolarEnergy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MolarEnergy((double)value, (MolarEnergyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

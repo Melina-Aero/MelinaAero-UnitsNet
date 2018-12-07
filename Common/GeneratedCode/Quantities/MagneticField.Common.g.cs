@@ -207,6 +207,11 @@ namespace UnitsNet
             return new MagneticField((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MagneticField((double)value, (MagneticFieldUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

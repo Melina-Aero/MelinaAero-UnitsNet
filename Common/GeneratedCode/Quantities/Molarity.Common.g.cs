@@ -340,6 +340,11 @@ namespace UnitsNet
             return new Molarity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Molarity((double)value, (MolarityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

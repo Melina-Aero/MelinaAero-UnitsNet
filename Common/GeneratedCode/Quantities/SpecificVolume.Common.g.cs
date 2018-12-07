@@ -226,6 +226,11 @@ namespace UnitsNet
             return new SpecificVolume((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new SpecificVolume((double)value, (SpecificVolumeUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

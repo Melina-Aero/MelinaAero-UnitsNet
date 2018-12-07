@@ -245,6 +245,11 @@ namespace UnitsNet
             return new MolarEntropy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MolarEntropy((double)value, (MolarEntropyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -435,6 +435,11 @@ namespace UnitsNet
             return new Force((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Force((double)value, (ForceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

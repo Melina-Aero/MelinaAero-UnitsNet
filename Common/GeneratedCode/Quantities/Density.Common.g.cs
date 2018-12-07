@@ -682,6 +682,11 @@ namespace UnitsNet
             return new Density((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Density((double)value, (DensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

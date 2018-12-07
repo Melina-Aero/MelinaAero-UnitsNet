@@ -720,6 +720,11 @@ namespace UnitsNet
             return new MassMomentOfInertia((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MassMomentOfInertia((double)value, (MassMomentOfInertiaUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

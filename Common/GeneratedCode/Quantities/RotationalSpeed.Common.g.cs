@@ -435,6 +435,11 @@ namespace UnitsNet
             return new RotationalSpeed((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new RotationalSpeed((double)value, (RotationalSpeedUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

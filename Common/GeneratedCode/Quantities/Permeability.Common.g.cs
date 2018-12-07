@@ -207,6 +207,11 @@ namespace UnitsNet
             return new Permeability((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Permeability((double)value, (PermeabilityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

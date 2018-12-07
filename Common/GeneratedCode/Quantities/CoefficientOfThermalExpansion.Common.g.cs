@@ -245,6 +245,11 @@ namespace UnitsNet
             return new CoefficientOfThermalExpansion((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new CoefficientOfThermalExpansion((double)value, (CoefficientOfThermalExpansionUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

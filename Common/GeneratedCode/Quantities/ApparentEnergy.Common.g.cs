@@ -245,6 +245,11 @@ namespace UnitsNet
             return new ApparentEnergy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ApparentEnergy((double)value, (ApparentEnergyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

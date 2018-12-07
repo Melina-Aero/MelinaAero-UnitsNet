@@ -245,6 +245,11 @@ namespace UnitsNet
             return new RotationalStiffness((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new RotationalStiffness((double)value, (RotationalStiffnessUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

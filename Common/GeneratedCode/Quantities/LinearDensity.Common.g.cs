@@ -245,6 +245,11 @@ namespace UnitsNet
             return new LinearDensity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new LinearDensity((double)value, (LinearDensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

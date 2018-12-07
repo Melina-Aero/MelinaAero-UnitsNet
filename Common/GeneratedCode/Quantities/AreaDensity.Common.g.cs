@@ -207,6 +207,11 @@ namespace UnitsNet
             return new AreaDensity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new AreaDensity((double)value, (AreaDensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

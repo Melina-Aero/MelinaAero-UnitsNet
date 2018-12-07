@@ -606,6 +606,11 @@ namespace UnitsNet
             return new Mass((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Mass((double)value, (MassUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

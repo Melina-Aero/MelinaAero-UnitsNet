@@ -207,6 +207,11 @@ namespace UnitsNet
             return new Magnetization((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Magnetization((double)value, (MagnetizationUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

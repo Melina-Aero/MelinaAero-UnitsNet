@@ -226,6 +226,11 @@ namespace UnitsNet
             return new ThermalConductivity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ThermalConductivity((double)value, (ThermalConductivityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

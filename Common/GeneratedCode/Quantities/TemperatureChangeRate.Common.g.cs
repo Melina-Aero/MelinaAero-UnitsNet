@@ -378,6 +378,11 @@ namespace UnitsNet
             return new TemperatureChangeRate((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new TemperatureChangeRate((double)value, (TemperatureChangeRateUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

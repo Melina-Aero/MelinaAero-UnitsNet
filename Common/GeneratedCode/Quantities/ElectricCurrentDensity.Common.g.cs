@@ -207,6 +207,11 @@ namespace UnitsNet
             return new ElectricCurrentDensity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricCurrentDensity((double)value, (ElectricCurrentDensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

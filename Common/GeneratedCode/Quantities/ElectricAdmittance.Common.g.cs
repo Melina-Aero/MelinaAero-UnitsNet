@@ -264,6 +264,11 @@ namespace UnitsNet
             return new ElectricAdmittance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricAdmittance((double)value, (ElectricAdmittanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

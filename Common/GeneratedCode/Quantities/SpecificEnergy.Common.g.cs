@@ -340,6 +340,11 @@ namespace UnitsNet
             return new SpecificEnergy((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new SpecificEnergy((double)value, (SpecificEnergyUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

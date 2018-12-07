@@ -568,6 +568,11 @@ namespace UnitsNet
             return new Power((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Power((double)value, (PowerUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

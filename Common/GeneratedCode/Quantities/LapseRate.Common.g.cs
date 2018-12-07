@@ -207,6 +207,11 @@ namespace UnitsNet
             return new LapseRate((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new LapseRate((double)value, (LapseRateUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -264,6 +264,11 @@ namespace UnitsNet
             return new PressureChangeRate((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new PressureChangeRate((double)value, (PressureChangeRateUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

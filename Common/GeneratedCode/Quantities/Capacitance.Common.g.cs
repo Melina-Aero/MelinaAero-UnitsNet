@@ -207,6 +207,11 @@ namespace UnitsNet
             return new Capacitance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Capacitance((double)value, (CapacitanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

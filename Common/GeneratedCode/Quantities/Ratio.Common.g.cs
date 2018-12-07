@@ -301,6 +301,11 @@ namespace UnitsNet
             return new Ratio((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Ratio((double)value, (RatioUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

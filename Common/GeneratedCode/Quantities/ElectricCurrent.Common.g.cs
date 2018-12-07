@@ -340,6 +340,11 @@ namespace UnitsNet
             return new ElectricCurrent((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricCurrent((double)value, (ElectricCurrentUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

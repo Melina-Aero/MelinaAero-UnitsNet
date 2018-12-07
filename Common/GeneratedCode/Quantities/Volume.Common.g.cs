@@ -852,6 +852,11 @@ namespace UnitsNet
             return new Volume((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Volume((double)value, (VolumeUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

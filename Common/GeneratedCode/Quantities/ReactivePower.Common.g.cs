@@ -264,6 +264,11 @@ namespace UnitsNet
             return new ReactivePower((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ReactivePower((double)value, (ReactivePowerUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

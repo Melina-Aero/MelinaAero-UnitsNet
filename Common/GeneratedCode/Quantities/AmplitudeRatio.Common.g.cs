@@ -263,6 +263,11 @@ namespace UnitsNet
             return new AmplitudeRatio((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new AmplitudeRatio((double)value, (AmplitudeRatioUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

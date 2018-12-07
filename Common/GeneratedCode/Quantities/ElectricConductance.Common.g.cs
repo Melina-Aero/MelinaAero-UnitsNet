@@ -245,6 +245,11 @@ namespace UnitsNet
             return new ElectricConductance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricConductance((double)value, (ElectricConductanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

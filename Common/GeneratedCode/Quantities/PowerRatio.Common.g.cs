@@ -225,6 +225,11 @@ namespace UnitsNet
             return new PowerRatio((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new PowerRatio((double)value, (PowerRatioUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

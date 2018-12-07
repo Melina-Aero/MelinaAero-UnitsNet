@@ -681,6 +681,11 @@ namespace UnitsNet
             return new Flow((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Flow((double)value, (FlowUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

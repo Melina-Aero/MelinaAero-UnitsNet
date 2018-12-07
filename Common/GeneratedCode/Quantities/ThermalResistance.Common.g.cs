@@ -283,6 +283,11 @@ namespace UnitsNet
             return new ThermalResistance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ThermalResistance((double)value, (ThermalResistanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

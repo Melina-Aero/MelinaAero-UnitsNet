@@ -283,6 +283,11 @@ namespace UnitsNet
             return new Temperature((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Temperature((double)value, (TemperatureUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

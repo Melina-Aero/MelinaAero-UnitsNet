@@ -207,6 +207,11 @@ namespace UnitsNet
             return new ElectricCurrentGradient((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new ElectricCurrentGradient((double)value, (ElectricCurrentGradientUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

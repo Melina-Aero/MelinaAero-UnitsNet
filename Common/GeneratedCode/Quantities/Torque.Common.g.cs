@@ -587,6 +587,11 @@ namespace UnitsNet
             return new Torque((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Torque((double)value, (TorqueUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

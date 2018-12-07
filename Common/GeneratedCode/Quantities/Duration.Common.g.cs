@@ -420,6 +420,11 @@ namespace UnitsNet
             return new Duration((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Duration((double)value, (DurationUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

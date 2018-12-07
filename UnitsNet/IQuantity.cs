@@ -47,5 +47,6 @@ namespace UnitsNet
         double Value { get; }
 
         double As(int unitEnumIndex);
+        IQuantity From(double value, int fromUnit);
     }
 }

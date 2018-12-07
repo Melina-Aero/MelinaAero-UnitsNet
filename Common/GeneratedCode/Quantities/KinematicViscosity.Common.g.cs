@@ -340,6 +340,11 @@ namespace UnitsNet
             return new KinematicViscosity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new KinematicViscosity((double)value, (KinematicViscosityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

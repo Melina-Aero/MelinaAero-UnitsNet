@@ -264,6 +264,11 @@ namespace UnitsNet
             return new Illuminance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new Illuminance((double)value, (IlluminanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

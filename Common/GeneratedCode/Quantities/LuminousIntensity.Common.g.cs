@@ -207,6 +207,11 @@ namespace UnitsNet
             return new LuminousIntensity((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new LuminousIntensity((double)value, (LuminousIntensityUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

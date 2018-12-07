@@ -454,6 +454,11 @@ namespace UnitsNet
             return new AmountOfSubstance((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new AmountOfSubstance((double)value, (AmountOfSubstanceUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>

@@ -549,6 +549,11 @@ namespace UnitsNet
             return new MassFlow((double)value, fromUnit);
         }
 
+        public IQuantity From(double value, int fromUnit)
+        {
+            return new MassFlow((double)value, (MassFlowUnit)fromUnit);
+        }
+
         /// <summary>
         ///     Get unit abbreviation string.
         /// </summary>
