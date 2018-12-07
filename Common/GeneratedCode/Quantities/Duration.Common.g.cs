@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Duration : IQuantity
 #else
-    public partial class Duration : IQuantity, IComparable, IComparable<Duration>
+    public partial struct Duration : IQuantity, IComparable, IComparable<Duration>
 #endif
     {
         /// <summary>

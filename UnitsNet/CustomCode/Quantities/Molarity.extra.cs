@@ -9,7 +9,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Molarity
 #else
-    public partial class Molarity
+    public partial struct Molarity
 #endif
     {
         // Windows Runtime Component does not allow public methods/ctors with same number of parameters: https://msdn.microsoft.com/en-us/library/br230301.aspx#Overloaded methods

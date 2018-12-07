@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class CoefficientOfThermalExpansion : IQuantity
 #else
-    public partial class CoefficientOfThermalExpansion : IQuantity, IComparable, IComparable<CoefficientOfThermalExpansion>
+    public partial struct CoefficientOfThermalExpansion : IQuantity, IComparable, IComparable<CoefficientOfThermalExpansion>
 #endif
     {
         /// <summary>

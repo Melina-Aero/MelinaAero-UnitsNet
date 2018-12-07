@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class ThermalConductivity : IQuantity
 #else
-    public partial class ThermalConductivity : IQuantity, IComparable, IComparable<ThermalConductivity>
+    public partial struct ThermalConductivity : IQuantity, IComparable, IComparable<ThermalConductivity>
 #endif
     {
         /// <summary>

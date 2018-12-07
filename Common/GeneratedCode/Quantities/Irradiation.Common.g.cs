@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Irradiation : IQuantity
 #else
-    public partial class Irradiation : IQuantity, IComparable, IComparable<Irradiation>
+    public partial struct Irradiation : IQuantity, IComparable, IComparable<Irradiation>
 #endif
     {
         /// <summary>

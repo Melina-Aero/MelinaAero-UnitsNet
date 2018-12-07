@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class CoefficientOfThermalExpansion : IComparable, IComparable<CoefficientOfThermalExpansion>
+    public partial struct CoefficientOfThermalExpansion : IComparable, IComparable<CoefficientOfThermalExpansion>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

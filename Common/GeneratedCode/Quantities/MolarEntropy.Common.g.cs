@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class MolarEntropy : IQuantity
 #else
-    public partial class MolarEntropy : IQuantity, IComparable, IComparable<MolarEntropy>
+    public partial struct MolarEntropy : IQuantity, IComparable, IComparable<MolarEntropy>
 #endif
     {
         /// <summary>

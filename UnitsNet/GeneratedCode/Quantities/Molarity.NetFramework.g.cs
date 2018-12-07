@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Molarity : IComparable, IComparable<Molarity>
+    public partial struct Molarity : IComparable, IComparable<Molarity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

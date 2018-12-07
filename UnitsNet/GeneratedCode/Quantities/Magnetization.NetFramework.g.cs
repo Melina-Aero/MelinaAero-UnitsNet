@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Magnetization : IComparable, IComparable<Magnetization>
+    public partial struct Magnetization : IComparable, IComparable<Magnetization>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

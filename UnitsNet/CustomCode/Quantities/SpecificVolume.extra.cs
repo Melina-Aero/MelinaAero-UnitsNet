@@ -28,7 +28,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class SpecificVolume
 #else
-    public partial class SpecificVolume
+    public partial struct SpecificVolume
 #endif
     {
 

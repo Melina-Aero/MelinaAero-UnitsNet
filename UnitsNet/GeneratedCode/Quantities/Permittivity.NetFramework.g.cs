@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Permittivity : IComparable, IComparable<Permittivity>
+    public partial struct Permittivity : IComparable, IComparable<Permittivity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

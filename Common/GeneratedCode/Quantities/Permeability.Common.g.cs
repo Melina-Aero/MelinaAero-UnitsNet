@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Permeability : IQuantity
 #else
-    public partial class Permeability : IQuantity, IComparable, IComparable<Permeability>
+    public partial struct Permeability : IQuantity, IComparable, IComparable<Permeability>
 #endif
     {
         /// <summary>

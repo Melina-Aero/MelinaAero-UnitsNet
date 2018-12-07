@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Permittivity : IQuantity
 #else
-    public partial class Permittivity : IQuantity, IComparable, IComparable<Permittivity>
+    public partial struct Permittivity : IQuantity, IComparable, IComparable<Permittivity>
 #endif
     {
         /// <summary>

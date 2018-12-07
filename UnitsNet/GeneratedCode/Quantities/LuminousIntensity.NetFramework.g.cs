@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class LuminousIntensity : IComparable, IComparable<LuminousIntensity>
+    public partial struct LuminousIntensity : IComparable, IComparable<LuminousIntensity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

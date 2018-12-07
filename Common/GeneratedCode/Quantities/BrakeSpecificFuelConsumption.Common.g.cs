@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class BrakeSpecificFuelConsumption : IQuantity
 #else
-    public partial class BrakeSpecificFuelConsumption : IQuantity, IComparable, IComparable<BrakeSpecificFuelConsumption>
+    public partial struct BrakeSpecificFuelConsumption : IQuantity, IComparable, IComparable<BrakeSpecificFuelConsumption>
 #endif
     {
         /// <summary>

@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class RotationalAcceleration : IQuantity
 #else
-    public partial class RotationalAcceleration : IQuantity, IComparable, IComparable<RotationalAcceleration>
+    public partial struct RotationalAcceleration : IQuantity, IComparable, IComparable<RotationalAcceleration>
 #endif
     {
         /// <summary>

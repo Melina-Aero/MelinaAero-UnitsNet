@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class DynamicViscosity : IComparable, IComparable<DynamicViscosity>
+    public partial struct DynamicViscosity : IComparable, IComparable<DynamicViscosity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

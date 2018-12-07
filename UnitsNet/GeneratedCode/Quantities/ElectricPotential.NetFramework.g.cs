@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class ElectricPotential : IComparable, IComparable<ElectricPotential>
+    public partial struct ElectricPotential : IComparable, IComparable<ElectricPotential>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

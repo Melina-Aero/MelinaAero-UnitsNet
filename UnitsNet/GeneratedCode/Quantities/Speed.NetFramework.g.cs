@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Speed : IComparable, IComparable<Speed>
+    public partial struct Speed : IComparable, IComparable<Speed>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

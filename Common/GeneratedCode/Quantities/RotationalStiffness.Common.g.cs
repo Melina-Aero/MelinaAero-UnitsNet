@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class RotationalStiffness : IQuantity
 #else
-    public partial class RotationalStiffness : IQuantity, IComparable, IComparable<RotationalStiffness>
+    public partial struct RotationalStiffness : IQuantity, IComparable, IComparable<RotationalStiffness>
 #endif
     {
         /// <summary>

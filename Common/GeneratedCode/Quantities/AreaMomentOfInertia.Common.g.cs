@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class AreaMomentOfInertia : IQuantity
 #else
-    public partial class AreaMomentOfInertia : IQuantity, IComparable, IComparable<AreaMomentOfInertia>
+    public partial struct AreaMomentOfInertia : IQuantity, IComparable, IComparable<AreaMomentOfInertia>
 #endif
     {
         /// <summary>

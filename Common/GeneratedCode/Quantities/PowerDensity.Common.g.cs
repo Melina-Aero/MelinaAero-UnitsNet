@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class PowerDensity : IQuantity
 #else
-    public partial class PowerDensity : IQuantity, IComparable, IComparable<PowerDensity>
+    public partial struct PowerDensity : IQuantity, IComparable, IComparable<PowerDensity>
 #endif
     {
         /// <summary>

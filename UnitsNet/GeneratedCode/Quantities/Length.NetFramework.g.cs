@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Length : IComparable, IComparable<Length>
+    public partial struct Length : IComparable, IComparable<Length>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

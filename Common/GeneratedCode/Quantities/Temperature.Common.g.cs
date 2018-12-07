@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Temperature : IQuantity
 #else
-    public partial class Temperature : IQuantity, IComparable, IComparable<Temperature>
+    public partial struct Temperature : IQuantity, IComparable, IComparable<Temperature>
 #endif
     {
         /// <summary>

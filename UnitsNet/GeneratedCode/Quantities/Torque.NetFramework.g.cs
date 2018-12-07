@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class Torque : IComparable, IComparable<Torque>
+    public partial struct Torque : IComparable, IComparable<Torque>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

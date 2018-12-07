@@ -31,7 +31,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class AmplitudeRatio
 #else
-    public partial class AmplitudeRatio
+    public partial struct AmplitudeRatio
 #endif
     {
         /// <summary>

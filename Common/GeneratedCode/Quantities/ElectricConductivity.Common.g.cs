@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class ElectricConductivity : IQuantity
 #else
-    public partial class ElectricConductivity : IQuantity, IComparable, IComparable<ElectricConductivity>
+    public partial struct ElectricConductivity : IQuantity, IComparable, IComparable<ElectricConductivity>
 #endif
     {
         /// <summary>

@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class MassMomentOfInertia : IComparable, IComparable<MassMomentOfInertia>
+    public partial struct MassMomentOfInertia : IComparable, IComparable<MassMomentOfInertia>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

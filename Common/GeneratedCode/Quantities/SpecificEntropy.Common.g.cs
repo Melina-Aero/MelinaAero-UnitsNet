@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class SpecificEntropy : IQuantity
 #else
-    public partial class SpecificEntropy : IQuantity, IComparable, IComparable<SpecificEntropy>
+    public partial struct SpecificEntropy : IQuantity, IComparable, IComparable<SpecificEntropy>
 #endif
     {
         /// <summary>

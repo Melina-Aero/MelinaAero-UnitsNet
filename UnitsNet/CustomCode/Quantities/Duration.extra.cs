@@ -30,7 +30,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class Duration
 #else
-    public partial class Duration
+    public partial struct Duration
 #endif
     {
         // Windows Runtime Component does not allow operator overloads: https://msdn.microsoft.com/en-us/library/br230301.aspx

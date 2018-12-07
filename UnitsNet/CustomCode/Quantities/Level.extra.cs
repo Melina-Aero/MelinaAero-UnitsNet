@@ -30,7 +30,7 @@ namespace UnitsNet
     // Public classes must be sealed (NotInheritable in Visual Basic). If your programming model requires polymorphism, you can create a public interface and implement that interface on the classes that must be polymorphic.
     // Cannot have methods with same name and same number of parameters.
 #if !WINDOWS_UWP
-    public partial class Level
+    public partial struct Level
     {
         /// <summary>
         ///     Initializes a new instance of the logarithmic <see cref="Level" /> class which is the ratio of a quantity Q to a

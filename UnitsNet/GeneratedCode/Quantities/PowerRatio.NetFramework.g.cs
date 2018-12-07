@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class PowerRatio : IComparable, IComparable<PowerRatio>
+    public partial struct PowerRatio : IComparable, IComparable<PowerRatio>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

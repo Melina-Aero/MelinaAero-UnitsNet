@@ -59,7 +59,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class SolidAngle : IQuantity
 #else
-    public partial class SolidAngle : IQuantity, IComparable, IComparable<SolidAngle>
+    public partial struct SolidAngle : IQuantity, IComparable, IComparable<SolidAngle>
 #endif
     {
         /// <summary>

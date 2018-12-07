@@ -31,7 +31,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class PowerRatio
 #else
-    public partial class PowerRatio
+    public partial struct PowerRatio
 #endif
     {
         /// <summary>

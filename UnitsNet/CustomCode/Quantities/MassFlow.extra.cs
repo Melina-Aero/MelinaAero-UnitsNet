@@ -33,7 +33,7 @@ namespace UnitsNet
 #if WINDOWS_UWP
     public sealed partial class MassFlow
 #else
-    public partial class MassFlow
+    public partial struct MassFlow
 #endif
     {
 #if !WINDOWS_UWP

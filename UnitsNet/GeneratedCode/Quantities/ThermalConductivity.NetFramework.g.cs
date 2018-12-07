@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class ThermalConductivity : IComparable, IComparable<ThermalConductivity>
+    public partial struct ThermalConductivity : IComparable, IComparable<ThermalConductivity>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.

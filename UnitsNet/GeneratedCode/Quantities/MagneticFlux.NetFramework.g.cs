@@ -53,7 +53,7 @@ namespace UnitsNet
     /// </summary>
     // ReSharper disable once PartialTypeWithSinglePart
 
-    public partial class MagneticFlux : IComparable, IComparable<MagneticFlux>
+    public partial struct MagneticFlux : IComparable, IComparable<MagneticFlux>
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
