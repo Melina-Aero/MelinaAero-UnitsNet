@@ -87,7 +87,7 @@ namespace UnitsNet.Units
         Torr,
     }
 
-    enum PressureReference
+    public enum PressureReference
     {
         Undefined = 0,
         Absolute,

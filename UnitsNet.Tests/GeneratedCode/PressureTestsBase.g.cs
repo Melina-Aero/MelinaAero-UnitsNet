@@ -38,6 +38,7 @@
 
 using System;
 using System.Linq;
+using UnitsNet.CustomCode.Wrappers;
 using UnitsNet.Units;
 using Xunit;
 
@@ -94,7 +95,7 @@ namespace UnitsNet.Tests
         protected abstract double TonnesForcePerSquareMillimeterInOnePascal { get; }
         protected abstract double TorrsInOnePascal { get; }
 
-// ReSharper disable VirtualMemberNeverOverriden.Global
+        // ReSharper disable VirtualMemberNeverOverriden.Global
         protected virtual double AtmospheresTolerance { get { return 1e-5; } }
         protected virtual double BarsTolerance { get { return 1e-5; } }
         protected virtual double CentibarsTolerance { get { return 1e-5; } }
@@ -130,12 +131,13 @@ namespace UnitsNet.Tests
         protected virtual double PoundsForcePerSquareFootTolerance { get { return 1e-5; } }
         protected virtual double PoundsForcePerSquareInchTolerance { get { return 1e-5; } }
         protected virtual double PoundsPerInchSecondSquaredTolerance { get { return 1e-5; } }
+        protected virtual double PsiTolerance { get { return 1e-5; } }
         protected virtual double TechnicalAtmospheresTolerance { get { return 1e-5; } }
         protected virtual double TonnesForcePerSquareCentimeterTolerance { get { return 1e-5; } }
         protected virtual double TonnesForcePerSquareMeterTolerance { get { return 1e-5; } }
         protected virtual double TonnesForcePerSquareMillimeterTolerance { get { return 1e-5; } }
         protected virtual double TorrsTolerance { get { return 1e-5; } }
-// ReSharper restore VirtualMemberNeverOverriden.Global
+        // ReSharper restore VirtualMemberNeverOverriden.Global
 
         [Fact]
         public void PascalToPressureUnits()
@@ -491,12 +493,12 @@ namespace UnitsNet.Tests
         {
             Pressure v = Pressure.FromPascals(1);
             AssertEx.EqualTolerance(-1, -v.Pascals, PascalsTolerance);
-            AssertEx.EqualTolerance(2, (Pressure.FromPascals(3)-v).Pascals, PascalsTolerance);
+            AssertEx.EqualTolerance(2, (Pressure.FromPascals(3) - v).Pascals, PascalsTolerance);
             AssertEx.EqualTolerance(2, (v + v).Pascals, PascalsTolerance);
-            AssertEx.EqualTolerance(10, (v*10).Pascals, PascalsTolerance);
-            AssertEx.EqualTolerance(10, (10*v).Pascals, PascalsTolerance);
-            AssertEx.EqualTolerance(2, (Pressure.FromPascals(10)/5).Pascals, PascalsTolerance);
-            AssertEx.EqualTolerance(2, Pressure.FromPascals(10)/Pressure.FromPascals(5), PascalsTolerance);
+            AssertEx.EqualTolerance(10, (v * 10).Pascals, PascalsTolerance);
+            AssertEx.EqualTolerance(10, (10 * v).Pascals, PascalsTolerance);
+            AssertEx.EqualTolerance(2, (Pressure.FromPascals(10) / 5).Pascals, PascalsTolerance);
+            AssertEx.EqualTolerance(2, Pressure.FromPascals(10) / Pressure.FromPascals(5), PascalsTolerance);
         }
 
         [Fact]
@@ -546,13 +548,13 @@ namespace UnitsNet.Tests
             Pressure a = Pressure.FromPascals(1);
             Pressure b = Pressure.FromPascals(2);
 
-// ReSharper disable EqualExpressionComparison
+            // ReSharper disable EqualExpressionComparison
             Assert.True(a == a);
             Assert.True(a != b);
 
             Assert.False(a == b);
             Assert.False(a != a);
-// ReSharper restore EqualExpressionComparison
+            // ReSharper restore EqualExpressionComparison
         }
 
         [Fact]
@@ -581,6 +583,60 @@ namespace UnitsNet.Tests
         public void UnitsDoesNotContainUndefined()
         {
             Assert.DoesNotContain(PressureUnit.Undefined, Pressure.Units);
+        }
+
+        // Pressure Measurement References
+
+        [Fact]
+        public void ReferenceConversion_WithDefaultReferencedPressure()
+        {
+            ReferencePressure refPressure = new ReferencePressure(Pressure.FromAtmospheres(3));
+
+            AssertEx.EqualTolerance(2, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(2, refPressure.Vacuum.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(3, refPressure.Absolute.Atmospheres, AtmospheresTolerance);
+
+            refPressure = new ReferencePressure(Pressure.FromAtmospheres(3), PressureReference.Gauge);
+
+            AssertEx.EqualTolerance(4, refPressure.Absolute.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(3, refPressure.Vacuum.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(3, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+
+            refPressure = new ReferencePressure(Pressure.FromAtmospheres(3), PressureReference.Vacuum);
+
+            AssertEx.EqualTolerance(3, refPressure.Vacuum.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(3, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+            AssertEx.EqualTolerance(2, refPressure.Absolute.Atmospheres, AtmospheresTolerance);
+        }
+
+        [Fact]
+        public void ReferenceConversion_WithSetReferencedPressure()
+        {
+            ReferencePressure refPressure = new ReferencePressure(Pressure.FromAtmospheres(3));
+
+            AssertEx.EqualTolerance(2, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+
+            ReferencePressure.ReferencedPressure = new Pressure(2, PressureUnit.Atmosphere);
+            AssertEx.EqualTolerance(1, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+
+            ReferencePressure.ReferencedPressure = new Pressure(1.5, PressureUnit.Atmosphere);
+            AssertEx.EqualTolerance(1.5, refPressure.Gauge.Atmospheres, AtmospheresTolerance);
+        }
+
+        [Fact]
+        public void ReferencePressure_isChanged()
+        {
+            var referencePressure = ReferencePressure.ReferencedPressure;
+            ReferencePressure.ReferencedPressure = new Pressure(2, PressureUnit.Atmosphere);
+
+            Assert.False(referencePressure.Atmospheres.Equals(ReferencePressure.ReferencedPressure.Atmospheres));
+            Assert.True(ReferencePressure.ReferencedPressure.Atmospheres.Equals(2));
+        }
+
+        [Fact]
+        public void ReferencesDoesNotContainUndefined()
+        {
+            Assert.DoesNotContain(PressureReference.Undefined, ReferencePressure.References);
         }
 
     }

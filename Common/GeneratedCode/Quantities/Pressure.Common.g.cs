@@ -77,6 +77,9 @@ namespace UnitsNet
         /// </summary>
         public PressureUnit Unit => _unit.GetValueOrDefault(BaseUnit);
 
+        /// <summary>
+        ///     The measured reference this quantity was constructed with -or- <see cref="BaseUnit" /> if default ctor was used.
+        /// </summary>
         static Pressure()
         {
             BaseDimensions = new BaseDimensions(-1, 1, -2, 0, 0, 0, 0);
@@ -1310,8 +1313,6 @@ namespace UnitsNet
         /// Represents the smallest possible value of Pressure
         /// </summary>
         public static Pressure MinValue => new Pressure(double.MinValue, BaseUnit);
-
-        public static Pressure Reference { get; set; } = new Pressure(1, PressureUnit.Atmosphere);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
