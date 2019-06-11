@@ -159,7 +159,7 @@ namespace UnitsNet
         /// <summary>
         ///     All units of measurement for the HeatTransferCoefficient quantity.
         /// </summary>
-        public static HeatTransferCoefficientUnit[] Units { get; } = Enum.GetValues(typeof(HeatTransferCoefficientUnit)).Cast<HeatTransferCoefficientUnit>().Except(new HeatTransferCoefficientUnit[]{ HeatTransferCoefficientUnit.Undefined }).ToArray();
+        public static HeatTransferCoefficientUnit[] Units { get; } = Enum.GetValues(typeof(HeatTransferCoefficientUnit)).Cast<HeatTransferCoefficientUnit>().Except(new HeatTransferCoefficientUnit[] { HeatTransferCoefficientUnit.Undefined }).ToArray();
 
         /// <summary>
         ///     Get HeatTransferCoefficient in WattsPerSquareMeterCelsius.
@@ -170,6 +170,16 @@ namespace UnitsNet
         ///     Get HeatTransferCoefficient in WattsPerSquareMeterKelvin.
         /// </summary>
         public double WattsPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.WattPerSquareMeterKelvin);
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient in KilowattsPerSquareMeterKelvin.
+        /// </summary>
+        public double KilowattsPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.KilowattPerSquareMeterKelvin);
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient in KilowattsPerSquareMeterCelsius.
+        /// </summary>
+        public double KilowattsPerSquareMeterCelsius => As(HeatTransferCoefficientUnit.KilowattPerSquareMeterCelsius);
 
         #endregion
 
@@ -190,8 +200,22 @@ namespace UnitsNet
         public static HeatTransferCoefficient FromWattsPerSquareMeterCelsius(QuantityValue wattspersquaremetercelsius)
 #endif
         {
-            double value = (double) wattspersquaremetercelsius;
+            double value = (double)wattspersquaremetercelsius;
             return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.WattPerSquareMeterCelsius);
+        }
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient from KilowattsPerSquareMeterCelsius.
+        /// </summary>
+#if WINDOWS_UWP
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromWattsPerSquareMeterCelsius(double wattspersquaremetercelsius)
+#else
+        public static HeatTransferCoefficient FromKilowattsPerSquareMeterCelsius(QuantityValue kilowattspersquaremetercelsius)
+#endif
+        {
+            double value = (double)kilowattspersquaremetercelsius;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.KilowattPerSquareMeterCelsius);
         }
 
         /// <summary>
@@ -204,8 +228,22 @@ namespace UnitsNet
         public static HeatTransferCoefficient FromWattsPerSquareMeterKelvin(QuantityValue wattspersquaremeterkelvin)
 #endif
         {
-            double value = (double) wattspersquaremeterkelvin;
+            double value = (double)wattspersquaremeterkelvin;
             return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.WattPerSquareMeterKelvin);
+        }
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient from KilowattsPerSquareMeterKelvin.
+        /// </summary>
+#if WINDOWS_UWP
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromWattsPerSquareMeterKelvin(double wattspersquaremeterkelvin)
+#else
+        public static HeatTransferCoefficient FromKilowattsPerSquareMeterKelvin(QuantityValue kilowattspersquaremeterkelvin)
+#endif
+        {
+            double value = (double)kilowattspersquaremeterkelvin;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.KilowattPerSquareMeterKelvin);
         }
 
 
@@ -248,8 +286,8 @@ namespace UnitsNet
 
         public int CompareTo(object obj)
         {
-            if(obj is null) throw new ArgumentNullException(nameof(obj));
-            if(!(obj is HeatTransferCoefficient)) throw new ArgumentException("Expected type HeatTransferCoefficient.", nameof(obj));
+            if (obj is null) throw new ArgumentNullException(nameof(obj));
+            if (!(obj is HeatTransferCoefficient)) throw new ArgumentException("Expected type HeatTransferCoefficient.", nameof(obj));
 
             return CompareTo((HeatTransferCoefficient)obj);
         }
@@ -268,7 +306,7 @@ namespace UnitsNet
         [Obsolete("It is not safe to compare equality due to using System.Double as the internal representation. It is very easy to get slightly different values due to floating point operations. Instead use Equals(HeatTransferCoefficient, double, ComparisonType) to provide the max allowed absolute or relative error.")]
         public override bool Equals(object obj)
         {
-            if(obj is null || !(obj is HeatTransferCoefficient))
+            if (obj is null || !(obj is HeatTransferCoefficient))
                 return false;
 
             var objQuantity = (HeatTransferCoefficient)obj;
@@ -317,7 +355,7 @@ namespace UnitsNet
         /// <returns>True if the absolute difference between the two values is not greater than the specified relative or absolute tolerance.</returns>
         public bool Equals(HeatTransferCoefficient other, double tolerance, ComparisonType comparisonType)
         {
-            if(tolerance < 0)
+            if (tolerance < 0)
                 throw new ArgumentOutOfRangeException("tolerance", "Tolerance must be greater than or equal to 0.");
 
             double thisValue = (double)this.Value;
@@ -359,7 +397,7 @@ namespace UnitsNet
         /// <returns>Value converted to the specified unit.</returns>
         public double As(HeatTransferCoefficientUnit unit)
         {
-            if(Unit == unit)
+            if (Unit == unit)
                 return Convert.ToDouble(Value);
 
             var converted = AsBaseNumericType(unit);
@@ -393,10 +431,12 @@ namespace UnitsNet
         /// <returns>The value in the base unit representation.</returns>
         private double AsBaseUnit()
         {
-            switch(Unit)
+            switch (Unit)
             {
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return _value;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return _value;
+                case HeatTransferCoefficientUnit.KilowattPerSquareMeterCelsius: return (_value) * 1e3d;
+                case HeatTransferCoefficientUnit.KilowattPerSquareMeterKelvin: return (_value) * 1e3d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -404,15 +444,17 @@ namespace UnitsNet
 
         private double AsBaseNumericType(HeatTransferCoefficientUnit unit)
         {
-            if(Unit == unit)
+            if (Unit == unit)
                 return _value;
 
             var baseUnitValue = AsBaseUnit();
 
-            switch(unit)
+            switch (unit)
             {
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return baseUnitValue;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return baseUnitValue;
+                case HeatTransferCoefficientUnit.KilowattPerSquareMeterCelsius: return (baseUnitValue) / 1e3d;
+                case HeatTransferCoefficientUnit.KilowattPerSquareMeterKelvin: return (baseUnitValue) / 1e3d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

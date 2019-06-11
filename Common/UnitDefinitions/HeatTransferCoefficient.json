@@ -31,6 +31,30 @@
           "Abbreviations": [ "W/m²·°C" ]
         }
       ]
+    },
+    {
+      "SingularName": "KilowattPerSquareMeterKelvin",
+      "PluralName": "KilowattsPerSquareMeterKelvin",
+      "FromUnitToBaseFunc": "x*1e3",
+      "FromBaseToUnitFunc": "x/1e3",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "kW/m²·K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "KilowattPerSquareMeterCelsius",
+      "PluralName": "KilowattsPerSquareMeterCelsius",
+      "FromUnitToBaseFunc": "x*1e3",
+      "FromBaseToUnitFunc": "x/1e3",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "kW/m²·°C" ]
+        }
+      ]
     }
   ]
 }

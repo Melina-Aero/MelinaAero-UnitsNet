@@ -48,5 +48,7 @@ namespace UnitsNet.Tests.CustomCode
     {
         protected override double WattsPerSquareMeterCelsiusInOneWattPerSquareMeterKelvin => 1;
         protected override double WattsPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => 1;
+        protected override double KilowattsPerSquareMeterCelsiusInOneWattPerSquareMeterKelvin => 1e-3d;
+        protected override double KilowattsPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => 1e-3d;
     }
 }
