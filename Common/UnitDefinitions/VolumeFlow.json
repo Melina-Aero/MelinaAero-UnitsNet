@@ -88,6 +88,31 @@
       ]
     },
     {
+      "SingularName": "CubicFootPerDay",
+      "PluralName": "CubicFeetPerDay",
+      "FromUnitToBaseFunc": "x*3.277613897e-7",
+      "FromBaseToUnitFunc": "x/3.277613897e-7",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "ft³/d", "cf/d" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "MillionStandardCubicFootPerDay",
+      "PluralName": "MillionStandardCubicFeetPerDay",
+      "FromUnitToBaseFunc": "x*0.3277613897",
+      "FromBaseToUnitFunc": "x/0.3277613897",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "MMSCFD" ]
+        }
+      ]
+    },
+
+    {
       "SingularName": "CubicYardPerSecond",
       "PluralName": "CubicYardsPerSecond",
       "FromUnitToBaseFunc": "x*0.764554857984",

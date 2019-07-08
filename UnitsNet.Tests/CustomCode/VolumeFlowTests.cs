@@ -49,11 +49,13 @@ namespace UnitsNet.Tests.CustomCode
         protected override double CubicMetersPerHourInOneCubicMeterPerSecond => 3600.0;
 
         protected override double CubicDecimetersPerMinuteInOneCubicMeterPerSecond => 60000.00000;
+        protected override double CubicFeetPerDayInOneCubicMeterPerSecond => 3.051187219e6;
 
         protected override double CubicFeetPerHourInOneCubicMeterPerSecond => 1.271328001973604e+5;
 
         protected override double CubicFeetPerSecondInOneCubicMeterPerSecond => 35.314666721489;
 
+        protected override double MillionStandardCubicFeetPerDayInOneCubicMeterPerSecond => 3.051187219;
         protected override double MillionUsGallonsPerDayInOneCubicMeterPerSecond => 22.824465227;
 
         protected override double CubicMetersPerSecondInOneCubicMeterPerSecond => 1;

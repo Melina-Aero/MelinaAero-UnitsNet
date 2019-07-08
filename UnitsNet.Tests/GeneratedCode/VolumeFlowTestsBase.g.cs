@@ -55,6 +55,7 @@ namespace UnitsNet.Tests
     {
         protected abstract double CentilitersPerMinuteInOneCubicMeterPerSecond { get; }
         protected abstract double CubicDecimetersPerMinuteInOneCubicMeterPerSecond { get; }
+        protected abstract double CubicFeetPerDayInOneCubicMeterPerSecond { get; }
         protected abstract double CubicFeetPerHourInOneCubicMeterPerSecond { get; }
         protected abstract double CubicFeetPerMinuteInOneCubicMeterPerSecond { get; }
         protected abstract double CubicFeetPerSecondInOneCubicMeterPerSecond { get; }
@@ -72,6 +73,7 @@ namespace UnitsNet.Tests
         protected abstract double LitersPerSecondInOneCubicMeterPerSecond { get; }
         protected abstract double MicrolitersPerMinuteInOneCubicMeterPerSecond { get; }
         protected abstract double MillilitersPerMinuteInOneCubicMeterPerSecond { get; }
+        protected abstract double MillionStandardCubicFeetPerDayInOneCubicMeterPerSecond { get; }
         protected abstract double MillionUsGallonsPerDayInOneCubicMeterPerSecond { get; }
         protected abstract double NanolitersPerMinuteInOneCubicMeterPerSecond { get; }
         protected abstract double OilBarrelsPerDayInOneCubicMeterPerSecond { get; }
@@ -84,6 +86,7 @@ namespace UnitsNet.Tests
 // ReSharper disable VirtualMemberNeverOverriden.Global
         protected virtual double CentilitersPerMinuteTolerance { get { return 1e-5; } }
         protected virtual double CubicDecimetersPerMinuteTolerance { get { return 1e-5; } }
+        protected virtual double CubicFeetPerDayTolerance { get { return 1e-5; } }
         protected virtual double CubicFeetPerHourTolerance { get { return 1e-5; } }
         protected virtual double CubicFeetPerMinuteTolerance { get { return 1e-5; } }
         protected virtual double CubicFeetPerSecondTolerance { get { return 1e-5; } }
@@ -101,6 +104,7 @@ namespace UnitsNet.Tests
         protected virtual double LitersPerSecondTolerance { get { return 1e-5; } }
         protected virtual double MicrolitersPerMinuteTolerance { get { return 1e-5; } }
         protected virtual double MillilitersPerMinuteTolerance { get { return 1e-5; } }
+        protected virtual double MillionStandardCubicFeetPerDayTolerance { get { return 1e-5; } }
         protected virtual double MillionUsGallonsPerDayTolerance { get { return 1e-5; } }
         protected virtual double NanolitersPerMinuteTolerance { get { return 1e-5; } }
         protected virtual double OilBarrelsPerDayTolerance { get { return 1e-5; } }
@@ -117,6 +121,7 @@ namespace UnitsNet.Tests
             VolumeFlow cubicmeterpersecond = VolumeFlow.FromCubicMetersPerSecond(1);
             AssertEx.EqualTolerance(CentilitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.CentilitersPerMinute, CentilitersPerMinuteTolerance);
             AssertEx.EqualTolerance(CubicDecimetersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.CubicDecimetersPerMinute, CubicDecimetersPerMinuteTolerance);
+            AssertEx.EqualTolerance(CubicFeetPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.CubicFeetPerDay, CubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(CubicFeetPerHourInOneCubicMeterPerSecond, cubicmeterpersecond.CubicFeetPerHour, CubicFeetPerHourTolerance);
             AssertEx.EqualTolerance(CubicFeetPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.CubicFeetPerMinute, CubicFeetPerMinuteTolerance);
             AssertEx.EqualTolerance(CubicFeetPerSecondInOneCubicMeterPerSecond, cubicmeterpersecond.CubicFeetPerSecond, CubicFeetPerSecondTolerance);
@@ -134,6 +139,7 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(LitersPerSecondInOneCubicMeterPerSecond, cubicmeterpersecond.LitersPerSecond, LitersPerSecondTolerance);
             AssertEx.EqualTolerance(MicrolitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.MicrolitersPerMinute, MicrolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(MillilitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.MillilitersPerMinute, MillilitersPerMinuteTolerance);
+            AssertEx.EqualTolerance(MillionStandardCubicFeetPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.MillionStandardCubicFeetPerDay, MillionStandardCubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(MillionUsGallonsPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.MillionUsGallonsPerDay, MillionUsGallonsPerDayTolerance);
             AssertEx.EqualTolerance(NanolitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.NanolitersPerMinute, NanolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(OilBarrelsPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.OilBarrelsPerDay, OilBarrelsPerDayTolerance);
@@ -149,6 +155,7 @@ namespace UnitsNet.Tests
         {
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CentilitersPerMinute).CentilitersPerMinute, CentilitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CubicDecimeterPerMinute).CubicDecimetersPerMinute, CubicDecimetersPerMinuteTolerance);
+            AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CubicFootPerDay).CubicFeetPerDay, CubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CubicFootPerHour).CubicFeetPerHour, CubicFeetPerHourTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CubicFootPerMinute).CubicFeetPerMinute, CubicFeetPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.CubicFootPerSecond).CubicFeetPerSecond, CubicFeetPerSecondTolerance);
@@ -166,6 +173,7 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.LitersPerSecond).LitersPerSecond, LitersPerSecondTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.MicrolitersPerMinute).MicrolitersPerMinute, MicrolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.MillilitersPerMinute).MillilitersPerMinute, MillilitersPerMinuteTolerance);
+            AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.MillionStandardCubicFeetPerDay).MillionStandardCubicFeetPerDay, MillionStandardCubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.MillionUsGallonsPerDay).MillionUsGallonsPerDay, MillionUsGallonsPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.NanolitersPerMinute).NanolitersPerMinute, NanolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.From(1, VolumeFlowUnit.OilBarrelsPerDay).OilBarrelsPerDay, OilBarrelsPerDayTolerance);
@@ -182,6 +190,7 @@ namespace UnitsNet.Tests
             var cubicmeterpersecond = VolumeFlow.FromCubicMetersPerSecond(1);
             AssertEx.EqualTolerance(CentilitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CentilitersPerMinute), CentilitersPerMinuteTolerance);
             AssertEx.EqualTolerance(CubicDecimetersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CubicDecimeterPerMinute), CubicDecimetersPerMinuteTolerance);
+            AssertEx.EqualTolerance(CubicFeetPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CubicFootPerDay), CubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(CubicFeetPerHourInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CubicFootPerHour), CubicFeetPerHourTolerance);
             AssertEx.EqualTolerance(CubicFeetPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CubicFootPerMinute), CubicFeetPerMinuteTolerance);
             AssertEx.EqualTolerance(CubicFeetPerSecondInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.CubicFootPerSecond), CubicFeetPerSecondTolerance);
@@ -199,6 +208,7 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(LitersPerSecondInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.LitersPerSecond), LitersPerSecondTolerance);
             AssertEx.EqualTolerance(MicrolitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.MicrolitersPerMinute), MicrolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(MillilitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.MillilitersPerMinute), MillilitersPerMinuteTolerance);
+            AssertEx.EqualTolerance(MillionStandardCubicFeetPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.MillionStandardCubicFeetPerDay), MillionStandardCubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(MillionUsGallonsPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.MillionUsGallonsPerDay), MillionUsGallonsPerDayTolerance);
             AssertEx.EqualTolerance(NanolitersPerMinuteInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.NanolitersPerMinute), NanolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(OilBarrelsPerDayInOneCubicMeterPerSecond, cubicmeterpersecond.As(VolumeFlowUnit.OilBarrelsPerDay), OilBarrelsPerDayTolerance);
@@ -221,6 +231,10 @@ namespace UnitsNet.Tests
             var cubicdecimeterperminuteQuantity = cubicmeterpersecond.ToUnit(VolumeFlowUnit.CubicDecimeterPerMinute);
             AssertEx.EqualTolerance(CubicDecimetersPerMinuteInOneCubicMeterPerSecond, (double)cubicdecimeterperminuteQuantity.Value, CubicDecimetersPerMinuteTolerance);
             Assert.Equal(VolumeFlowUnit.CubicDecimeterPerMinute, cubicdecimeterperminuteQuantity.Unit);
+
+            var cubicfootperdayQuantity = cubicmeterpersecond.ToUnit(VolumeFlowUnit.CubicFootPerDay);
+            AssertEx.EqualTolerance(CubicFeetPerDayInOneCubicMeterPerSecond, (double)cubicfootperdayQuantity.Value, CubicFeetPerDayTolerance);
+            Assert.Equal(VolumeFlowUnit.CubicFootPerDay, cubicfootperdayQuantity.Unit);
 
             var cubicfootperhourQuantity = cubicmeterpersecond.ToUnit(VolumeFlowUnit.CubicFootPerHour);
             AssertEx.EqualTolerance(CubicFeetPerHourInOneCubicMeterPerSecond, (double)cubicfootperhourQuantity.Value, CubicFeetPerHourTolerance);
@@ -290,6 +304,10 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(MillilitersPerMinuteInOneCubicMeterPerSecond, (double)millilitersperminuteQuantity.Value, MillilitersPerMinuteTolerance);
             Assert.Equal(VolumeFlowUnit.MillilitersPerMinute, millilitersperminuteQuantity.Unit);
 
+            var millionstandardcubicfeetperdayQuantity= cubicmeterpersecond.ToUnit(VolumeFlowUnit.MillionStandardCubicFeetPerDay);
+            AssertEx.EqualTolerance(MillionStandardCubicFeetPerDayInOneCubicMeterPerSecond, (double)millionstandardcubicfeetperdayQuantity.Value, MillionStandardCubicFeetPerDayTolerance);
+            Assert.Equal(VolumeFlowUnit.MillionStandardCubicFeetPerDay, millionstandardcubicfeetperdayQuantity.Unit);
+
             var millionusgallonsperdayQuantity = cubicmeterpersecond.ToUnit(VolumeFlowUnit.MillionUsGallonsPerDay);
             AssertEx.EqualTolerance(MillionUsGallonsPerDayInOneCubicMeterPerSecond, (double)millionusgallonsperdayQuantity.Value, MillionUsGallonsPerDayTolerance);
             Assert.Equal(VolumeFlowUnit.MillionUsGallonsPerDay, millionusgallonsperdayQuantity.Unit);
@@ -329,6 +347,7 @@ namespace UnitsNet.Tests
             VolumeFlow cubicmeterpersecond = VolumeFlow.FromCubicMetersPerSecond(1);
             AssertEx.EqualTolerance(1, VolumeFlow.FromCentilitersPerMinute(cubicmeterpersecond.CentilitersPerMinute).CubicMetersPerSecond, CentilitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromCubicDecimetersPerMinute(cubicmeterpersecond.CubicDecimetersPerMinute).CubicMetersPerSecond, CubicDecimetersPerMinuteTolerance);
+            AssertEx.EqualTolerance(1, VolumeFlow.FromCubicFeetPerDay(cubicmeterpersecond.CubicFeetPerDay).CubicMetersPerSecond, CubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromCubicFeetPerHour(cubicmeterpersecond.CubicFeetPerHour).CubicMetersPerSecond, CubicFeetPerHourTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromCubicFeetPerMinute(cubicmeterpersecond.CubicFeetPerMinute).CubicMetersPerSecond, CubicFeetPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromCubicFeetPerSecond(cubicmeterpersecond.CubicFeetPerSecond).CubicMetersPerSecond, CubicFeetPerSecondTolerance);
@@ -346,6 +365,7 @@ namespace UnitsNet.Tests
             AssertEx.EqualTolerance(1, VolumeFlow.FromLitersPerSecond(cubicmeterpersecond.LitersPerSecond).CubicMetersPerSecond, LitersPerSecondTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromMicrolitersPerMinute(cubicmeterpersecond.MicrolitersPerMinute).CubicMetersPerSecond, MicrolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromMillilitersPerMinute(cubicmeterpersecond.MillilitersPerMinute).CubicMetersPerSecond, MillilitersPerMinuteTolerance);
+            AssertEx.EqualTolerance(1, VolumeFlow.FromMillionStandardCubicFeetPerDay(cubicmeterpersecond.MillionStandardCubicFeetPerDay).CubicMetersPerSecond, MillionStandardCubicFeetPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromMillionUsGallonsPerDay(cubicmeterpersecond.MillionUsGallonsPerDay).CubicMetersPerSecond, MillionUsGallonsPerDayTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromNanolitersPerMinute(cubicmeterpersecond.NanolitersPerMinute).CubicMetersPerSecond, NanolitersPerMinuteTolerance);
             AssertEx.EqualTolerance(1, VolumeFlow.FromOilBarrelsPerDay(cubicmeterpersecond.OilBarrelsPerDay).CubicMetersPerSecond, OilBarrelsPerDayTolerance);
