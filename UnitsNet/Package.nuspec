@@ -2,12 +2,12 @@
 <package >
   <metadata>
     <id>MelinaAero-UnitsNet</id>
-    <version>1.2.0</version>
+    <version>1.5.0</version>
     <authors>MelinaAero</authors>
     <owners>MelinaAero</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Forked UnitsNet Library</description>
-    <releaseNotes>Added From method with the double and int parameters to IQuantity interface</releaseNotes>
+    <releaseNotes>Added new unit into volume flow rate quantity</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>UnitsNet .Net</tags>
   </metadata>
