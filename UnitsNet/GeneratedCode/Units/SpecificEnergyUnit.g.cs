@@ -45,11 +45,14 @@ namespace UnitsNet.Units
     public enum SpecificEnergyUnit
     {
         Undefined = 0,
+        BritishThermalUnitPerPound,
         CaloriePerGram,
         JoulePerKilogram,
+        KilobritishThermalUnitPerPound,
         KilocaloriePerGram,
         KilojoulePerKilogram,
         KilowattHourPerKilogram,
+        MegabritishThermalUnitPerPound,
         MegajoulePerKilogram,
         MegawattHourPerKilogram,
         WattHourPerKilogram,

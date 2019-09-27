@@ -162,6 +162,11 @@ namespace UnitsNet
         public static SpecificEnergyUnit[] Units { get; } = Enum.GetValues(typeof(SpecificEnergyUnit)).Cast<SpecificEnergyUnit>().Except(new SpecificEnergyUnit[]{ SpecificEnergyUnit.Undefined }).ToArray();
 
         /// <summary>
+        ///     Get SpecificEnergy in BritishThermalUnitsPerPound.
+        /// </summary>
+        public double BritishThermalUnitsPerPound => As(SpecificEnergyUnit.BritishThermalUnitPerPound);
+
+        /// <summary>
         ///     Get SpecificEnergy in CaloriesPerGram.
         /// </summary>
         public double CaloriesPerGram => As(SpecificEnergyUnit.CaloriePerGram);
@@ -170,6 +175,11 @@ namespace UnitsNet
         ///     Get SpecificEnergy in JoulesPerKilogram.
         /// </summary>
         public double JoulesPerKilogram => As(SpecificEnergyUnit.JoulePerKilogram);
+
+        /// <summary>
+        ///     Get SpecificEnergy in KilobritishThermalUnitsPerPound.
+        /// </summary>
+        public double KilobritishThermalUnitsPerPound => As(SpecificEnergyUnit.KilobritishThermalUnitPerPound);
 
         /// <summary>
         ///     Get SpecificEnergy in KilocaloriesPerGram.
@@ -185,6 +195,11 @@ namespace UnitsNet
         ///     Get SpecificEnergy in KilowattHoursPerKilogram.
         /// </summary>
         public double KilowattHoursPerKilogram => As(SpecificEnergyUnit.KilowattHourPerKilogram);
+
+        /// <summary>
+        ///     Get SpecificEnergy in MegabritishThermalUnitsPerPound.
+        /// </summary>
+        public double MegabritishThermalUnitsPerPound => As(SpecificEnergyUnit.MegabritishThermalUnitPerPound);
 
         /// <summary>
         ///     Get SpecificEnergy in MegajoulesPerKilogram.
@@ -209,6 +224,20 @@ namespace UnitsNet
         ///     Gets an instance of this quantity with a value of 0 in the base unit JoulePerKilogram.
         /// </summary>
         public static SpecificEnergy Zero => new SpecificEnergy(0, BaseUnit);
+
+        /// <summary>
+        ///     Get SpecificEnergy from BritishThermalUnitsPerPound.
+        /// </summary>
+#if WINDOWS_UWP
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static SpecificEnergy FromBritishThermalUnitsPerPound(double btu)
+#else
+        public static SpecificEnergy FromBritishThermalUnitsPerPound(QuantityValue btu)
+#endif
+        {
+            double value = (double)btu;
+            return new SpecificEnergy(value, SpecificEnergyUnit.BritishThermalUnitPerPound);
+        }
 
         /// <summary>
         ///     Get SpecificEnergy from CaloriesPerGram.
@@ -236,6 +265,20 @@ namespace UnitsNet
         {
             double value = (double) joulesperkilogram;
             return new SpecificEnergy(value, SpecificEnergyUnit.JoulePerKilogram);
+        }
+
+        /// <summary>
+        ///     Get SpecificEnergy from KilobritishThermalUnitsPerPound.
+        /// </summary>
+#if WINDOWS_UWP
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static SpecificEnergy FromKilobritishThermalUnitsPerPound(double kiloBtu)
+#else
+        public static SpecificEnergy FromKilobritishThermalUnitsPerPound(QuantityValue kiloBtu)
+#endif
+        {
+            double value = (double)kiloBtu;
+            return new SpecificEnergy(value, SpecificEnergyUnit.KilobritishThermalUnitPerPound);
         }
 
         /// <summary>
@@ -278,6 +321,20 @@ namespace UnitsNet
         {
             double value = (double) kilowatthoursperkilogram;
             return new SpecificEnergy(value, SpecificEnergyUnit.KilowattHourPerKilogram);
+        }
+
+        /// <summary>
+        ///     Get SpecificEnergy from MegabritishThermalUnitsPerPound.
+        /// </summary>
+#if WINDOWS_UWP
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static SpecificEnergy FromMegabritishThermalUnitsPerPound(double megaBtu)
+#else
+        public static SpecificEnergy FromMegabritishThermalUnitsPerPound(QuantityValue megaBtu)
+#endif
+        {
+            double value = (double)megaBtu;
+            return new SpecificEnergy(value, SpecificEnergyUnit.MegabritishThermalUnitPerPound);
         }
 
         /// <summary>
@@ -509,11 +566,14 @@ namespace UnitsNet
         {
             switch(Unit)
             {
+                case SpecificEnergyUnit.BritishThermalUnitPerPound: return _value * 2326.000292;
                 case SpecificEnergyUnit.CaloriePerGram: return _value*4.184e3;
                 case SpecificEnergyUnit.JoulePerKilogram: return _value;
+                case SpecificEnergyUnit.KilobritishThermalUnitPerPound: return (_value * 2326.000292) * 1e3d;
                 case SpecificEnergyUnit.KilocaloriePerGram: return (_value*4.184e3) * 1e3d;
                 case SpecificEnergyUnit.KilojoulePerKilogram: return (_value) * 1e3d;
                 case SpecificEnergyUnit.KilowattHourPerKilogram: return (_value*3.6e3) * 1e3d;
+                case SpecificEnergyUnit.MegabritishThermalUnitPerPound: return (_value * 2326.000292) * 1e6d;
                 case SpecificEnergyUnit.MegajoulePerKilogram: return (_value) * 1e6d;
                 case SpecificEnergyUnit.MegawattHourPerKilogram: return (_value*3.6e3) * 1e6d;
                 case SpecificEnergyUnit.WattHourPerKilogram: return _value*3.6e3;
@@ -531,11 +591,14 @@ namespace UnitsNet
 
             switch(unit)
             {
+                case SpecificEnergyUnit.BritishThermalUnitPerPound: return _value / 2326.000292;
                 case SpecificEnergyUnit.CaloriePerGram: return baseUnitValue/4.184e3;
                 case SpecificEnergyUnit.JoulePerKilogram: return baseUnitValue;
+                case SpecificEnergyUnit.KilobritishThermalUnitPerPound: return (_value / 2326.000292) / 1e3d;
                 case SpecificEnergyUnit.KilocaloriePerGram: return (baseUnitValue/4.184e3) / 1e3d;
                 case SpecificEnergyUnit.KilojoulePerKilogram: return (baseUnitValue) / 1e3d;
                 case SpecificEnergyUnit.KilowattHourPerKilogram: return (baseUnitValue/3.6e3) / 1e3d;
+                case SpecificEnergyUnit.MegabritishThermalUnitPerPound: return (_value / 2326.000292) / 1e6d;
                 case SpecificEnergyUnit.MegajoulePerKilogram: return (baseUnitValue) / 1e6d;
                 case SpecificEnergyUnit.MegawattHourPerKilogram: return (baseUnitValue/3.6e3) / 1e6d;
                 case SpecificEnergyUnit.WattHourPerKilogram: return baseUnitValue/3.6e3;

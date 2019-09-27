@@ -61,8 +61,11 @@ namespace UnitsNet.Tests
         protected abstract double MegajoulesPerKilogramInOneJoulePerKilogram { get; }
         protected abstract double MegawattHoursPerKilogramInOneJoulePerKilogram { get; }
         protected abstract double WattHoursPerKilogramInOneJoulePerKilogram { get; }
+        protected abstract double BritishThermalUnitsPerPoundInOneJoulePerKilogram { get; }
+        protected abstract double KilobritishThermalUnitsPerPoundInOneJoulePerKilogram { get; }
+        protected abstract double MegabritishThermalUnitsPerPoundInOneJoulePerKilogram { get; }
 
-// ReSharper disable VirtualMemberNeverOverriden.Global
+        // ReSharper disable VirtualMemberNeverOverriden.Global
         protected virtual double CaloriesPerGramTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerKilogramTolerance { get { return 1e-5; } }
         protected virtual double KilocaloriesPerGramTolerance { get { return 1e-5; } }
@@ -71,17 +74,24 @@ namespace UnitsNet.Tests
         protected virtual double MegajoulesPerKilogramTolerance { get { return 1e-5; } }
         protected virtual double MegawattHoursPerKilogramTolerance { get { return 1e-5; } }
         protected virtual double WattHoursPerKilogramTolerance { get { return 1e-5; } }
-// ReSharper restore VirtualMemberNeverOverriden.Global
+        protected virtual double BritishThermalUnitsPerPoundTolerance { get { return 1e-5; } }
+        protected virtual double KilobritishThermalUnitsPerPoundTolerance { get { return 1e-5; } }
+        protected virtual double MegabritishThermalUnitsPerPoundTolerance { get { return 1e-5; } }
+
+        // ReSharper restore VirtualMemberNeverOverriden.Global
 
         [Fact]
         public void JoulePerKilogramToSpecificEnergyUnits()
         {
             SpecificEnergy jouleperkilogram = SpecificEnergy.FromJoulesPerKilogram(1);
+            AssertEx.EqualTolerance(BritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.BritishThermalUnitsPerPound, BritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.CaloriesPerGram, CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(JoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.JoulesPerKilogram, JoulesPerKilogramTolerance);
+            AssertEx.EqualTolerance(KilobritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.KilobritishThermalUnitsPerPound, KilobritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(KilocaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.KilocaloriesPerGram, KilocaloriesPerGramTolerance);
             AssertEx.EqualTolerance(KilojoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.KilojoulesPerKilogram, KilojoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(KilowattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.KilowattHoursPerKilogram, KilowattHoursPerKilogramTolerance);
+            AssertEx.EqualTolerance(MegabritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.MegabritishThermalUnitsPerPound, MegabritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(MegajoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.MegajoulesPerKilogram, MegajoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(MegawattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.MegawattHoursPerKilogram, MegawattHoursPerKilogramTolerance);
             AssertEx.EqualTolerance(WattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.WattHoursPerKilogram, WattHoursPerKilogramTolerance);
@@ -90,11 +100,14 @@ namespace UnitsNet.Tests
         [Fact]
         public void FromValueAndUnit()
         {
+            AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.BritishThermalUnitPerPound).BritishThermalUnitsPerPound, BritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.CaloriePerGram).CaloriesPerGram, CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.JoulePerKilogram).JoulesPerKilogram, JoulesPerKilogramTolerance);
+            AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.KilobritishThermalUnitPerPound).KilobritishThermalUnitsPerPound, KilobritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.KilocaloriePerGram).KilocaloriesPerGram, KilocaloriesPerGramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.KilojoulePerKilogram).KilojoulesPerKilogram, KilojoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.KilowattHourPerKilogram).KilowattHoursPerKilogram, KilowattHoursPerKilogramTolerance);
+            AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.MegabritishThermalUnitPerPound).MegabritishThermalUnitsPerPound, MegabritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.MegajoulePerKilogram).MegajoulesPerKilogram, MegajoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.MegawattHourPerKilogram).MegawattHoursPerKilogram, MegawattHoursPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.From(1, SpecificEnergyUnit.WattHourPerKilogram).WattHoursPerKilogram, WattHoursPerKilogramTolerance);
@@ -104,11 +117,14 @@ namespace UnitsNet.Tests
         public void As()
         {
             var jouleperkilogram = SpecificEnergy.FromJoulesPerKilogram(1);
+            AssertEx.EqualTolerance(BritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.BritishThermalUnitPerPound), BritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.CaloriePerGram), CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(JoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.JoulePerKilogram), JoulesPerKilogramTolerance);
+            AssertEx.EqualTolerance(KilobritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.KilobritishThermalUnitPerPound), KilobritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(KilocaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.KilocaloriePerGram), KilocaloriesPerGramTolerance);
             AssertEx.EqualTolerance(KilojoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.KilojoulePerKilogram), KilojoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(KilowattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.KilowattHourPerKilogram), KilowattHoursPerKilogramTolerance);
+            AssertEx.EqualTolerance(MegabritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.MegabritishThermalUnitPerPound), MegabritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(MegajoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.MegajoulePerKilogram), MegajoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(MegawattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.MegawattHourPerKilogram), MegawattHoursPerKilogramTolerance);
             AssertEx.EqualTolerance(WattHoursPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(SpecificEnergyUnit.WattHourPerKilogram), WattHoursPerKilogramTolerance);
@@ -119,6 +135,10 @@ namespace UnitsNet.Tests
         {
             var jouleperkilogram = SpecificEnergy.FromJoulesPerKilogram(1);
 
+            var btuperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.BritishThermalUnitPerPound);
+            AssertEx.EqualTolerance(BritishThermalUnitsPerPoundInOneJoulePerKilogram, (double)btuperkilogramQuantity.Value, BritishThermalUnitsPerPoundTolerance);
+            Assert.Equal(SpecificEnergyUnit.BritishThermalUnitPerPound, btuperkilogramQuantity.Unit);
+
             var caloriepergramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.CaloriePerGram);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, (double)caloriepergramQuantity.Value, CaloriesPerGramTolerance);
             Assert.Equal(SpecificEnergyUnit.CaloriePerGram, caloriepergramQuantity.Unit);
@@ -126,6 +146,10 @@ namespace UnitsNet.Tests
             var jouleperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.JoulePerKilogram);
             AssertEx.EqualTolerance(JoulesPerKilogramInOneJoulePerKilogram, (double)jouleperkilogramQuantity.Value, JoulesPerKilogramTolerance);
             Assert.Equal(SpecificEnergyUnit.JoulePerKilogram, jouleperkilogramQuantity.Unit);
+
+            var kilobtuperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.KilobritishThermalUnitPerPound);
+            AssertEx.EqualTolerance(KilobritishThermalUnitsPerPoundInOneJoulePerKilogram, (double)kilobtuperkilogramQuantity.Value, KilobritishThermalUnitsPerPoundTolerance);
+            Assert.Equal(SpecificEnergyUnit.KilobritishThermalUnitPerPound, kilobtuperkilogramQuantity.Unit);
 
             var kilocaloriepergramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.KilocaloriePerGram);
             AssertEx.EqualTolerance(KilocaloriesPerGramInOneJoulePerKilogram, (double)kilocaloriepergramQuantity.Value, KilocaloriesPerGramTolerance);
@@ -138,6 +162,10 @@ namespace UnitsNet.Tests
             var kilowatthourperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.KilowattHourPerKilogram);
             AssertEx.EqualTolerance(KilowattHoursPerKilogramInOneJoulePerKilogram, (double)kilowatthourperkilogramQuantity.Value, KilowattHoursPerKilogramTolerance);
             Assert.Equal(SpecificEnergyUnit.KilowattHourPerKilogram, kilowatthourperkilogramQuantity.Unit);
+
+            var megabtuperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.MegabritishThermalUnitPerPound);
+            AssertEx.EqualTolerance(MegabritishThermalUnitsPerPoundInOneJoulePerKilogram, (double)megabtuperkilogramQuantity.Value, MegabritishThermalUnitsPerPoundTolerance);
+            Assert.Equal(SpecificEnergyUnit.MegabritishThermalUnitPerPound, megabtuperkilogramQuantity.Unit);
 
             var megajouleperkilogramQuantity = jouleperkilogram.ToUnit(SpecificEnergyUnit.MegajoulePerKilogram);
             AssertEx.EqualTolerance(MegajoulesPerKilogramInOneJoulePerKilogram, (double)megajouleperkilogramQuantity.Value, MegajoulesPerKilogramTolerance);
@@ -156,11 +184,14 @@ namespace UnitsNet.Tests
         public void ConversionRoundTrip()
         {
             SpecificEnergy jouleperkilogram = SpecificEnergy.FromJoulesPerKilogram(1);
+            AssertEx.EqualTolerance(1, SpecificEnergy.FromBritishThermalUnitsPerPound(jouleperkilogram.BritishThermalUnitsPerPound).JoulesPerKilogram, BritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromCaloriesPerGram(jouleperkilogram.CaloriesPerGram).JoulesPerKilogram, CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromJoulesPerKilogram(jouleperkilogram.JoulesPerKilogram).JoulesPerKilogram, JoulesPerKilogramTolerance);
+            AssertEx.EqualTolerance(1, SpecificEnergy.FromKilobritishThermalUnitsPerPound(jouleperkilogram.KilobritishThermalUnitsPerPound).JoulesPerKilogram, KilobritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromKilocaloriesPerGram(jouleperkilogram.KilocaloriesPerGram).JoulesPerKilogram, KilocaloriesPerGramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromKilojoulesPerKilogram(jouleperkilogram.KilojoulesPerKilogram).JoulesPerKilogram, KilojoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromKilowattHoursPerKilogram(jouleperkilogram.KilowattHoursPerKilogram).JoulesPerKilogram, KilowattHoursPerKilogramTolerance);
+            AssertEx.EqualTolerance(1, SpecificEnergy.FromMegabritishThermalUnitsPerPound(jouleperkilogram.MegabritishThermalUnitsPerPound).JoulesPerKilogram, MegabritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromMegajoulesPerKilogram(jouleperkilogram.MegajoulesPerKilogram).JoulesPerKilogram, MegajoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromMegawattHoursPerKilogram(jouleperkilogram.MegawattHoursPerKilogram).JoulesPerKilogram, MegawattHoursPerKilogramTolerance);
             AssertEx.EqualTolerance(1, SpecificEnergy.FromWattHoursPerKilogram(jouleperkilogram.WattHoursPerKilogram).JoulesPerKilogram, WattHoursPerKilogramTolerance);
