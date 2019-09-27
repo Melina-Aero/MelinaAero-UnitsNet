@@ -93,8 +93,8 @@
     {
       "SingularName": "PoundPerSecond",
       "PluralName": "PoundsPerSecond",
-      "FromUnitToBaseFunc": "x/0.002204",
-      "FromBaseToUnitFunc": "x*0.002204",
+      "FromUnitToBaseFunc": "x/0.00220462442",
+      "FromBaseToUnitFunc": "x*0.00220462442",
       "Prefixes": [ "Mega" ],
       "Localization": [
         {
