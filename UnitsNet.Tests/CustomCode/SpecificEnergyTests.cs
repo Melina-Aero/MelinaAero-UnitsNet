@@ -33,6 +33,9 @@ namespace UnitsNet.Tests.CustomCode
         protected override double WattHoursPerKilogramInOneJoulePerKilogram => 2.77777778e-4;
         protected override double KilowattHoursPerKilogramInOneJoulePerKilogram => 2.77777778e-7;
         protected override double MegawattHoursPerKilogramInOneJoulePerKilogram => 2.77777778e-10;
+        protected override double BritishThermalUnitsPerPoundInOneJoulePerKilogram => 4.2992255995813087e-4;
+        protected override double KilobritishThermalUnitsPerPoundInOneJoulePerKilogram => 4.2992255995813087e-7;
+        protected override double MegabritishThermalUnitsPerPoundInOneJoulePerKilogram => 4.2992255995813087e-10;
 
         [Fact]
         public void MassTimesSpecificEnergyEqualsEnergy()
