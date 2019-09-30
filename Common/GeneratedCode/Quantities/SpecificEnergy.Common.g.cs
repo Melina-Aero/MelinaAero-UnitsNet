@@ -591,14 +591,14 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case SpecificEnergyUnit.BritishThermalUnitPerPound: return _value / 2326.000292;
+                case SpecificEnergyUnit.BritishThermalUnitPerPound: return baseUnitValue / 2326.000292;
                 case SpecificEnergyUnit.CaloriePerGram: return baseUnitValue/4.184e3;
                 case SpecificEnergyUnit.JoulePerKilogram: return baseUnitValue;
-                case SpecificEnergyUnit.KilobritishThermalUnitPerPound: return (_value / 2326.000292) / 1e3d;
+                case SpecificEnergyUnit.KilobritishThermalUnitPerPound: return (baseUnitValue / 2326.000292) / 1e3d;
                 case SpecificEnergyUnit.KilocaloriePerGram: return (baseUnitValue/4.184e3) / 1e3d;
                 case SpecificEnergyUnit.KilojoulePerKilogram: return (baseUnitValue) / 1e3d;
                 case SpecificEnergyUnit.KilowattHourPerKilogram: return (baseUnitValue/3.6e3) / 1e3d;
-                case SpecificEnergyUnit.MegabritishThermalUnitPerPound: return (_value / 2326.000292) / 1e6d;
+                case SpecificEnergyUnit.MegabritishThermalUnitPerPound: return (baseUnitValue / 2326.000292) / 1e6d;
                 case SpecificEnergyUnit.MegajoulePerKilogram: return (baseUnitValue) / 1e6d;
                 case SpecificEnergyUnit.MegawattHourPerKilogram: return (baseUnitValue/3.6e3) / 1e6d;
                 case SpecificEnergyUnit.WattHourPerKilogram: return baseUnitValue/3.6e3;

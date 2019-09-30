@@ -83,6 +83,11 @@ namespace UnitsNet.Tests
         [Fact]
         public void JoulePerKilogramToSpecificEnergyUnits()
         {
+            var kiloJoulesPerKg = SpecificEnergy.FromKilojoulesPerKilogram(1);
+            var btuPerPound = kiloJoulesPerKg.BritishThermalUnitsPerPound;
+            var joulesPerKg = SpecificEnergy.FromJoulesPerKilogram(1000);
+            var btuPerPound1 = joulesPerKg.BritishThermalUnitsPerPound;
+
             SpecificEnergy jouleperkilogram = SpecificEnergy.FromJoulesPerKilogram(1);
             AssertEx.EqualTolerance(BritishThermalUnitsPerPoundInOneJoulePerKilogram, jouleperkilogram.BritishThermalUnitsPerPound, BritishThermalUnitsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.CaloriesPerGram, CaloriesPerGramTolerance);
